@@ -51,6 +51,14 @@ PRE LOADER
   width: 50%;
   float:right;
 }
+.error{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 15px;
+}
+.form-group{
+    text-align: center;
+}
 /*Nas kod kraj*/
 .preloader {
     position: fixed;

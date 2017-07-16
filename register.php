@@ -1,8 +1,9 @@
   <?php 
-
-        $fNameErr = $ lNameErr = $emailErr = $passErr = $passErr1 = "";
-        $fName = $ lName = $email = $pass = $pass1 = "";
+        
+        $fNameErr = $lNameErr = $emailErr = $passErr = $passErr1 = "";
+        $fName = $lName = $email = $pass = $pass1 = "";
         $errors = array();        
+        $id_role = 2; $pass_hashed = $id = "";;
           function test_input($data)
           {
                 $data = trim($data);
@@ -23,8 +24,9 @@
             {
                 $fName = test_input($_POST["first_name"]);
                 
-                if(!preg_match("/^[A-Z][a-z]{2,35}$/"),$fName){
+                if(!preg_match("/^[A-Z][a-z]{2,35}$/",$fName)){
                     $fNameErr = "3-36 characters";
+                    $errors[] = "fName";
                 }
             }
             //firstNAme
@@ -56,7 +58,7 @@
             {
                     $pass = test_input($_POST["pass"]);
 
-                    if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass)
+                    if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass))
                     {
                         $passErr = "Password not well formed";
                         $errors[] = "Pass error";
@@ -87,11 +89,79 @@
                     else
                     {
                               $errors[] = "Pass1 err";
+                              $passErr1 = "Passwords don't match";
                               echo "<script>alert('nisu iste sifre');</script>";
                     }
 
             }
+            //password1
+            
+            //email
+            if (empty($_POST["email"])) 
+            {
+                    $emailErr = "Email is required";
+                      $errors[] = "Email";
+            } 
+            else 
+            {
+              
+                    $email = test_input($_POST["email"]);
+                    // check if e-mail address is well-formed
+                   
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+                    {
+                      $emailErr = "Invalid email format"; 
+                      $errors[] = "Pass1 err";
+                    }
+            }
+            if(count($errors) != 0)
+            {
+                     echo "<script>alert('Ima gresaka');</script>";
+            }
+            else
+            {
 
+                include("connectionFile/connection.php");
+               
+                $stmt = $conn-> prepare("SELECT u.email FROM user u INNER JOIN role r ON u.id_role = r.id_role WHERE email=?");
+                $stmt->bind_param("s",$email);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if($result->num_rows > 0)
+                {
+                
+                  echo"
+                    <script> 
+                        
+                        alert('Postoji takav user');       
+                        window.location.href='index.php?page=login';                 
+                    </script>";
+                     $stmt->close();
+
+                }
+                else
+                {
+                      
+                      $stmt->close();
+
+                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?)");
+                      
+                      $stm->bind_param("sssssi",$id,$pass_hashed,$email,$fName,$lName,$id_role);
+                      
+                      $stm->execute();
+                      
+                      if($stm)
+                      {
+                        echo "<script>alert('Upis izvrsen');</script>";
+                      }
+                      else
+                      {
+                        echo "<script>alert('Upis nije izvrsen');</script>";
+                      }
+                
+                 
+                }
+            }
         }             
            
 
@@ -107,36 +177,42 @@
                         <div class="message_content">
                             <div class="message_heading_text center-content wow zoomIn" data-wow-duration="1s">
                                 <h2>Get in Touch</h2>
-                                <p>Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
+                                <p id="neuspeh" >Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
                             </div>
 
-                            <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST" onSubmit="register_check();">
+                            <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="first_name" placeholder="first name" required="">
+                                        <span class="error"> <?php echo $fNameErr;?></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="last_name" placeholder="last name" required="">
+                                        <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email" name="email">
+                                        <input type="email" class="form-control" placeholder="Email" name="email" required="">
+                                        <span class="error"> <?php echo $emailErr;?></span>
                                     </div> <!-- end of form-group -->
 
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" name="pass">
+                                        <input type="password" class="form-control" placeholder="Password" name="pass" required="">
+                                        <span class="error"> <?php echo $passErr;?></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Repeat password" name="pass1">
+                                        <input type="password" class="form-control" placeholder="Repeat password" name="pass1" required="">
+                                        <span class="error"> <?php echo $passErr1;?></span>
                                     </div>
 
+
                                     <div class="center-content">
-                                        <input type="submit_register" value="Submit" class="btn larg-btn">
+                                        <input type="submit" value="Submit" class="btn larg-btn" name="submit_register">
                                     </div>
                                 </div>
                             </form>
