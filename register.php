@@ -1,7 +1,7 @@
   <?php 
         
         $fNameErr = $lNameErr = $emailErr = $passErr = $passErr1 = "";
-        $fName = $lName = $email = $pass = $pass1 = "";
+        $fName = $lName = $email = $pass = $pass1 = $hash_ver = "";
         $errors = array();        
         $id_role = 2; $pass_hashed = $id = "";;
           function test_input($data)
@@ -111,9 +111,12 @@
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
                     {
                       $emailErr = "Invalid email format"; 
-                      $errors[] = "Pass1 err";
+                      $errors[] = "email err";
                     }
             }
+            //info verification end
+
+            //it errors exist
             if(count($errors) != 0)
             {
                      echo "<script>alert('Ima gresaka');</script>";
@@ -122,7 +125,7 @@
             {
 
                 include("connectionFile/connection.php");
-               
+               //if user with that email already exists
                 $stmt = $conn-> prepare("SELECT u.email FROM user u INNER JOIN role r ON u.id_role = r.id_role WHERE email=?");
                 $stmt->bind_param("s",$email);
                 $stmt->execute();
@@ -143,13 +146,14 @@
                 {
                       
                       $stmt->close();
-
-                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?)");
+                      $hash_ver = md5(rand(0,1000));
+                      $status = "";
+                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?,?,?)");
                       
-                      $stm->bind_param("sssssi",$id,$pass_hashed,$email,$fName,$lName,$id_role);
+                      $stm->bind_param("sssssssi",$id,$pass_hashed,$email,$fName,$lName,$hash_ver,$status,$id_role);
                       
                       $stm->execute();
-                      
+                      //send mail after inserting into database
                       if($stm)
                       {
                         echo "<script>alert('Upis izvrsen');</script>";
@@ -185,6 +189,7 @@
 
                               <i>Your name is: $fName $lName</i><br/>
                               <i>Your password is: {$_POST['pass']}</i>
+                              <b><a href='localhost/qoqa/az/verify.php?hash={$hash_ver}&email={$email}'>Click on this link to activate your account:</a></b>
 
                           ";
                           $mail->AltBody = "Your name is: $fName $lName";
