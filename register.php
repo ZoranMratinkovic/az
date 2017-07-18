@@ -153,39 +153,7 @@
                       if($stm)
                       {
                         echo "<script>alert('Upis izvrsen');</script>";
-                        
-                        /*$message = '
-                          <html>
-                          <body>
-                          <table>
-                          <tr><td>
-                          <p><b>Name:  <b/></td><td>'.$fName.'</p></td></tr><tr><td>
-                          <p><b>Email:  <b/></td><td>'.$email.'</p></td></tr><tr><td>
-                          <p><b>Telefon:  <b/></td><td>'.$fNameErr.'</p></td></tr><tr><td>
-                          <p><b>Kommentar:  <b/></td><td>'.$fName.'</p></td></tr><tr><td>
-                          <p><b>1 offerte von:  <b/></td><td>'.$fName.'</p></td></tr><tr><td>
-                          <p><b>Offerte:  <b/></td><td>'.$fName.'</p></td></tr>
-                          <tr><td><p><b>Röntgenbilder:  <b/></td><td>'.$fName.'</p></td></tr>
-                          </table>
-                          </body>
-                          </html>
-                          ';
-
-                          $headers  = 'MIME-Version: 1.0' . "\r\n";
-                          $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-                          $headers .= 'To: David <zoran3001@gmail.com>' . "\r\n";
-                          $headers .= 'From: '.$_REQUEST['email'] . "\r\n";
-
-
-                          if(mail($email, "mysubject", $message, $headers))
-                          {
-                              echo "<script>alert('Mail je poslat');</script>";
-                          }
-                          else
-                          {
-                              echo "<script>alert('Mail nije poslat');</script>";  
-                          }*/
+                      
                           include('phpmailer/PHPMailerAutoload.php');
                           $mail = new PHPMailer;
 
@@ -198,14 +166,14 @@
                           //Set this to true if SMTP host requires authentication to send email
                           $mail->SMTPAuth = true;                          
                           //Provide username and password     
-                          $mail->Username = "andrija.pavlovic996@gmail.com";                 
-                          $mail->Password = "Mateja1703";                           
+                          $mail->Username = "webtesting96@gmail.com";                 
+                          $mail->Password = "web_testing";                           
                           //If SMTP requires TLS encryption then set it
                           $mail->SMTPSecure = "tls";                           
                           //Set TCP port to connect to 
                           $mail->Port = 587;                                   
 
-                          $mail->From = "andrija.pavlovic996@gmail.com";
+                          $mail->From = "webtesting96@gmail.com";
                           $mail->FromName = "Andrija Pavlovic";
 
                           $mail->addAddress($email, $fName);
