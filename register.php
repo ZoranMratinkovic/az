@@ -1,9 +1,14 @@
   <?php 
         
         $fNameErr = $lNameErr = $emailErr = $passErr = $passErr1 = "";
-        $fName = $lName = $email = $pass = $pass1 = $hash_ver = "";
-        $errors = array();        
-        $id_role = 2; $pass_hashed = $id = "";;
+        $fName = $lName = $email = $pass_reg = $pass1 = $hash_ver = "";
+        $errors = array();            
+        $id_role = 2; $pass_hashed = $id = "      ";
+        $options = 
+        [
+        
+          'cost' => 12,
+        ];
           function test_input($data)
           {
                 $data = trim($data);
@@ -56,16 +61,17 @@
             }
             else
             {
-                    $pass = test_input($_POST["pass"]);
+                    $pass_reg = test_input($_POST["pass"]);
 
-                    if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass))
+                    if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_reg))
                     {
                         $passErr = "Password not well formed";
                         $errors[] = "Pass error";
                     }
                     else
                     {
-                        $pass_hashed = password_hash($pass,PASSWORD_DEFAULT);
+                        $pass_hashed = password_hash($pass_reg,PASSWORD_BCRYPT,$options);
+                        //$pass_hashed = trim($pass_hashed);
                        
                     }
             }
@@ -100,7 +106,7 @@
             //email
             if (empty($_POST["email"])) 
             {
-                    $emailErr = "Email is required";
+                      $emailErr = "Email is required";
                       $errors[] = "Email";
             } 
             else 
@@ -204,7 +210,6 @@
                           else 
                           {
                                echo "<script>alert('mail poslat');</script>";
-                          }
                       }
                       else
                       {

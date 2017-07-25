@@ -1,7 +1,8 @@
   <?php 
-
+       // unset($_SESSION['name']);
+        //unset($_SESSION['last_name']);
         $emailErr = $passErr = "";
-        $email = $pass = "";
+        $email =$pass_login="";
         $array = array();
         
         function test_input($data)
@@ -37,31 +38,26 @@
             }
             else
             {
-                $pass = test_input($_POST['password_login']);
-                
+                $pass_login = test_input($_POST['password_login']);
 
-                if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass))
+                if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_login))
                 {
                     $passErr = "Invalid password format";
                     $errors[] = "Invalid password";
                 }
             }
-
             if(count($array) != 0)
             {
                 echo "<script>alert('Ima gresaka')</script>";
             }
             else
             {
-              
                 include('connectionFile/connection.php');
-               
-                //$pass_hashed = password_hash($pass,PASSWORD_DEFAULT);
-               
+
                 $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif`,`email`,`password` FROM user WHERE `email`=?");
                 $stmt->bind_param("s",$email);
                 $stmt->execute();
-               
+             
                 if($res = $stmt->get_result())
                 {
                      $count = $res->num_rows;
@@ -70,45 +66,48 @@
                      {
                         
                         $row = $res->fetch_assoc();
-                      
                         $passwordb = $row['password'];
-                        //$pass = test_input($_POST['password_login']);
-
-                        echo "<p>".$passwordb."</p>";
-                        $verify = password_verify($pass,$passwordb);
+                       
+                        $verify = password_verify($pass_login,$passwordb);
+                       
                         if($verify)
                         {
-                            echo "<script>alert('poklapa se')</script>";
+                            echo "<script>alert('Password match');</script>";
+                           
+                            if($row['status_verif']==1)
+                            {
+                                $_SESSION['name'] = $row['name'];
+                                $_SESSION['last_name'] = $row['last_name'];
+                                echo "<script>window.location.href='index.php'; </script>";
+                            }
+                            else
+                            {
+                                echo 
+                                "<script>
+                                    alert('you must verify your account');
+                                    window.location.href='index.php?page=login'; 
+                                </script>";
+                               
+                            }
                         }
                         else
                         {
-                            var_dump($verify);
-                            var_dump($passwordb);
-                            echo "<script>alert('ne poklapa se')</script>";
+                           
+                            //var_dump($passwordb);
+                            echo "<script>alert('Password doesnt match');</script>";
                         }
 
                      }
                      else
                      {
-                        echo "<script>alert('Ima 0 redova')</script>";
+                        echo "<script>alert('0 rows');</script>";
                      }
                      
                 }
                 else
                 {
-                     echo "<script>alert('nema redova')</script>";
+                     echo "<script>alert('No rows at all');</script>";
                 }
-                    /*$stmt->store_result();
-                    $count = $stmt->num_rows;
-                    $stmt->bind_result($name,$last_name,$status_verif);
-                    
-                    $stmt->fetch();  
-                    */
-                    
-                  
-
-                //}
-
 
             }
         }
