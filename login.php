@@ -56,31 +56,43 @@
               
                 include('connectionFile/connection.php');
                
-                $pass_hashed = password_hash($pass,PASSWORD_DEFAULT);
+                //$pass_hashed = password_hash($pass,PASSWORD_DEFAULT);
                
-                $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif` FROM user WHERE `email`=? AND `password`=?");
-                $stmt->bind_param("ss",$email,$pass_hashed);
+                $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif`,`email`,`password` FROM user WHERE `email`=?");
+                $stmt->bind_param("s",$email);
                 $stmt->execute();
                
                 if($res = $stmt->get_result())
                 {
-                     echo "<script>alert('Ima redova')</script>";
-                     $stmt->store_result();
-                     $count = $stmt->num_rows;
-                     if($count==1)//$stmt->num_rows == 0
-                     {
+                     $count = $res->num_rows;
                      
-                        echo "<script>alert('Ima 1 redova')</script>";
-                       
-                        //$row = $result->fetch_assoc();
+                     if($count==1)
+                     {
                         
-                        //echo "<p class='paragraf'>{$row['email']}</p>";
+                        $row = $res->fetch_assoc();
+                      
+                        $passwordb = $row['password'];
+                        //$pass = test_input($_POST['password_login']);
+
+                        echo "<p>".$passwordb."</p>";
+                        $verify = password_verify($pass,$passwordb);
+                        if($verify)
+                        {
+                            echo "<script>alert('poklapa se')</script>";
+                        }
+                        else
+                        {
+                            var_dump($verify);
+                            var_dump($passwordb);
+                            echo "<script>alert('ne poklapa se')</script>";
+                        }
+
                      }
                      else
                      {
-                          echo var_dump($stmt);
                         echo "<script>alert('Ima 0 redova')</script>";
                      }
+                     
                 }
                 else
                 {

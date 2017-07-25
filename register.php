@@ -66,6 +66,7 @@
                     else
                     {
                         $pass_hashed = password_hash($pass,PASSWORD_DEFAULT);
+                       
                     }
             }
             //password
@@ -148,11 +149,12 @@
                       $stmt->close();
                       $hash_ver = md5(rand(0,1000));
                       $status = "";
-                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?,?,?)");
+                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
                       
                       $stm->bind_param("sssssssi",$id,$pass_hashed,$email,$fName,$lName,$hash_ver,$status,$id_role);
                       
                       $stm->execute();
+                      echo strlen($pass_hashed);
                       //send mail after inserting into database
                       if($stm)
                       {
