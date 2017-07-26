@@ -51,10 +51,19 @@ PRE LOADER
   width: 50%;
   float:right;
 }
-.error{
+.error,.errors{
     color: #ff0000;
     font-weight: bold;
     font-size: 15px;
+}
+.errors
+{
+    display:none;
+}
+.error_login_class
+{
+     color: #ff0000;
+    display:block;
 }
 .form-group{
     text-align: center;

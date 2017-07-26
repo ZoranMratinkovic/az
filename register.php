@@ -210,15 +210,16 @@
                           else 
                           {
                                echo "<script>alert('mail poslat');</script>";
-                      }
+                          }
+                      }      //query successful ends
                       else
                       {
                         echo "<script>alert('Upis nije izvrsen');</script>";
                       }
+
+                }            //unique email ends
                 
-                 
-                }
-            }
+            }                //no errors end
         }             
            
 

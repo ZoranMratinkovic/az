@@ -1,6 +1,6 @@
   <?php 
-       // unset($_SESSION['name']);
-        //unset($_SESSION['last_name']);
+        //unset($_SESSION['name']);
+       //unset($_SESSION['last_name']);
         $emailErr = $passErr = "";
         $email =$pass_login="";
         $array = array();
@@ -15,6 +15,7 @@
        
         if(isset($_POST['submit_login']))
         {
+            
             if(empty($_POST['email_login']))
             {
                 $emailErr = "You must enter email address";
@@ -46,9 +47,10 @@
                     $errors[] = "Invalid password";
                 }
             }
+           
             if(count($array) != 0)
             {
-                echo "<script>alert('Ima gresaka')</script>";
+                echo "<script>alert('There are mistakes')</script>";
             }
             else
             {
@@ -72,44 +74,46 @@
                        
                         if($verify)
                         {
-                            echo "<script>alert('Password match');</script>";
-                           
+
                             if($row['status_verif']==1)
                             {
                                 $_SESSION['name'] = $row['name'];
                                 $_SESSION['last_name'] = $row['last_name'];
-                                echo "<script>window.location.href='index.php'; </script>";
-                            }
+                                echo 
+                                "
+                                <script>
+                                    window.location.href='index.php'; 
+                                </script>";
+                            }      //verification successful ends
                             else
                             {
                                 echo 
                                 "<script>
-                                    alert('you must verify your account');
+                                    alert('You must verify your account');
                                     window.location.href='index.php?page=login'; 
                                 </script>";
                                
                             }
-                        }
+                        }         //password correct ends
                         else
                         {
-                           
-                            //var_dump($passwordb);
-                            echo "<script>alert('Password doesnt match');</script>";
+
+                            echo "<script>alert('Email or password incorrect');</script>";
                         }
 
-                     }
+                     }           //there is only one match ends
                      else
                      {
-                        echo "<script>alert('0 rows');</script>";
+                        echo "<script>alert('There is no user with such email address');</script>";
                      }
                      
-                }
+                }               //there are some result end
                 else
                 {
                      echo "<script>alert('No rows at all');</script>";
                 }
 
-            }
+            }                  //no mistakes else ends
         }
    ?>
 
@@ -125,17 +129,19 @@
                                 <p>Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
                             </div>
 
-                            <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
+                            <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST" onSubmit="return login_check();">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email_login" placeholder="Email address" required="">
+                                        <input type="email" class="form-control" name="email_login" id="email_login" placeholder="Email address" required="">
                                     </div>
+                                    <span id="emailErr" class="errors"> <?php echo $emailErr;?></span>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password_login" placeholder="Password" required="">
+                                        <input type="password" class="form-control" name="password_login" id="password_login" placeholder="Password" required="">
                                     </div>
+                                    <span id="pass_error" class="errors"> <?php echo $passErr;?></span>
                                 </div>
 
                                 <div class="col-sm-12">
