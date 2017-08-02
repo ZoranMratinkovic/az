@@ -1,6 +1,4 @@
-$(".toogle").click(function(){
-    $(".funk").toggle();
-});
+
         <section id="home">
             <div id="bgimage" class="header-image">
                 <div class="container">
