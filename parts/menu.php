@@ -172,7 +172,7 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <?php
+                             <?php
                                 if(isset($_SESSION['name']))
                                 {
                                     echo
