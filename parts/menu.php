@@ -72,10 +72,6 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <li><a href="#" class="" onClick="ispisi();">Discribe</a></li>
-                            <li><a href="#pricing" class="">Pricing</a></li>
-                            <li><a href="#downloadApps" class="">Download</a></li>
-                          
 
                             <li><a href="#works" class="">Fearures</a>
                             <ul>
