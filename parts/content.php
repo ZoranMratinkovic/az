@@ -19,7 +19,7 @@
                 <p class="pricelis funk">Transfer: 5000fr </p>
                 <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
 								<div class="button">
-									<p class="btn toogle">Details</p>
+									<p class="btn toogle" onClick="ispisi();">Details</p>
 									<a href="" class="btn white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>
 								</div>
 							</div>
@@ -37,7 +37,7 @@
         </section>
 
         <div class="row">
-          <p class="col-xs-3 pull-right">00:00:15</p>
+          <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
           <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
           aria-valuemin="0" aria-valuemax="100" style="width:70%">
             <p class="prozent">Nur noch 45%!!!</p>

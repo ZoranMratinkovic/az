@@ -90,12 +90,12 @@
 
 
 
-
+        <script src="js/check.js"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery/jquery.js"></script>
 
         <script src="js/script.js"></script>
-        <script src="js/check.js"></script>
+        
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -106,7 +106,7 @@
         <script src="js/jquery-easing/jquery.easing.1.3.js"></script>
         <script src="js/superslide/jquery.superslides.js"></script>
         <script src="js/wow/wow.min.js"></script>
-
+        
 
     </body>
 </html>

@@ -23,6 +23,11 @@ body {
 PRE LOADER
 ==========================================*/
 /*Nas kod*/
+#demo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 17px;
+}
 .DropDownPic{
   background-color: #fff;
   width:380px;

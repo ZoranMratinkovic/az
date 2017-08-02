@@ -13,7 +13,7 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
-                             <li><a href="index.php" class="">HOME</a></li>
+                             <li><a href="index.php" class="" >HOME</a></li>
                             <li><a href="#works" class="">Fearures</a>
                             <ul>
                               <a href="#">
@@ -36,9 +36,11 @@
                                                     {
                                                         $date = $row['expire_date'];
                                                         $timestamp = strtotime($date);
+                                                       
                                                         echo 
                                                         "
                                                             <script>
+                                                                
                                                                 var timestamp = ".$timestamp.";
                                                             </script>
                                                         ";
