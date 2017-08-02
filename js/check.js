@@ -19,7 +19,7 @@ function login_check()
 }
 function ispisi()
 {
-    alert(timestamp);
+    alert(id_product);
 }
 // Set the date we're counting down to
 var countDownDate = new Date(timestamp*1000).getTime();
@@ -48,4 +48,50 @@ var x = setInterval(function() {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
+    else if(distance == 0)
+    {
+        document.getElementById("demo").innerHTML = "EXPIRED";
+        ajax();
+    }
 }, 1000);
+
+function ajax()
+{
+    function kreiraj()
+    {
+        if (window.XMLHttpRequest){ 
+            request = new XMLHttpRequest(); 
+            return request;
+        }
+        else
+        { 
+            request = new ActiveXObject("Microsoft.XMLHTTP"); 
+        }
+    }
+    
+    function update()
+    {
+        request = kreiraj();
+    
+        if(!request)
+        {
+            alert('Nije napravljen kanal za filtriranje.');
+        }
+
+        else
+        {
+            request.open('GET','update.php?id_productProd='+id_product,true);
+            request.onreadystatechange = updateTable;
+            request.send(null);1
+        }
+    }
+
+    function updateTable()
+    {
+        if(request.readyState == 4 && request.status == 200)
+        {
+            var text = request.responseText;
+        
+        }
+    }
+}

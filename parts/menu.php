@@ -1,3 +1,37 @@
+<?php 
+   include("connectionFile/connection.php");
+   $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ?";
+   $expired = 0;
+   $st = $conn->prepare($sql);
+   $st->bind_param("i",$expired);
+   $st->execute();
+   if($st)
+   {
+       if($rez = $st->get_result())
+       {
+           while($row = $rez->fetch_assoc())
+           {
+
+             $date = $row['expire_date'];            
+             $timestamp = strtotime($date);
+             $name_cat = $row['categorie'];
+             $name = $row['product_name'];
+             $ammount = $row['amount'];
+             $old_price = $row['price_old'];
+             $new_price = $row['price_new'];
+             $pic = $row['pictures_slider'];
+             $id_product = $row['id_product'];
+             echo 
+              "
+               <script>
+               var id_product = ". $id_product . ";
+               var timestamp = ".$timestamp.";
+               </script>
+              ";
+            }
+        }
+   }
+?>
 <header id="home" class="header navbar-fixed-top">
             <div class="navbar navbar-default main-menu">
 
@@ -14,40 +48,14 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
                              <li><a href="index.php" class="" >HOME</a></li>
-                            <li><a href="#works" class="">Fearures</a>
+                            <li><a href="#works" class=""><?php echo $name_cat ?></a>
                             <ul>
                               <a href="#">
                                 <li>
                                   <div class="DropDownPic">
 
                                         <img src="images/menu1.jpg" height="270" width="380" class="MenuPic"/>
-                                        <?php 
-                                            include("connectionFile/connection.php");
-                                            $sql = "SELECT expire_date FROM product WHERE expired = ?";
-                                            $expired = 0;
-                                            $st = $conn->prepare($sql);
-                                            $st->bind_param("i",$expired);
-                                            $st->execute();
-                                            if($st)
-                                            {
-                                                if($rez = $st->get_result())
-                                                {
-                                                    while($row = $rez->fetch_assoc())
-                                                    {
-                                                        $date = $row['expire_date'];
-                                                        $timestamp = strtotime($date);
-                                                       
-                                                        echo 
-                                                        "
-                                                            <script>
-                                                                
-                                                                var timestamp = ".$timestamp.";
-                                                            </script>
-                                                        ";
-                                                    }
-                                                }
-                                            }
-                                         ?>
+                                        
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -61,8 +69,8 @@
                                             <p class="des1">Ovde ide opis l</p>
                                         </div>
                                         <div class="rightt">
-                                            <p class="des1">100 CHFR</p>
-                                            <p class="des1">80 CHFR</p>
+                                            <strike><p class="des1"><?php echo $old_price ?>CHF</p></strike>
+                                            <p class="des1"><?php echo $new_price ?>CHF</p>
                                         </div>
 
 
