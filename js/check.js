@@ -17,3 +17,7 @@ function login_check()
         return true;
     }
 }
+function ispisi()
+{
+    return alert("1");
+}
