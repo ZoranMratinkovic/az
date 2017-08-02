@@ -43,9 +43,12 @@ $(document).ready(function() {
 
 /*-- =============================================== -->
 <!-- ========== bootstrap scrollspy ========== -->
+
 <!-- =============================================== --> */
 
-
+$(".toogle").click(function(){
+    alert('radi');
+});
     $('body').scrollspy({
     	target: '.navbar',
     	offset: 160
