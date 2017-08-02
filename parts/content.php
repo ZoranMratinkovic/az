@@ -1,4 +1,6 @@
-
+$(".toogle").click(function(){
+    $(".funk").toggle();
+});
         <section id="home">
             <div id="bgimage" class="header-image">
                 <div class="container">
@@ -12,11 +14,15 @@
 
                         <div class="col-sm-7 col-xs-12 heading-text">
                             <div class="single_home_content wow zoomIn" data-wow-duration="1s">
-								<h1>Introducing Iolite app landing template </h1>
-								<p class="bannerDescription">Iolite is great new responsive app landing page template for your awesome app. This is freebie from uimint.com & you will get useful resources from there.</p>
+								<h1>Brand New Iphone 8 </h1>
+
+                <p class="pricelis">Old price: 1000 EUR </p>
+                <p class="pricelis">new price: 800 EUR </p>
+                <p class="pricelis funk">Transfer: 5000fr </p>
+                <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
 								<div class="button">
-									<a href="" class="btn">Downlod APP</a>
-									<a href="" class="btn white-btn youtube-media"><i class="fa fa-play"></i> Watch video</a>
+									<p class="btn toogle">Details</p>
+									<a href="" class="btn white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>
 								</div>
 							</div>
                         </div>
@@ -32,7 +38,15 @@
 
         </section>
 
+        <div class="captionFig1 progress1">
+          <p class="prozent1">00:00:15</p>
+          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+          aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            <p class="prozent">Nur noch 45%!!!</p>
 
+          </div>
+
+        </div>
         <!-- Our Works Section -->
 
         <section id="works" class="center-content">
@@ -298,7 +312,7 @@
             </div>
         </section> -->
 
-    
+
         <!-- Video Section -->
 
         <section id="video">
@@ -321,7 +335,7 @@
 
 
 
-        
+
 
         <!-- Description Third Section -->
         <section id="description_third">
@@ -431,10 +445,7 @@
             </div>
         </section>
 
-        
-        
+
+
 
         <!-- Subscribe Section  -->
-
-
-      

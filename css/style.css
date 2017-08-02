@@ -35,13 +35,38 @@ PRE LOADER
 .captionFig{
   z-index:10001;
   position:absolute;
-  top:63%;
+  top:66%;
   opacity:0.7;
   width:100%;
   height:100px;
 }
 .progress{
   height:40px!important;
+}
+.captionFig1{
+  z-index:10001;
+  position:absolute;
+  bottom:1;
+  opacity:0.7;
+  width:100%;
+  height:100px;
+}
+.progress1{
+  height:56px!important;
+}
+.prozent{
+  font-size: 43px;
+    width: 50%;
+    padding-top: 6px;
+    float:left;
+}
+.prozent1{
+  font-size: 43px;
+      float: right;
+      width: 10%;
+      margin-right: 45px;
+      padding-top: 6px;
+
 }
 .leftt{
   width:50%;
@@ -50,6 +75,17 @@ PRE LOADER
 .rigth{
   width: 50%;
   float:right;
+}
+.des1{
+  text-align: center;
+  padding:5px;
+
+}
+.pricelis {
+  font-size: 22px;
+color: white;
+padding: 15px;
+text-align: center;
 }
 .right_li > a
 {
@@ -358,13 +394,18 @@ p.description {
     color: #fff;
 }
 .heading-text h1{
-	color:#fff;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 34px;
 }
 p.bannerDescription{
+  padding: 19px;
+    background: #ff6f6f;
     color: #fff;
     font-size: 1.8rem;
     margin-bottom: 65px;
     line-height: 30px;
+    border-radius: 12px;
 
 }
 
