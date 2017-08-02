@@ -1,4 +1,4 @@
- <header id="home" class="header navbar-fixed-top">
+<header id="home" class="header navbar-fixed-top">
             <div class="navbar navbar-default main-menu">
 
                 <div class="container">
@@ -21,6 +21,31 @@
                                   <div class="DropDownPic">
 
                                         <img src="images/menu1.jpg" height="270" width="380" class="MenuPic"/>
+                                        <?php 
+                                            include("connectionFile/connection.php");
+                                            $sql = "SELECT expire_date FROM product WHERE expired = ?";
+                                            $expired = 0;
+                                            $st = $conn->prepare($sql);
+                                            $st->bind_param("i",$expired);
+                                            $st->execute();
+                                            if($st)
+                                            {
+                                                if($rez = $st->get_result())
+                                                {
+                                                    while($row = $rez->fetch_assoc())
+                                                    {
+                                                        $date = $row['expire_date'];
+                                                        $timestamp = strtotime($date);
+                                                        echo 
+                                                        "
+                                                            <script>
+                                                                var timestamp = ".$timestamp.";
+                                                            </script>
+                                                        ";
+                                                    }
+                                                }
+                                            }
+                                         ?>
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -47,6 +72,11 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
+                            <li><a href="#" class="" onClick="ispisi();">Discribe</a></li>
+                            <li><a href="#pricing" class="">Pricing</a></li>
+                            <li><a href="#downloadApps" class="">Download</a></li>
+                          
+
                             <li><a href="#works" class="">Fearures</a>
                             <ul>
                               <a href="#">
@@ -166,7 +196,6 @@
                              ?>
 
                         </ul>
-
                     </div>
                 </div>
             </div> <!-- end of navbar -->
