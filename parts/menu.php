@@ -50,8 +50,25 @@
                             <li><a href="#" class="">Discribe</a></li>
                             <li><a href="#pricing" class="">Pricing</a></li>
                             <li><a href="#downloadApps" class="">Download</a></li>
-                            <li><a href="index.php?page=login" class="">Login</a></li>
-                            <li><a href="index.php?page=register" class="">Register</a></li>
+                            <?php 
+                                if(isset($_SESSION['name']))
+                                {
+                                    echo 
+                                    "
+                                        <li><a href='logout.php' class=''>Logout</a></li>
+                                        <li  class='right_li'><a href=''>{$_SESSION['name']} {$_SESSION['last_name']}</a></li>
+                                    ";
+                                }
+                                else
+                                {
+                                    echo
+                                    "
+                                        <li><a href='index.php?page=login' class=''>Login</a></li>
+                                        <li><a href='index.php?page=register' class=''>Register</a></li>
+                                    ";
+                                }
+                             ?>
+                            
                         </ul>
 
                     </div>

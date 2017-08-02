@@ -167,6 +167,7 @@
                         echo "<script>alert('Upis izvrsen');</script>";
                       
                           include('phpmailer/PHPMailerAutoload.php');
+                          include("connectionFile/define.php");
                           $mail = new PHPMailer;
 
                           //Enable SMTP debugging. 
@@ -178,15 +179,15 @@
                           //Set this to true if SMTP host requires authentication to send email
                           $mail->SMTPAuth = true;                          
                           //Provide username and password     
-                          $mail->Username = "webtesting96@gmail.com";                 
-                          $mail->Password = "web_testing";                           
+                          $mail->Username = USERNAME;                 
+                          $mail->Password = PASSWORD;                           
                           //If SMTP requires TLS encryption then set it
                           $mail->SMTPSecure = "tls";                           
                           //Set TCP port to connect to 
                           $mail->Port = 587;                                   
 
-                          $mail->From = "webtesting96@gmail.com";
-                          $mail->FromName = "Andrija Pavlovic";
+                          $mail->From = EMAIL;
+                          $mail->FromName = NAME;
 
                           $mail->addAddress($email, $fName);
 

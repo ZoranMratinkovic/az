@@ -56,7 +56,7 @@
             {
                 include('connectionFile/connection.php');
 
-                $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif`,`email`,`password` FROM user WHERE `email`=?");
+                $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif`,`email`,`password`,`id_role` FROM user WHERE `email`=?");
                 $stmt->bind_param("s",$email);
                 $stmt->execute();
              
@@ -79,6 +79,7 @@
                             {
                                 $_SESSION['name'] = $row['name'];
                                 $_SESSION['last_name'] = $row['last_name'];
+
                                 echo 
                                 "
                                 <script>
