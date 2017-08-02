@@ -43,12 +43,9 @@ $(document).ready(function() {
 
 /*-- =============================================== -->
 <!-- ========== bootstrap scrollspy ========== -->
-
 <!-- =============================================== --> */
 
-$(".toogle").click(function(){
-    alert('radi');
-});
+
     $('body').scrollspy({
     	target: '.navbar',
     	offset: 160
@@ -174,7 +171,7 @@ $('#portfolio a').nivoLightbox({
 	singleItem:true,
 	responsive: true,
 	responsiveRefreshRate : 200,
-	responsiveBaseWidth: window
+	responsiveBaseWidth: window 
 
 	});
 
