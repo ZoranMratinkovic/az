@@ -1,4 +1,4 @@
-<?php 
+<?php
    include("connectionFile/connection.php");
    $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ?";
    $expired = 0;
@@ -12,7 +12,7 @@
            while($row = $rez->fetch_assoc())
            {
 
-             $date = $row['expire_date'];            
+             $date = $row['expire_date'];
              $timestamp = strtotime($date);
              $name_cat = $row['categorie'];
              $name = $row['product_name'];
@@ -21,7 +21,7 @@
              $new_price = $row['price_new'];
              $pic = $row['pictures_slider'];
              $id_product = $row['id_product'];
-             echo 
+             echo
               "
                <script>
                var id_product = ". $id_product . ";
@@ -48,6 +48,17 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
                              <li><a href="index.php" class="" >HOME</a></li>
+                             <!--
+                                  $upit1 ="SELECT * from categorie";
+                                  $result1 = $conn->query($upit1);
+                                   while($rezz=mysqli_fetch_array($result1)){
+                                     $categorie=$rezz['categorie'];
+                                    echo "<li><a href='#'>";
+                                    echo $categorie;
+                                    echo "</li></a>";
+                                  }
+*/
+                             ?>-->
                             <li><a href="#works" class=""><?php echo $name_cat ?></a>
                             <ul>
                               <a href="#">
@@ -55,7 +66,7 @@
                                   <div class="DropDownPic">
 
                                         <img src="images/menu1.jpg" height="270" width="380" class="MenuPic"/>
-                                        
+
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
