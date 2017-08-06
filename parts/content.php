@@ -14,10 +14,10 @@
                             <div class="single_home_content wow zoomIn" data-wow-duration="1s">
 								<h1>Brand New Iphone 8 </h1>
 
-                <p class="pricelis">Old price: 1000 EUR </p>
-                <p class="pricelis">new price: 800 EUR </p>
-                <p class="pricelis funk">Transfer: 5000fr </p>
-                <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
+                                    <p class="pricelis">Old price: 1000 EUR </p>
+                                    <p class="pricelis">new price: 800 EUR </p>
+                                    <p class="pricelis funk">Transfer: 5000fr </p>
+                                    <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
 								<div class="button">
 									<p class="btn toogle" onClick="ispisi();">Details</p>
 									<a href="" class="btn white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>

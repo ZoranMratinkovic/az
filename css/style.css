@@ -28,6 +28,9 @@ PRE LOADER
     font-weight: bold;
     margin-top: 17px;
 }
+.centered{
+    margin-top: 25px;
+}
 .DropDownPic{
   background-color: #fff;
   width:380px;

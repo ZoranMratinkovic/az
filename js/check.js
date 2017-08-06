@@ -45,14 +45,11 @@ var x = setInterval(function() {
     
     // If the count down is over, write some text 
     if (distance < 0) {
-        ajax();
+        update();
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
 
-function ajax()
-{
     function kreiraj()
     {
         if (window.XMLHttpRequest){ 
@@ -84,10 +81,12 @@ function ajax()
 
     function updateTable()
     {
-        if(request.readyState == 4 && request.status == 200)
+        if(request.readyState==4 || request.status == 200)
         {
-            var text = request.responseText;
-        
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        else
+        {
+            alert("page not found");
         }
     }
-}

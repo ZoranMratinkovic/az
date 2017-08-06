@@ -1,6 +1,6 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ?";
+   $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ?";
    $expired = 0;
    $st = $conn->prepare($sql);
    $st->bind_param("i",$expired);
@@ -19,6 +19,7 @@
              $ammount = $row['amount'];
              $old_price = $row['price_old'];
              $new_price = $row['price_new'];
+             $description = $row['description'];
              $pic = $row['pictures_slider'];
              $id_product = $row['id_product'];
              echo
@@ -65,7 +66,7 @@
                                 <li>
                                   <div class="DropDownPic">
 
-                                        <img src="images/menu1.jpg" height="270" width="380" class="MenuPic"/>
+                                        <img src="<?php echo $pic; ?>" height="270" width="380" class="MenuPic"/>
 
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -75,11 +76,10 @@
                                         </div>
 
                                       <div class="picDescr">
-                                        <div class="leftt">
-                                            <p class="des1">Ovde ide opis l</p>
-                                            <p class="des1">Ovde ide opis l</p>
+                                        <div class="col-xs-9">
+                                            <p class="des1 centered"><?php echo $description; ?></p>
                                         </div>
-                                        <div class="rightt">
+                                        <div class="col-xs-3">
                                             <strike><p class="des1"><?php echo $old_price ?>CHF</p></strike>
                                             <p class="des1"><?php echo $new_price ?>CHF</p>
                                         </div>
