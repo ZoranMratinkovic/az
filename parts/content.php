@@ -54,30 +54,67 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                                 <i class="fa fa-crop"></i>
-                                <h3>Clean and Responsive</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at nibh orci.</p>
+
+                                <?php
+                                      $upit2 ="SELECT * from product_des where id_product='1'";
+                                      $result2 = $conn->query($upit2);
+                                      while($rez1=mysqli_fetch_array($result2)){
+                                        $headingtext1=$rez1['headingtext1'];
+                                        $text1 =$rez1['text1'];
+                                        echo "<h3>$headingtext1</h3>";
+                                        echo "<p>$text1</p>";
+                                      }
+
+                                 ?>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".8s">
                                 <i class="fa fa-cube"></i>
-                                <h3>Clean and Responsive</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at nibh orci.</p>
-                            </div>
+
+                                <?php
+                                      $upit2 ="SELECT * from product_des where id_product='1'";
+                                      $result2 = $conn->query($upit2);
+                                      while($rez1=mysqli_fetch_array($result2)){
+                                        $headingtext2=$rez1['headingtext2'];
+                                        $text2 =$rez1['text2'];
+                                        echo "<h3>$headingtext2</h3>";
+                                        echo "<p>$text2</p>";
+                                      }
+
+                                 ?>                            </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.2s">
                                 <i class="fa fa-magic"></i>
-                                <h3>Clean and Responsive</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at nibh orci.</p>
-                            </div>
+
+                                <?php
+                                      $upit2 ="SELECT * from product_des where id_product='1'";
+                                      $result2 = $conn->query($upit2);
+                                      while($rez1=mysqli_fetch_array($result2)){
+                                          $headingtext3=$rez1['headingtext3'];
+                                        $text3 =$rez1['text3'];
+                                          echo "<h3>$headingtext3</h3>";
+                                        echo "<p>$text3</p>";
+                                      }
+
+                                 ?>                            </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.5s">
                                 <i class="fa fa-code-fork"></i>
-                                <h3>Clean and Responsive</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at nibh orci.</p>
-                            </div>
+
+                                <?php
+                                      $upit2 ="SELECT * from product_des where id_product='1'";
+                                      $result2 = $conn->query($upit2);
+                                      while($rez1=mysqli_fetch_array($result2)){
+                                          $headingtext4=$rez1['headingtext4'];
+                                        $text4 =$rez1['text4'];
+                                          echo "<h3>$headingtext4</h3>";
+                                        echo "<p>$text4</p>";
+                                      }
+
+                                 ?>                            </div>
                         </div>
 
 
@@ -195,36 +232,81 @@
                 <div class="row main_description">
                     <div class="col-sm-6 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                            <img src="images/iphone3.png" alt="" />
+                          <?php
+                          $upit2 ="SELECT * from product_des where id_product='1'";
+                          $result2 = $conn->query($upit2);
+                          while($rez1=mysqli_fetch_array($result2)){
+                            $slika=$rez1['picture_desc'];
+                            echo "<img src='$slika' />";
+                          }
+
+                          ?>
+
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
-                            <h1>Description First Layout</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt efficitur vestibulum. Phasellus nisl leo, congue eu malesuada lobortis, fringilla et nulla.</p>
+                          <?php
+                                $upit2 ="SELECT * from product_des where id_product='1'";
+                                $result2 = $conn->query($upit2);
+                                while($rez1=mysqli_fetch_array($result2)){
+                                    $desc1=$rez1['headingdesc1'];
+                                  $des1 =$rez1['desc1'];
+                                    echo "<h3>$desc1</h3>";
+                                  echo "<p>$des1</p>";
+                                }
+
+                           ?>
 
                             <div class="right_desc_bottom_text">
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-shield"></i>
                                     <div class="right_bottom_description">
-                                        <h6>Hundreds of Icons</h6>
-                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
+                                      <?php
+                                            $upit2 ="SELECT * from product_des where id_product='1'";
+                                            $result2 = $conn->query($upit2);
+                                            while($rez1=mysqli_fetch_array($result2)){
+                                                $desc2=$rez1['headingdesc2'];
+                                              $des2 =$rez1['desc2'];
+                                                echo "<h6>$desc2</h6>";
+                                              echo "<p>$des2</p>";
+                                            }
+
+                                       ?>
                                     </div>
                                 </div>
 
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-css3"></i>
                                     <div class="right_bottom_description">
-                                        <h6>Hundreds of Icons</h6>
-                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
+                                      <?php
+                                            $upit2 ="SELECT * from product_des where id_product='1'";
+                                            $result2 = $conn->query($upit2);
+                                            while($rez1=mysqli_fetch_array($result2)){
+                                                $desc3=$rez1['headingdesc3'];
+                                              $des3 =$rez1['desc3'];
+                                                echo "<h6>$desc3</h6>";
+                                              echo "<p>$des3</p>";
+                                            }
+
+                                       ?>
                                     </div>
                                 </div>
 
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-file-text"></i>
                                     <div class="right_bottom_description">
-                                        <h6>Hundreds of Icons</h6>
-                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
+                                      <?php
+                                            $upit2 ="SELECT * from product_des where id_product='1'";
+                                            $result2 = $conn->query($upit2);
+                                            while($rez1=mysqli_fetch_array($result2)){
+                                                $desc4=$rez1['headingdesc4'];
+                                              $des4 =$rez1['desc3'];
+                                                echo "<h6>$desc4</h6>";
+                                              echo "<p>$des4</p>";
+                                            }
+
+                                       ?>
                                     </div>
                                 </div>
 
@@ -347,11 +429,17 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
                             <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                                <h4>Description Third Layout</h4>
+                              <?php
+                                    $upit2 ="SELECT * from product_des where id_product='1'";
+                                    $result2 = $conn->query($upit2);
+                                    while($rez1=mysqli_fetch_array($result2)){
+                                        $bigdescheading=$rez1['bigdescheading'];
+                                      $bigdesc =$rez1['bigdesc'];
+                                        echo "<h3>$bigdescheading</h3>";
+                                      echo "<p>$bigdesc</p>";
+                                    }
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt efficitur vestibulum. Phasellus nisl leo, congue eu malesuada lobortis, fringilla et nulla. Curabitur posuere, sem nec bibendum finibus, erat turpis congue tellus, id sagittis eros purus quis odio. Etiam ut auctor mi. Nam enim augue, placerat ut pellentesque ac, dictum nec ligula. Maecenas venenatis nisi porta neque volutpat, nec vestibulum quam elementum. Nunc blandit elit in pretium ultrices.</p>
-
-                                <p>Cras dapibus accumsan ex a luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam maximus rhoncus orci, tempor mollis purus euismod sed. Proin aliquam nibh eros, iaculis accumsan dolor tempor ac. Proin commodo elementum magna at aliquam. Donec semper libero ut ipsum pharetra eleifend. Etiam rhoncus orci metus, eget pulvinar quam lobortis.</p>
+                               ?>
                             </div>
                         </div>
 

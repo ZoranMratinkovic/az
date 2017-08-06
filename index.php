@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
         ob_start();
  ?>
@@ -41,20 +41,20 @@
         <![endif]-->
     </head>
     <body>
-		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
-       
-        <?php 
+		<!--<div class='preloader'><div class='loaded'>&nbsp;</div></div>-->
+
+        <?php
          //Loading header
          include("parts/menu.php");
          ?>
-      
+
 
         <?php
         if(isset($_GET["page"]))
         {
               //
               $page = $_GET["page"];
-              
+
               switch ($page) {
                   case 'login':
                       include("login.php");
@@ -76,7 +76,7 @@
         ?>
 
 
-        <?php 
+        <?php
              //loading footer
             include("parts/footer.php");
          ?>
@@ -95,7 +95,7 @@
         <script src="js/jquery/jquery.js"></script>
 
         <script src="js/script.js"></script>
-        
+
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -106,7 +106,7 @@
         <script src="js/jquery-easing/jquery.easing.1.3.js"></script>
         <script src="js/superslide/jquery.superslides.js"></script>
         <script src="js/wow/wow.min.js"></script>
-        
+
 
     </body>
 </html>
