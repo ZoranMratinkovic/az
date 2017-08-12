@@ -28,7 +28,79 @@
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript">
 
+  function countdown(tm,id){
+// Set the date we're counting down to
+    var countDownDate = new Date(tm*1000).getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        /*output = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        // Output the result in an element with id="demo"*/
+        if(id==2)//kategorija vino
+        {
+          document.getElementById("vino").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(id==1)//kategorija pivo
+        {
+          document.getElementById("pivo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(id==3)//kategorija phone
+        {
+          document.getElementById("phone").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(id==4)//kategorija laptop
+        {
+          document.getElementById("laptop").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+
+        // If the count down is over, write some text 
+        if (distance < 0 && id == 2) {
+            updateVino();
+            clearInterval(x);
+             document.getElementById("vino").innerHTML = "Expired"
+             document.getElementById("demo").innerHTML = "Expired";
+        }
+        else if(distance < 0 && id == 1)
+        {
+          updatePivo();
+          clearInterval(x);
+          document.getElementById("vino").innerHTML = "Expired"
+        }
+         else if(distance < 0 && id == 3)
+        {
+          updatePhone();
+          clearInterval(x);
+          document.getElementById("phone").innerHTML = "Expired"
+        }
+         else if(distance < 0 && id == 4)
+        {
+          updateLaptop();
+          clearInterval(x);
+          document.getElementById("laptop").innerHTML = "Expired"
+        }
+    }, 1000);
+}
+</script>
 
 
 
@@ -107,6 +179,10 @@
         <script src="js/superslide/jquery.superslides.js"></script>
         <script src="js/wow/wow.min.js"></script>
 
-
+<script type="text/javascript">
+  /*var output1 = countdown(timestamp1);
+               document.getElementById('demo').innerHTML = output1;*/
+              
+</script>
     </body>
 </html>

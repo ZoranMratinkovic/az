@@ -6,21 +6,21 @@
 
                         <div class="col-sm-5 col-xs-12">
                             <div class="iphone center-content wow fadeInLeft" data-wow-duration="1s">
-                                <img src="images/iphone.png" alt="" />
+                                <img class="sliderPic" src="<?php echo $pic ?>" alt="" height="400"/>
                             </div>
                         </div>
 
-                        <div class="col-sm-7 col-xs-12 heading-text">
+                        <div class="col-sm-7 col-xs-12 centar">
                             <div class="single_home_content wow zoomIn" data-wow-duration="1s">
-								<h1>Brand New Iphone 8 </h1>
+								<h1><?php echo $name ?></h1>
 
-                                    <p class="pricelis">Old price: 1000 EUR </p>
-                                    <p class="pricelis">new price: 800 EUR </p>
+                                    <p class="pricelis">Old price: <?php echo $old_price ?></p>
+                                    <p class="pricelis">new price: <?php echo $new_price ?></p>
                                     <p class="pricelis funk">Transfer: 5000fr </p>
                                     <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
 								<div class="button">
-									<p class="btn toogle" onClick="ispisi();">Details</p>
-									<a href="" class="btn white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>
+									<p class="btn toogle">Details</p>
+									<a href="" class="btn btn-default white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>
 								</div>
 							</div>
                         </div>

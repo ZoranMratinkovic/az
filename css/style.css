@@ -23,6 +23,12 @@ body {
 PRE LOADER
 ==========================================*/
 /*Nas kod*/
+.centar{
+    text-align: center;
+}
+.sliderPic{
+    border-radius: 4px;
+}
 #demo{
     font-size: 30px;
     font-weight: bold;

@@ -21,34 +21,6 @@ function ispisi()
 {
     alert(id_product);
 }
-// Set the date we're counting down to
-var countDownDate = new Date(timestamp*1000).getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        update();
-        clearInterval(x);
-    }
-}, 1000);
 
     function kreiraj()
     {
@@ -62,7 +34,7 @@ var x = setInterval(function() {
         }
     }
     
-    function update()
+    function updateVino()
     {
         request = kreiraj();
     
@@ -78,15 +50,59 @@ var x = setInterval(function() {
             request.send(null);1
         }
     }
+    function updatePivo()
+    {
+        request = kreiraj();
+    
+        if(!request)
+        {
+            alert('Nije napravljen kanal za filtriranje.');
+        }
 
+        else
+        {
+            request.open('GET','update.php?id_productProd1='+id_product1,true);
+            request.onreadystatechange = updateTable;
+            request.send(null);1
+        }
+    }
+    function updatePhone()
+    {
+        request = kreiraj();
+    
+        if(!request)
+        {
+            alert('Nije napravljen kanal za filtriranje.');
+        }
+
+        else
+        {
+            request.open('GET','update.php?id_productProd2='+id_product2,true);
+            request.onreadystatechange = updateTable;
+            request.send(null);1
+        }
+    }
+    function updateLaptop()
+    {
+        request = kreiraj();
+    
+        if(!request)
+        {
+            alert('Nije napravljen kanal za filtriranje.');
+        }
+
+        else
+        {
+            request.open('GET','update.php?id_productPro3='+id_product3,true);
+            request.onreadystatechange = updateTable;
+            request.send(null);1
+        }
+    }
     function updateTable()
     {
         if(request.readyState==4 || request.status == 200)
         {
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
-        else
-        {
-            alert("page not found");
-        }
+        //page not found kada u isto vreme - resi!
     }
