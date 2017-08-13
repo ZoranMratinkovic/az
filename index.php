@@ -96,10 +96,11 @@
         {
           updateLaptop();
           clearInterval(x);
-          document.getElementById("laptop").innerHTML = "Expired"
+          document.getElementById("laptop").innerHTML = "Expired";
         }
     }, 1000);
 }
+
 </script>
 
 
@@ -182,7 +183,7 @@
 <script type="text/javascript">
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
-              
+              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
 </script>
     </body>
 </html>

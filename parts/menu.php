@@ -29,6 +29,7 @@
                var id_product = ". $id_product . ";
                var timestamp = ".$timestamp.";
                countdown(timestamp,id_product);
+
                </script>
               ";
             }
@@ -61,7 +62,7 @@
                <script>
                var id_product1 = ". $id_product1 . ";
                var timestamp1 = ".$timestamp1.";
-              countdown(timestamp1,id_product1);
+               countdown(timestamp1,id_product1);
                </script>
               ";
             }
@@ -167,7 +168,7 @@
                                 <li>
                                   <div class="DropDownPic">
 
-                                        <img src="<?php echo $pic; ?>" height="270" width="380" class="MenuPic"/>
+                                        <img src="<?php echo $pic ?>" height="270" width="380" class="MenuPic"/>
 
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"

@@ -378,7 +378,7 @@ p.description {
 }
 
 #bgimage {
-	background-image: url(../images/headbg1.jpg);
+	/*background-image: url(../images/headbg1.jpg);*/
 	background-position: center top;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;

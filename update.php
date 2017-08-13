@@ -20,7 +20,7 @@
 	{
 		header("Location :index.php");
 	}
-	$one = 1;
+	    $one = 1;
 		include("connectionFile/connection.php");
 		$sql_query = "UPDATE product SET expired = ? WHERE id_product = ?";
 		$Stmt = $conn->prepare($sql_query);

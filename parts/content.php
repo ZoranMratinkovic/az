@@ -2,15 +2,15 @@
         <section id="home">
             <div id="bgimage" class="header-image">
                 <div class="container">
-                    <div class="row">
+                    <div class="row centar">
 
-                        <div class="col-sm-5 col-xs-12">
+                        <!--<div class="col-sm-5 col-xs-12">
                             <div class="iphone center-content wow fadeInLeft" data-wow-duration="1s">
-                                <img class="sliderPic" src="<?php echo $pic ?>" alt="" height="400"/>
-                            </div>
-                        </div>
+                                <img class="sliderPic" src="<?php //echo $pic ?>" alt="" height="400"/>
+                            </div>slika na slajderu
+                        </div>--> 
 
-                        <div class="col-sm-7 col-xs-12 centar">
+                        <div class="col-sm-12 col-xs-12 centar">
                             <div class="single_home_content wow zoomIn" data-wow-duration="1s">
 								<h1><?php echo $name ?></h1>
 
