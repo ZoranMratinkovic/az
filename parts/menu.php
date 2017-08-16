@@ -208,7 +208,7 @@
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
-                                            
+
                                           </div>
                                           <div id="pivo"></div>
                                         </div>
@@ -242,7 +242,7 @@
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
-                                          
+
                                           </div>
                                              <div id="phone"></div>
                                         </div>
@@ -276,8 +276,8 @@
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
-                                            
-                                          </div> 
+
+                                          </div>
                                           <div id="laptop"></div>
 
                                         </div>
