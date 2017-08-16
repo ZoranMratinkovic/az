@@ -1,10 +1,11 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
+   $sql = "SELECT p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE (p.expired = ? AND p.id_cat=?) OR (p.expired = ? AND p.id_cat=?)";
    $expired = 0;
+   $expiredOne = 1;
    $id_cat = 1;
    $st = $conn->prepare($sql);
-   $st->bind_param("ii",$expired,$id_cat);
+   $st->bind_param("iiii",$expired,$id_cat,$expiredOne,$id_cat);
    $st->execute();
    if($st)
    {
@@ -26,10 +27,10 @@
              echo
               "
                <script>
+
                var id_product = ". $id_product . ";
                var timestamp = ".$timestamp.";
                countdown(timestamp,id_product);
-
                </script>
               ";
             }
@@ -38,7 +39,7 @@
    $expired1 = 0;
    $id_cat1 = 2;
    $st1 = $conn->prepare($sql);
-   $st1->bind_param("ii",$expired1,$id_cat1);
+   $st1->bind_param("iiii",$expired1,$id_cat1,$expiredOne,$id_cat1);
    $st1->execute();
    if($st)
    {
@@ -71,7 +72,7 @@
    $expired2 = 0;
    $id_cat2 = 3;
    $st2 = $conn->prepare($sql);
-   $st2->bind_param("ii",$expired2,$id_cat2);
+   $st2->bind_param("iiii",$expired2,$id_cat2,$expiredOne,$id_cat2);
    $st2->execute();
    if($st)
    {
@@ -104,7 +105,7 @@
    $expired3 = 0;
    $id_cat3 = 4;
    $st3 = $conn->prepare($sql);
-   $st3->bind_param("ii",$expired3,$id_cat3);
+   $st3->bind_param("iiii",$expired3,$id_cat3,$expiredOne,$id_cat3);
    $st3->execute();
    if($st)
    {
@@ -171,7 +172,7 @@
                                         <img src="<?php echo $pic ?>" height="270" width="380" class="MenuPic"/>
 
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar bgc" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
                                           </div>
@@ -205,7 +206,7 @@
 
                                         <img src="<?php echo $pic1 ?>" height="270" width="380" class="MenuPic"/>
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar bgc" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
                                             
@@ -239,7 +240,7 @@
 
                                         <img src="<?php echo $pic2 ?>" height="270" width="380" class="MenuPic"/>
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar bgc" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
                                           
@@ -273,7 +274,7 @@
 
                                         <img src="<?php echo $pic3 ?>" height="270" width="380" class="MenuPic"/>
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar bgc" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="width:70%">
                                             <span>70% Complete</span>
                                             

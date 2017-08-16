@@ -84,7 +84,7 @@
         {
           updatePivo();
           clearInterval(x);
-          document.getElementById("vino").innerHTML = "Expired"
+          document.getElementById("pivo").innerHTML = "Expired"
         }
          else if(distance < 0 && id == 3)
         {

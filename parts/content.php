@@ -38,9 +38,9 @@
 
         <div class="row">
           <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
-          <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
+          <div class="progress-bar col-xs-9 bgc" role="progressbar" aria-valuenow="70"
           aria-valuemin="0" aria-valuemax="100" style="width:70%">
-            <p class="prozent">Nur noch 45%!!!</p>
+            <p class="prozent">Nur noch 45%!</p>
 
           </div>
 
