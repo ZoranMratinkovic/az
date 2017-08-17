@@ -151,7 +151,7 @@
 
 
 
-        <section id="works_2">
+        <!--<section id="works_2">
             <div class="container">
                 <div class="row">
                     <div class="works_2_content">
@@ -223,13 +223,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 
         <!-- Video Section -->
 
-        <section id="video_icon">
+      <!--  <section id="video_icon">
             <div class="video_overlay">
                 <div class="container">
                     <div class="row">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- Description Section -->

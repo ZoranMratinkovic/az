@@ -145,7 +145,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a  href="#home" class="navbar-brand"><img src="images/logo.png" alt="Logo" /></a>
+                        <a  href="#home" class="navbar-brand"><img src="images/logo2.png" alt="Logo" /></a>
                         <!-- <a class="navbar-brand" href="index.html"></a> -->
                     </div>
                     <div class="collapse navbar-collapse">
@@ -173,10 +173,10 @@
                                         <?php
                                              $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
                                               $result11 = $conn->query($upitz)or die("bat upit");
-                                              
+
                                               while($rez11=mysqli_fetch_array($result11))
                                               {
-                                                
+
 
                                                 $ostatak=$rez11['ostatak'];
                                                 $ostatak=round($ostatak);
@@ -188,24 +188,24 @@
                                         ?>
 
                                       <div class="captionFig progress">
-                                          
+
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                             aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-                                              
+
                                               <span>Noch  <?php echo $ostatak; ?>% !!!</span>
 
                                           </div>
-                                          
+
                                           <div id="vino"></div>
-                                      
+
                                       </div>
-                                      
+
                                       <div class="picDescr">
-                                        
+
                                         <div class="col-xs-9">
                                             <p class="des1 centered"><?php echo $description; ?></p>
                                         </div>
-                                        
+
                                         <div class="col-xs-3">
                                             <strike><p class="des1"><?php echo $old_price ?>CHF</p></strike>
                                             <p class="des1"><?php echo $new_price ?>CHF</p>

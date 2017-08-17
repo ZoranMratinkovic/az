@@ -10,7 +10,22 @@
     <meta name="author" content="">
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/superslide/superslides.css">
 
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/themes/default/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate/animate.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap Core CSS -->
      <!--<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">-->
 
@@ -45,7 +60,7 @@
                     <a href="admin.php?word=text">Shortcuts</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="admin.php?word=insert">Einfuegen</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
@@ -72,7 +87,7 @@
                         <a href="#menu-toggle" id="menu-toggle"><input type="button" class="btn btn-warning btn-large" value="Toggle menu"></a>
                     </div>
                     <div class="col-xs-12">
-                        <?php 
+                        <?php
                         if(isset($_GET['word']))
                         {
                             switch($_GET['word'])
@@ -81,14 +96,16 @@
                                     break;
                                 case "text": include("text.php");
                                     break;
+                                    case "insert": include("insert.php");
+                                        break;
                                 default:
                                     break;
                             }
                         }
-                            
-                         ?> 
+
+                         ?>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="copyright_text">
-                            <p class=" wow zoomIn" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>2016. All Rights Reserved</p>
+                            <p class=" wow zoomIn" data-wow-duration="1s">Creadted by <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co"></a>2017. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
