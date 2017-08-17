@@ -14,7 +14,7 @@
 	}
 	else if(isset($_GET['id_productProd3']) && !empty($_GET['id_productProd3']))
 	{
-		$id_product = $_GET['id_productPro3'];
+		$id_product = $_GET['id_productProd3'];
 	}
 	else
 	{

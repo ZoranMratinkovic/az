@@ -44,6 +44,7 @@ PRE LOADER
     opacity: 0.8;
     padding: 4px;
     text-align: center;
+    min-height:500px!important;
 }
   .btnmy{
     background-color: #ff4472!important;

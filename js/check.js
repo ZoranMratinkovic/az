@@ -93,7 +93,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productPro3='+id_product3,true);
+            request.open('GET','update.php?id_productProd3='+id_product3,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }

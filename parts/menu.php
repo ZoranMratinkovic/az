@@ -171,29 +171,41 @@
                                         <img src="<?php echo $pic ?>" height="270" width="380" class="MenuPic"/>
 
                                         <?php
-                                        $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
-                                            $result11 = $conn->query($upitz)or die("bat upit");
-                                              while($rez11=mysqli_fetch_array($result11)){
+                                             $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+                                              $result11 = $conn->query($upitz)or die("bat upit");
+                                              
+                                              while($rez11=mysqli_fetch_array($result11))
+                                              {
+                                                
+
                                                 $ostatak=$rez11['ostatak'];
                                                 $ostatak=round($ostatak);
                                                 $stylee="width:".$ostatak."%";
                                                 $styleee="width:15%";
 
 
-                              }
+                                                }
                                         ?>
 
-                                        <div class="captionFig progress">
+                                      <div class="captionFig progress">
+                                          
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                          aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-                                            <span>Noch  <?php echo $ostatak; ?>% !!!</span>
+                                            aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
+                                              
+                                              <span>Noch  <?php echo $ostatak; ?>% !!!</span>
 
-                                        </div>
-
+                                          </div>
+                                          
+                                          <div id="vino"></div>
+                                      
+                                      </div>
+                                      
                                       <div class="picDescr">
+                                        
                                         <div class="col-xs-9">
                                             <p class="des1 centered"><?php echo $description; ?></p>
                                         </div>
+                                        
                                         <div class="col-xs-3">
                                             <strike><p class="des1"><?php echo $old_price ?>CHF</p></strike>
                                             <p class="des1"><?php echo $new_price ?>CHF</p>
