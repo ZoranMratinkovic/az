@@ -8,21 +8,30 @@
                             <div class="iphone center-content wow fadeInLeft" data-wow-duration="1s">
                                 <img class="sliderPic" src="<?php //echo $pic ?>" alt="" height="400"/>
                             </div>slika na slajderu
-                        </div>--> 
+                        </div>-->
 
-                        <div class="col-sm-12 col-xs-12 centar">
+                        <div class="col-sm-7 col-xs-12 products">
                             <div class="single_home_content wow zoomIn" data-wow-duration="1s">
 								<h1><?php echo $name ?></h1>
+                                      <table>
 
-                                    <p class="pricelis">Old price: <?php echo $old_price ?></p>
-                                    <p class="pricelis">new price: <?php echo $new_price ?></p>
-                                    <p class="pricelis funk">Transfer: 5000fr </p>
-                                    <p class="pricelis funk">Tiefesterpreis: 500 EUR </p>
+                                    <tr>
+
+
+                                    <td class="zindex">Old price: <?php echo $old_price ?></td>
+                                    <td class="zindex">new price: <?php echo $new_price ?></td>
+                                      <td class="zindex">new price: <?php echo $new_price ?></td>
+
+                                    </tr>
+                          <tr>
+
+
 								<div class="button">
-									<p class="btn toogle">Details</p>
-									<a href="" class="btn btn-default white-btn youtube-media"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a>
+									<td><p class="btn toogle">Details</p></td>
+									<td><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a></td>
 								</div>
-							</div>
+							</div></tr>
+                </table>
                         </div>
 
                     </div> <!-- end of row -->
@@ -38,11 +47,24 @@
 
         <div class="row">
           <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
+          <?php
+          $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+              $result11 = $conn->query($upitz)or die("bat upit");
+                while($rez11=mysqli_fetch_array($result11)){
+                  $ostatak=$rez11['ostatak'];
+                  $ostatak=round($ostatak);
+                  $stylee="width:".$ostatak."%";
+                  $styleee="width:15%";
+
+
+}
+          ?>
           <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
-          aria-valuemin="0" aria-valuemax="100" style="width:70%">
-            <p class="prozent">Nur noch 45%!!!</p>
+          aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
+            <p class="prozent">Noch  <?php echo $ostatak; ?>% !!!</p>
 
           </div>
+
 
         </div>
         <!-- Our Works Section -->
