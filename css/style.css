@@ -57,10 +57,20 @@ PRE LOADER
 .DropDownPic{
   background-color: #fff;
   width:380px;
-  height:40px!important;
+  position: absolute;
+  z-index:1000;
+}
+.progress{
+    height:40px!important;
+    margin-bottom: 14px!important;
+}
+.MenuPic{
+    width: 100%;
 }
 .progress-bar{
-  background:#777777!important;
+  background:#ff4472!important;
+  font-size:20px!important;
+  line-height:30px!important;
 }
 .captionFig1{
   z-index:10001;
@@ -73,6 +83,7 @@ PRE LOADER
 .progress1{
   height:56px!important;
 }
+
 .prozent{
   font-size: 43px;
     width: 50%;
