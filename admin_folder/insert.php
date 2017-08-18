@@ -18,7 +18,7 @@
   <form action="/action_page.php">
     <div class="form-group">
       <label for="email">Produkt name</label>
-      <input type="text" class="form-control" id="email" placeholder="Produkt name" name="email">
+      <input type="text" class="form-control" id="email" placeholder="Produkt name" name="product_name">
     </div>
     <div class="form-group">
       <label for="pwd">Kategorie</label><br/>
@@ -29,31 +29,31 @@
     </div>
     <div class="form-group">
       <label for="pwd">Stücke</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="stucke">
     </div>
     <div class="form-group">
       <label for="pwd">Preis </label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price">
     </div>
     <div class="form-group">
       <label for="pwd">Aktion Preis</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description">
     </div>
     <div class="form-group">
       <label for="pwd">Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="picture">
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
-      <input type="date" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="date" class="form-control" id="pwd" placeholder="Enter password" name="date">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description">
     </div>
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
@@ -92,8 +92,8 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                 $headingtext2=$rez1['headingtext2'];
                                 $text2 =$rez1['text2'];
-                                echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                                echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
+                                echo "<h3><input type='text' name='head2' value='heading2'></h3>";
+                                echo "<p><textarea rows='4' cols='30' placeholder='2 texxt'></textarea></p>";
                               }
 
                          ?>                            </div>
@@ -108,7 +108,7 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                   $headingtext3=$rez1['headingtext3'];
                                 $text3 =$rez1['text3'];
-                                echo "<h3><input type='text' name='head1' value='heading1'></h3>";
+                                echo "<h3><input type='text' name='head3' value='heading3'></h3>";
                                 echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
 
@@ -124,7 +124,7 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                   $headingtext4=$rez1['headingtext4'];
                                 $text4 =$rez1['text4'];
-                                echo "<h3><input type='text' name='head1' value='heading1'></h3>";
+                                echo "<h3><input type='text' name='head4' value='heading4'></h3>";
                                 echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
 

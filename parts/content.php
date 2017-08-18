@@ -10,8 +10,8 @@
                             </div>slika na slajderu
                         </div>-->
 
-                        <div class="col-sm-7 col-xs-12 products">
-                            <div class="single_home_content wow zoomIn" data-wow-duration="1s">
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
 								<h1><?php echo $name ?></h1>
                                       <table>
 
