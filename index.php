@@ -135,6 +135,9 @@
                   case 'register':
                       include('register.php');
                       break;
+                  case 'product':
+                      include('product.php');
+                      break;
                   default:
                       include("parts/content.php");
                       break;

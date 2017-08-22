@@ -90,7 +90,7 @@
                         <i class="fa fa-cube"></i>
 
                         <?php
-                              $upit2 ="SELECT * from product_des where id_product='1'";
+                              $upit2 ="SELECT * from product_des where id_product=1";
                               $result2 = $conn->query($upit2);
                               while($rez1=mysqli_fetch_array($result2)){
                                 $headingtext2=$rez1['headingtext2'];

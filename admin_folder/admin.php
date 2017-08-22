@@ -96,8 +96,8 @@
                                     break;
                                 case "text": include("text.php");
                                     break;
-                                    case "insert": include("insert.php");
-                                        break;
+                                case "insert": include("insert.php");
+                                    break;
                                 default:
                                     break;
                             }
