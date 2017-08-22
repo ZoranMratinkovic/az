@@ -56,7 +56,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
-      <input type="date" class="form-control" id="pwd" placeholder="Enter password" name="date">
+      <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
@@ -208,7 +208,7 @@
                                         $desc3=$rez1['headingdesc3'];
                                       $des3 =$rez1['desc3'];
                                       echo "<h3><input type='text' name='heading7' value='heading1'></h3>";
-                                      echo "<p><textarea rows='4' name='heading7' cols='50' placeholder='1 texxt'></textarea></p>";
+                                      echo "<p><textarea rows='4' name='head7' cols='50' placeholder='1 texxt'></textarea></p>";
                                     }
 
                                ?>
@@ -350,8 +350,8 @@
                             while($rez1=mysqli_fetch_array($result2)){
                                 $bigdescheading=$rez1['bigdescheading'];
                               $bigdesc =$rez1['bigdesc'];
-                              echo "<h3><input type='text' name='heading8' value='heading1'></h3>";
-                              echo "<p><textarea rows='10' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
+                              echo "<h3><input type='text' name='heading9' value='heading1'></h3>";
+                              echo "<p><textarea rows='10' name='head9' cols='50' placeholder='1 texxt'></textarea></p>";
                             }
 
                        ?>
@@ -372,7 +372,7 @@
                         $stucke=$_REQUEST['stucke'];
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
-                        $description=$_REQUEST['decription'];
+                        $description=$_REQUEST['description'];
                         $bild=$_REQUEST['picture'];
                         $date=$_REQUEST['date'];
                         $description1=$_REQUEST['description1'];
@@ -392,11 +392,11 @@
                         $head7=$_REQUEST['head7'];
                         $heading8=$_REQUEST['heading8'];
                         $head8=$_REQUEST['head8'];
-                      /*  $upitubacp2="INSERT INTO product_des VALUES('','$heading1','$head1','$heading2','$head2','$heading3','$head3','$heading4','$head4','$heading5','$head5','$heading6','$head6','$heading7','$head7','$heading8','$head8','$heading8','$head8','$head8','$heading8')";
-                        $resultubacp2 = $conn->query($upitubacp2)or die("2 upit error".mysql_error());
-*/
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild',$date,0)";
-                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysql_error());
+
+                    /*   $upitubacp2="INSERT INTO product_des VALUES('1','$heading1','$head1','$heading2','$head2','$heading3','$head3','$heading4','$head4','$heading5','$head5','$heading6','$head6','$heading7','$head7','$heading8','$head8','$heading8','$head8','555','5555')";
+                        $resultubacp2 = $conn->query($upitubacp2)or die("2 upit error".mysqli_error()); */
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild','$date',0)";
+                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error());
                       }
                   ?>
                 </form>
