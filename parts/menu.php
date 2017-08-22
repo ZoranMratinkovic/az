@@ -29,7 +29,7 @@
                <script>
                var id_product = ". $id_product . ";
                var timestamp = ".$timestamp.";
-               countdown(timestamp,id_product);
+                 countdown(timestamp,id_product);
 
                </script>
               ";
@@ -64,7 +64,7 @@
                <script>
                var id_product1 = ". $id_product1 . ";
                var timestamp1 = ".$timestamp1.";
-               countdown(timestamp1,id_product1);
+              countdown(timestamp1,id_product1);
                </script>
               ";
             }
@@ -200,7 +200,7 @@
 
                                           </div>
 
-                                          <div id="vino"></div>
+                                          <div id="vino" class='vinoo'></div>
 
                                       </div>
 

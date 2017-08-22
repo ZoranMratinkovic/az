@@ -18,7 +18,7 @@
                                     <tr>
 
 
-                                    <td class="zindex">Old price: <?php echo $old_price ?></td>
+                                    <td class="zindex" id='price'>Old price: <?php echo $old_price ?></td>
                                     <td class="zindex">new price: <?php echo $new_price ?></td>
                                       <td class="zindex">new price: <?php echo $new_price ?></td>
 

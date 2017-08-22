@@ -9,15 +9,16 @@
         $stmtPr = $conn->prepare($prikaz);
         $stmtPr -> bind_param('i',$id_pro);
         $stmtPr -> execute();
+
         if($stmtPr)
         {
             if($rez= $stmtPr->get_result())
             {
               while($row = $rez->fetch_assoc())
               {
-                 $name_pro = $row['id_product'];
+                 $id_prod = $row['id_product'];
                  $date_pro = $row['expire_date'];
-                 $timestamp_pro = strtotime($date);
+                 $timestamp_pro = strtotime($date_pro);
                  $name_cat_pro = $row['categorie'];
                  $name_pro = $row['product_name'];
                  $ammount_pro = $row['amount'];
@@ -28,7 +29,10 @@
                  $id_product_pro = $row['id_product'];
                  echo "<script>
                           var bgimage_pro ='{$row['pictures_slider']}';
-
+                          var name_cat_pro = '{$name_cat_pro}';
+                        
+                          var tmp = ".$timestamp_pro.";
+                         
                       </script>";
               }
             }
@@ -85,7 +89,10 @@
         </section>
 
         <div class="row">
-          <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
+          <p class="col-xs-3 pull-right" id="vinoo">00:00:15</p>
+          <p class="col-xs-3 pull-right" id="pivoo">00:00:15</p>
+          <p class="col-xs-3 pull-right" id="phoness">00:00:15</p>
+          <p class="col-xs-3 pull-right" id="laptopss">00:00:15</p>
           <?php
           
                 $upitz = "SELECT 100/amount*lager as ostatak from product where id_product={$_GET['id']}";
@@ -602,4 +609,9 @@
         <!-- Subscribe Section  -->
 <script type="text/javascript">
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
+           
+            countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
+
+            
+
 </script>

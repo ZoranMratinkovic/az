@@ -26,10 +26,13 @@ PRE LOADER
 .centar{
     text-align: center;
 }
+#vinoo,#pivoo,#phoness,#laptopss{
+    display:none;
+}
 .sliderPic{
     border-radius: 4px;
 }
-#demo{
+#demo,#pivoo,#vinoo,#phoness,#laptopss{
     font-size: 30px;
     font-weight: bold;
     margin-top: 17px;

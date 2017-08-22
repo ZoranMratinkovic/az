@@ -54,6 +54,7 @@
         {
           document.getElementById("vino").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
+ 
         document.getElementById("demo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
@@ -101,6 +102,79 @@
     }, 1000);
 }
 
+
+function countdown1(tm,name_cat){
+// Set the date we're counting down to
+    var countDownDate = new Date(tm*1000).getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        /*output = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        // Output the result in an element with id="demo"*/
+        if(name_cat=='Vine')//kategorija vino
+        {
+          document.getElementById('vinoo').style.display='block';
+          document.getElementById("vinoo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(name_cat=='Beer')//kategorija pivo
+        {
+           document.getElementById('pivoo').style.display='block';
+          document.getElementById("pivoo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(name_cat=='Phones')//kategorija phone
+        {
+           document.getElementById('phoness').style.display='block';
+          document.getElementById("phoness").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+        else if(name_cat=='Laptops')//kategorija laptop
+        {
+           document.getElementById('laptopss').style.display='block';
+          document.getElementById("laptopss").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        }
+
+        // If the count down is over, write some text 
+        if (distance < 0 && id == 2) {
+            updateVino();
+            clearInterval(x);
+             document.getElementById("vino").innerHTML = "Expired"
+             document.getElementById("demo").innerHTML = "Expired";
+        }
+        else if(distance < 0 && id == 1)
+        {
+          updatePivo();
+          clearInterval(x);
+          document.getElementById("pivo").innerHTML = "Expired"
+        }
+         else if(distance < 0 && id == 3)
+        {
+          updatePhone();
+          clearInterval(x);
+          document.getElementById("phone").innerHTML = "Expired"
+        }
+         else if(distance < 0 && id == 4)
+        {
+          updateLaptop();
+          clearInterval(x);
+          document.getElementById("laptop").innerHTML = "Expired";
+        }
+    }, 1000);
+}
 </script>
 
 
@@ -187,6 +261,11 @@
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
               document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
+            
+               
+              
+              
+             
 </script>
     </body>
 </html>

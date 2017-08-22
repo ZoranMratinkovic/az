@@ -372,7 +372,7 @@
                         $stucke=$_REQUEST['stucke'];
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
-                        $description=$_REQUEST['decription'];
+                        $description=$_REQUEST['description'];
                         $bild=$_REQUEST['picture'];
                         $date=$_REQUEST['date'];
                         $description1=$_REQUEST['description1'];
