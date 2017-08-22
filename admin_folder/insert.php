@@ -15,7 +15,8 @@
 
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form action="/action_page.php">
+<form class="" action="insert.php" method="post">
+
     <div class="form-group">
       <label for="email">Produkt name</label>
       <input type="text" class="form-control" id="email" placeholder="Produkt name" name="product_name">
@@ -62,7 +63,7 @@
       <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description1">
     </div>
 
-  </form>
+
 </div>
 <section id="works" class="center-content">
     <div class="container">
@@ -356,7 +357,6 @@
                        ?>
                     </div>
                 </div>
-                <form class="" action="insert.php" method="post">
 
 
                   <div class="checkbox">
@@ -364,7 +364,9 @@
                   </div>
                   <button type="submit" name="insert" class="btn btn-default">Submit</button>
                   <?php
+
                       if(isset($_REQUEST['insert'])){
+
                         $produkt=$_REQUEST['product_name'];
                         $categorie=$_REQUEST['categorie'];
                         $stucke=$_REQUEST['stucke'];
@@ -390,10 +392,11 @@
                         $head7=$_REQUEST['head7'];
                         $heading8=$_REQUEST['heading8'];
                         $head8=$_REQUEST['head8'];
-
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild')";
+                      /*  $upitubacp2="INSERT INTO product_des VALUES('','$heading1','$head1','$heading2','$head2','$heading3','$head3','$heading4','$head4','$heading5','$head5','$heading6','$head6','$heading7','$head7','$heading8','$head8','$heading8','$head8','$head8','$heading8')";
+                        $resultubacp2 = $conn->query($upitubacp2)or die("2 upit error".mysql_error());
+*/
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild',$date,0)";
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysql_error());
-
                       }
                   ?>
                 </form>
@@ -402,5 +405,6 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>
