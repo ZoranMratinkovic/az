@@ -22,8 +22,14 @@
     </div>
     <div class="form-group">
       <label for="pwd">Kategorie</label><br/>
-      <select class="" name="">
-        <option value="">0</option>
+      <select class="" name="categorie">
+        <?php
+      $upitcat="SELECT * FROM categorie";
+      $result11 = $conn->query($upitcat);
+      while($rezcat=mysqli_fetch_array($result11)){
+        echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
+      }
+        ?>
       </select>
 
     </div>
@@ -53,12 +59,9 @@
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description1">
     </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+
   </form>
 </div>
 <section id="works" class="center-content">
@@ -75,8 +78,8 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                 $headingtext1=$rez1['headingtext1'];
                                 $text1 =$rez1['text1'];
-                                echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                                echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
+                                echo "<h3><input type='text' name='heading1' value='heading1'></h3>";
+                                echo "<p><textarea rows='4' cols='30' name='head1' placeholder='1 texxt'></textarea></p>";
                               }
 
                          ?>
@@ -92,8 +95,8 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                 $headingtext2=$rez1['headingtext2'];
                                 $text2 =$rez1['text2'];
-                                echo "<h3><input type='text' name='head2' value='heading2'></h3>";
-                                echo "<p><textarea rows='4' cols='30' placeholder='2 texxt'></textarea></p>";
+                                echo "<h3><input type='text' name='heading2' value='heading2'></h3>";
+                                echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'></textarea></p>";
                               }
 
                          ?>                            </div>
@@ -108,8 +111,8 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                   $headingtext3=$rez1['headingtext3'];
                                 $text3 =$rez1['text3'];
-                                echo "<h3><input type='text' name='head3' value='heading3'></h3>";
-                                echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
+                                echo "<h3><input type='text' name='heading3' value='heading3'></h3>";
+                                echo "<p><textarea rows='4' name='head3' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
 
                          ?>                            </div>
@@ -124,8 +127,8 @@
                               while($rez1=mysqli_fetch_array($result2)){
                                   $headingtext4=$rez1['headingtext4'];
                                 $text4 =$rez1['text4'];
-                                echo "<h3><input type='text' name='head4' value='heading4'></h3>";
-                                echo "<p><textarea rows='4' cols='30' placeholder='1 texxt'></textarea></p>";
+                                echo "<h3><input type='text' name='heading4' value='heading4'></h3>";
+                                echo "<p><textarea rows='4' name='head4' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
 
                          ?>                            </div>
@@ -170,8 +173,8 @@
                         while($rez1=mysqli_fetch_array($result2)){
                             $desc1=$rez1['headingdesc1'];
                           $des1 =$rez1['desc1'];
-                          echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                          echo "<p><textarea rows='2' cols='25' placeholder='1 texxt'></textarea></p>";
+                          echo "<h3><input type='text' name='heading5' value='heading1'></h3>";
+                          echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'></textarea></p>";
                         }
 
                    ?>
@@ -186,8 +189,8 @@
                                     while($rez1=mysqli_fetch_array($result2)){
                                         $desc2=$rez1['headingdesc2'];
                                       $des2 =$rez1['desc2'];
-                                      echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                                      echo "<p><textarea rows='4' cols='50' placeholder='1 texxt'></textarea></p>";
+                                      echo "<h3><input type='text' name='heading6' value='heading 6'></h3>";
+                                      echo "<p><textarea rows='4' cols='50' name='head6' placeholder='1 texxt'></textarea></p>";
                                     }
 
                                ?>
@@ -203,8 +206,8 @@
                                     while($rez1=mysqli_fetch_array($result2)){
                                         $desc3=$rez1['headingdesc3'];
                                       $des3 =$rez1['desc3'];
-                                      echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                                      echo "<p><textarea rows='4' cols='50' placeholder='1 texxt'></textarea></p>";
+                                      echo "<h3><input type='text' name='heading7' value='heading1'></h3>";
+                                      echo "<p><textarea rows='4' name='heading7' cols='50' placeholder='1 texxt'></textarea></p>";
                                     }
 
                                ?>
@@ -220,8 +223,8 @@
                                     while($rez1=mysqli_fetch_array($result2)){
                                         $desc4=$rez1['headingdesc4'];
                                       $des4 =$rez1['desc3'];
-                                      echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                                      echo "<p><textarea rows='4' cols='50' placeholder='1 texxt'></textarea></p>";
+                                      echo "<h3><input type='text' name='heading8' value='heading1'></h3>";
+                                      echo "<p><textarea rows='4' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
                                     }
 
                                ?>
@@ -346,13 +349,54 @@
                             while($rez1=mysqli_fetch_array($result2)){
                                 $bigdescheading=$rez1['bigdescheading'];
                               $bigdesc =$rez1['bigdesc'];
-                              echo "<h3><input type='text' name='head1' value='heading1'></h3>";
-                              echo "<p><textarea rows='10' cols='50' placeholder='1 texxt'></textarea></p>";
+                              echo "<h3><input type='text' name='heading8' value='heading1'></h3>";
+                              echo "<p><textarea rows='10' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
                             }
 
                        ?>
                     </div>
                 </div>
+                <form class="" action="insert.php" method="post">
+
+
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="remember"> Remember me</label>
+                  </div>
+                  <button type="submit" name="insert" class="btn btn-default">Submit</button>
+                  <?php
+                      if(isset($_REQUEST['insert'])){
+                        $produkt=$_REQUEST['product_name'];
+                        $categorie=$_REQUEST['categorie'];
+                        $stucke=$_REQUEST['stucke'];
+                        $price=$_REQUEST['price'];
+                        $price1=$_REQUEST['price2'];
+                        $description=$_REQUEST['decription'];
+                        $bild=$_REQUEST['picture'];
+                        $date=$_REQUEST['date'];
+                        $description1=$_REQUEST['description1'];
+                        $heading1=$_REQUEST['heading1'];
+                        $head1=$_REQUEST['head1'];
+                        $heading2=$_REQUEST['heading2'];
+                        $head2=$_REQUEST['head2'];
+                        $heading3=$_REQUEST['heading3'];
+                        $head3=$_REQUEST['head3'];
+                        $heading4=$_REQUEST['heading4'];
+                        $head4=$_REQUEST['head4'];
+                        $heading5=$_REQUEST['heading5'];
+                        $head5=$_REQUEST['head5'];
+                        $heading6=$_REQUEST['heading6'];
+                        $head6=$_REQUEST['head6'];
+                        $heading7=$_REQUEST['heading7'];
+                        $head7=$_REQUEST['head7'];
+                        $heading8=$_REQUEST['heading8'];
+                        $head8=$_REQUEST['head8'];
+
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild')";
+                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysql_error());
+
+                      }
+                  ?>
+                </form>
 
             </div>
         </div>
