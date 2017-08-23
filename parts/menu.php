@@ -175,7 +175,7 @@
                                         <a href='<?php echo "index.php?page=product&id={$id_product}"; ?>'><img src="<?php echo $pic ?>" height="270" width="380" class="MenuPic"/></a>
 
                                         <?php
-                                             $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+                                             $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1 and status=1";
                                               $result11 = $conn->query($upitz)or die("bat upit");
 
                                               while($rez11=mysqli_fetch_array($result11))
@@ -231,7 +231,7 @@
                                 <li>
                                   <div class="DropDownPic">
                                     <?php
-                                    $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+                                    $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=2  and status=1";
                                         $result11 = $conn->query($upitz)or die("bat upit");
                                           while($rez11=mysqli_fetch_array($result11)){
                                             $ostatak=$rez11['ostatak'];
@@ -310,7 +310,7 @@
                                 <li>
                                   <div class="DropDownPic">
                                     <?php
-                                    $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+                                    $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=3 and status=1";
                                         $result11 = $conn->query($upitz)or die("bat upit");
                                           while($rez11=mysqli_fetch_array($result11)){
                                             $ostatak=$rez11['ostatak'];
@@ -356,7 +356,9 @@
                                     echo
                                     "
                                         <li><a href='logout.php' class=''>Logout</a></li>
+                                        <li><a href='index.php?page=change' class=''>change</a></li>
                                         <li  class='right_li'><a href=''>{$_SESSION['name']} {$_SESSION['last_name']}</a></li>
+
                                     ";
                                 }
                                 else

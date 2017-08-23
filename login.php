@@ -1,10 +1,10 @@
-  <?php 
+  <?php
         //unset($_SESSION['name']);
        //unset($_SESSION['last_name']);
         $emailErr = $passErr = "";
         $email =$pass_login="";
         $array = array();
-        
+
         function test_input($data)
         {
                 $data = trim($data);
@@ -12,10 +12,10 @@
                 $data = htmlspecialchars($data);
                 return $data;
         }
-       
+
         if(isset($_POST['submit_login']))
         {
-            
+
             if(empty($_POST['email_login']))
             {
                 $emailErr = "You must enter email address";
@@ -47,7 +47,7 @@
                     $errors[] = "Invalid password";
                 }
             }
-           
+
             if(count($array) != 0)
             {
                 echo "<script>alert('There are mistakes')</script>";
@@ -59,19 +59,19 @@
                 $stmt = $conn->prepare("SELECT `name`,`last_name`,`status_verif`,`email`,`password`,`id_role` FROM user WHERE `email`=?");
                 $stmt->bind_param("s",$email);
                 $stmt->execute();
-             
+
                 if($res = $stmt->get_result())
                 {
                      $count = $res->num_rows;
-                     
+
                      if($count==1)
                      {
-                        
+
                         $row = $res->fetch_assoc();
                         $passwordb = $row['password'];
-                       
+
                         $verify = password_verify($pass_login,$passwordb);
-                       
+
                         if($verify)
                         {
 
@@ -79,21 +79,23 @@
                             {
                                 $_SESSION['name'] = $row['name'];
                                 $_SESSION['last_name'] = $row['last_name'];
+                                $_SESSION['email'] = $row['email'];
+                                $_SESSION['id_user']=$row['id_user'];
 
-                                echo 
+                                echo
                                 "
                                 <script>
-                                    window.location.href='index.php'; 
+                                    window.location.href='index.php';
                                 </script>";
                             }      //verification successful ends
                             else
                             {
-                                echo 
+                                echo
                                 "<script>
                                     alert('You must verify your account');
-                                    window.location.href='index.php?page=login'; 
+                                    window.location.href='index.php?page=login';
                                 </script>";
-                               
+
                             }
                         }         //password correct ends
                         else
@@ -107,7 +109,7 @@
                      {
                         echo "<script>alert('There is no user with such email address');</script>";
                      }
-                     
+
                 }               //there are some result end
                 else
                 {

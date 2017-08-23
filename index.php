@@ -38,10 +38,10 @@
 
         // Get todays date and time
         var now = new Date().getTime();
-        
+
         // Find the distance between now an the count down date
         var distance = countDownDate - now;
-        
+
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -54,7 +54,7 @@
         {
           document.getElementById("vino").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
- 
+
         document.getElementById("demo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
@@ -74,7 +74,7 @@
         + minutes + "m " + seconds + "s ";
         }
 
-        // If the count down is over, write some text 
+        // If the count down is over, write some text
         if (distance < 0 && id == 2) {
             updateVino();
             clearInterval(x);
@@ -111,10 +111,10 @@ function countdown1(tm,name_cat){
 
         // Get todays date and time
         var now = new Date().getTime();
-        
+
         // Find the distance between now an the count down date
         var distance = countDownDate - now;
-        
+
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -148,7 +148,7 @@ function countdown1(tm,name_cat){
         + minutes + "m " + seconds + "s ";
         }
 
-        // If the count down is over, write some text 
+        // If the count down is over, write some text
         if (distance < 0 && id == 2) {
             updateVino();
             clearInterval(x);
@@ -212,6 +212,9 @@ function countdown1(tm,name_cat){
                   case 'product':
                       include('product.php');
                       break;
+                      case 'change':
+                          include('change.php');
+                          break;
                   default:
                       include("parts/content.php");
                       break;
@@ -261,11 +264,11 @@ function countdown1(tm,name_cat){
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
               document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
-            
-               
-              
-              
-             
+
+
+
+
+
 </script>
     </body>
 </html>
