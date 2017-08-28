@@ -35,15 +35,15 @@
                   <th><img src='../{$row['pictures_slider']}' width='50' height='50'/></th>
                   <th>{$row['expire_date']}</th>
                   <th>{$row['expired']}</th>
-                  <td><a href='admin.php?ids=".$row['id_product']."'class='brisanje'>Izmeni</a></td>
-                  <td><a href='admin.php?id=".$row['id_product']."'class='brisanje'>X</a></td>
+                  <td><a href='admin.php?word=edit&ids=".$row['id_product']."'class='brisanje'>Izmeni</a></td>
+                  <td><a href='admin.php?word=delete&id=".$row['id_product']."'class='brisanje'>X</a></td>
               </tr>
               ";
     }
     echo "</tbody></table>";
 
 if(isset($_GET['ids'])){
-  header('Location:index.php');
+
   echo "<script>alert('radi');</script>";
 }
  ?>

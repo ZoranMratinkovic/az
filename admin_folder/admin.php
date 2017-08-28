@@ -98,6 +98,10 @@
                                     break;
                                 case "insert": include("insert.php");
                                     break;
+                                case "edit": include("edit.php");
+                                    break;
+                                case "delete": include("delete.php");
+                                    break;
                                 default:
                                     break;
                             }
