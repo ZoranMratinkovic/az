@@ -244,7 +244,9 @@
                                 <?php  if(isset($_SESSION['name'])){
                                 /*  echo $_SESSION['name'];
                                   echo $_SESSION['last_name'];*/
-                              $upitchange="SELECT * FROM user where id_user=48";
+                                  echo $_SESSION['email'];
+                                  echo "<script>alert({$_SESSION['id_user']});</script>";
+                                $upitchange="SELECT * FROM user where id_user=".$_SESSION['id_user'];
                                 $result111 = $conn->query($upitchange)or die("bat upit");
                                 $r1=mysqli_fetch_array($result111);
 
@@ -285,11 +287,12 @@
                                   </div>
                               </div>
                             <?php   } if(isset($_REQUEST['submit_register1'])){
-                              $name=$_REQUEST['first_name'];
-                              $lastname=$_REQUEST['last_name'];
-                              $email=$_REQUEST['email'];
-                              $password=$_REQUEST['pass'];
-                                  $updateuser="UPDATE user SET name='$name',last_name='$lastname',email='$email',password='$password' where id_user=48";
+                                        $name=$_REQUEST['first_name'];
+                                        $lastname=$_REQUEST['last_name'];
+                                        $email=$_REQUEST['email'];
+                                        $password=$_REQUEST['pass'];
+                                        $password = password_hash($password,PASSWORD_BCRYPT,$options);
+                                            $updateuser="UPDATE user SET name='$name',last_name='$lastname',email='$email',password='$password' where id_user=".$_SESSION['id_user'];
                                     $result4 = $conn->query($updateuser)or die("bat upit");
                             } ?>
                           </form>
