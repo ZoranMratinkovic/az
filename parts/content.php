@@ -1,6 +1,6 @@
 
         <section id="home">
-            <div id="bgimage" class="header-image">
+            <div id="bgimage" class="header-image slider1">
                 <div class="container">
                     <div class="row centar">
 
@@ -10,25 +10,28 @@
                             </div>slika na slajderu
                         </div>-->
 
-                        <div class="col-sm-7 col-xs-12">
+                        <div class="col-sm-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-								<h1><?php echo $name ?></h1>
-                                      <table>
+								<h1 class="newh1"><?php echo $name ?></h1>
+                                      <table class="tabela">
 
                                     <tr>
 
 
-                                    <td class="zindex" id='price'>Old price: <?php echo $old_price ?></td>
-                                    <td class="zindex">new price: <?php echo $new_price ?></td>
-                                      <td class="zindex">new price: <?php echo $new_price ?></td>
+                                    <td class="zindex" id='price'>Katalog Preis: </td>
+                                    <td class="zindex">Neuer Preis: </td>
+                                      <td class="zindex">Neuer Preis: </td>
 
                                     </tr>
+                                    <tr>
+                                      <td class="zindex"><?php echo $old_price ?> CHF</td>
+                                        <td class="zindex">  <?php echo $new_price ?> CHF</td>
+                                          <td class="zindex"><?php echo $new_price ?> CHF</td>
+                                    </tr>
                           <tr>
-
-
 								<div class="button">
-									<td><p class="btn toogle">Details</p></td>
-									<td><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a></td>
+									<td colspan="3"><p class="btn toogle">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
+
 								</div>
 							</div></tr>
                 </table>
@@ -416,7 +419,7 @@
 
 
         <!-- Video Section -->
-
+      <!--
         <section id="video">
             <div class="video_overlay">
                 <div class="container">
@@ -424,7 +427,7 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="video_text center-content">
 
-                                <!-- 4:3 aspect ratio -->
+
                                 <div class="embed-responsive embed-responsive-4by3">
                                   <iframe class="embed-responsive-item" style="border-radius:10px;" width="940" height="600" src="https://www.youtube.com/embed/zpOULjyy-n8" frameborder="0" allowfullscreen></iframe>
                                 </div>
@@ -435,7 +438,7 @@
             </div>
         </section>
 
-
+-->
 
 
 

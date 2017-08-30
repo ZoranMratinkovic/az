@@ -36,7 +36,7 @@
                   <th>{$row['expire_date']}</th>
                   <th>{$row['expired']}</th>
                   <td><a href='admin.php?word=edit&ids=".$row['id_product']."'class='brisanje'>Izmeni</a></td>
-                  <td><a href='admin.php?word=delete&id=".$row['id_product']."'class='brisanje'>X</a></td>
+                  <td><a href='admin.php?word=products&id=".$row['id_product']."'class='brisanje'>X</a></td>
               </tr>
               ";
     }
@@ -45,6 +45,12 @@
 if(isset($_GET['ids'])){
 
   echo "<script>alert('radi');</script>";
+}
+if(isset($_GET['id'])){
+
+  $upitbrisanje111="DELETE FROM product where id_product=".$_GET['id'];
+  $resultdelete = $conn->query($upitbrisanje111)or die("losee");
+
 }
  ?>
 

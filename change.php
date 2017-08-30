@@ -242,10 +242,7 @@
                           <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
                               <div class="col-sm-6">
                                 <?php  if(isset($_SESSION['name'])){
-                                /*  echo $_SESSION['name'];
-                                  echo $_SESSION['last_name'];*/
-                                  echo $_SESSION['email'];
-                                  echo "<script>alert({$_SESSION['id_user']});</script>";
+
                                 $upitchange="SELECT * FROM user where id_user=".$_SESSION['id_user'];
                                 $result111 = $conn->query($upitchange)or die("bat upit");
                                 $r1=mysqli_fetch_array($result111);

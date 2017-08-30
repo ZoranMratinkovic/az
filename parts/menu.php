@@ -270,7 +270,7 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <li><a href="#works" class=""><?php echo $name_cat2 ?></a>
+                            <li><a href="#" class=""><?php echo $name_cat2 ?></a>
                             <ul>
                               <a href="#">
                                 <li>
@@ -304,7 +304,7 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <li><a href="#works" class=""><?php echo $name_cat3 ?></a>
+                            <li><a href="#" class=""><?php echo $name_cat3 ?></a>
                             <ul>
                               <a href="#">
                                 <li>
