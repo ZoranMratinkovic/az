@@ -16,10 +16,13 @@
 <div class="container">
   <h2>Vertical (basic) form</h2>
 <form class="" action="admin.php?word=insert" method="post">
+  <?php     $upitprikaz="SELECT * FROM product where id_product=".$_GET['ids'];
+      $result12=$conn->query($upitprikaz)or die("errrorrr");
+      $rowedit=mysqli_fetch_array($result12); ?>
 
     <div class="form-group">
       <label for="email">Produkt name</label>
-      <input type="text" class="form-control" id="email" placeholder="Produkt name" name="product_name">
+      <input type="text" class="form-control" id="email" placeholder="Produkt name" name="product_name" value="<?php echo $rowedit['product_name']; ?>">
     </div>
     <div class="form-group">
       <label for="pwd">Kategorie</label><br/>
@@ -30,38 +33,36 @@
       while($rezcat=mysqli_fetch_array($result11)){
         echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
       }
+
         ?>
       </select>
 
     </div>
     <div class="form-group">
       <label for="pwd">Stücke</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="stucke">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" value="<?php echo $rowedit['lager']; ?>" name="stucke">
     </div>
     <div class="form-group">
       <label for="pwd">Preis </label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" value="<?php echo $rowedit['price_old']; ?>" name="price">
     </div>
     <div class="form-group">
       <label for="pwd">Aktion Preis</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['price_new']; ?>">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description" value="<?php echo $rowedit['description']; ?>">
     </div>
     <div class="form-group">
       <label for="pwd">Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="picture">
+      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="picture" value="<?php echo $rowedit['pictures_slider']; ?>" >
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
-      <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date">
+      <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date" value="<?php echo $rowedit['expire_date']; ?>">
     </div>
-    <div class="form-group">
-      <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description1">
-    </div>
+
 
 
 </div>
@@ -73,17 +74,17 @@
                     <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                         <i class="fa fa-crop"></i>
 
-                        <?php
-                              $upit2 ="SELECT * from product_des where id_product='1'";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                $headingtext1=$rez1['headingtext1'];
-                                $text1 =$rez1['text1'];
-                                echo "<h3><input type='text' name='heading1' value='heading1'></h3>";
+                        <?php  $upit2 ="SELECT * from product_des where id_product=1";
+                          $result2 = $conn->query($upit2);
+
+                                $headingtext1=$rowedit['headingtext1'];
+                                $text1 =$rowedit['text1'];
+                                echo "<h3><input type='text' name='heading1' value='{$rowedit['price_new']};'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head1' placeholder='1 texxt'></textarea></p>";
-                              }
+
 
                          ?>
+
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -91,14 +92,12 @@
                         <i class="fa fa-cube"></i>
 
                         <?php
-                              $upit2 ="SELECT * from product_des where id_product=1";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                $headingtext2=$rez1['headingtext2'];
-                                $text2 =$rez1['text2'];
+
+                                $headingtext2=$rowedit['headingtext2'];
+                                $text2 =$rowedit['text2'];
                                 echo "<h3><input type='text' name='heading2' value='heading2'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'></textarea></p>";
-                              }
+
 
                          ?>                            </div>
                 </div>
@@ -109,9 +108,9 @@
                         <?php
                               $upit2 ="SELECT * from product_des where id_product='1'";
                               $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                  $headingtext3=$rez1['headingtext3'];
-                                $text3 =$rez1['text3'];
+                              while($rowedit=mysqli_fetch_array($result2)){
+                                  $headingtext3=$rowedit['headingtext3'];
+                                $text3 =$rowedit['text3'];
                                 echo "<h3><input type='text' name='heading3' value='heading3'></h3>";
                                 echo "<p><textarea rows='4' name='head3' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
@@ -125,9 +124,9 @@
                         <?php
                               $upit2 ="SELECT * from product_des where id_product='1'";
                               $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                  $headingtext4=$rez1['headingtext4'];
-                                $text4 =$rez1['text4'];
+                              while($rowedit=mysqli_fetch_array($result2)){
+                                  $headingtext4=$rowedit['headingtext4'];
+                                $text4 =$rowedit['text4'];
                                 echo "<h3><input type='text' name='heading4' value='heading4'></h3>";
                                 echo "<p><textarea rows='4' name='head4' cols='30' placeholder='1 texxt'></textarea></p>";
                               }
@@ -157,8 +156,8 @@
                   <?php
                   $upit2 ="SELECT * from product_des where id_product='1'";
                   $result2 = $conn->query($upit2);
-                  while($rez1=mysqli_fetch_array($result2)){
-                    $slika=$rez1['picture_desc'];
+                  while($rowedit=mysqli_fetch_array($result2)){
+                    $slika=$rowedit['picture_desc'];
                     echo "<img src='$slika' />";
                   }
 
@@ -169,14 +168,12 @@
             <div class="col-sm-6">
                 <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
                   <?php
-                        $upit2 ="SELECT * from product_des where id_product='1'";
-                        $result2 = $conn->query($upit2);
-                        while($rez1=mysqli_fetch_array($result2)){
-                            $desc1=$rez1['headingdesc1'];
-                          $des1 =$rez1['desc1'];
-                          echo "<h3><input type='text' name='heading5' value='heading5'></h3>";
+
+                            $desc1=$rowedit['headingdesc1'];
+                          $des1 =$rowedit['desc1'];
+                          echo "<h3><input type='text' name='heading5' value='5'></h3>";
                           echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'></textarea></p>";
-                        }
+
 
                    ?>
 
@@ -187,9 +184,9 @@
                               <?php
                                     $upit2 ="SELECT * from product_des where id_product='1'";
                                     $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc2=$rez1['headingdesc2'];
-                                      $des2 =$rez1['desc2'];
+                                    while($rowedit=mysqli_fetch_array($result2)){
+                                        $desc2=$rowedit['headingdesc2'];
+                                      $des2 =$rowedit['desc2'];
                                       echo "<h3><input type='text' name='heading6' value='heading 6'></h3>";
                                       echo "<p><textarea rows='4' cols='50' name='head6' placeholder='1 texxt'></textarea></p>";
                                     }
@@ -204,9 +201,9 @@
                               <?php
                                     $upit2 ="SELECT * from product_des where id_product='1'";
                                     $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc3=$rez1['headingdesc3'];
-                                      $des3 =$rez1['desc3'];
+                                    while($rowedit=mysqli_fetch_array($result2)){
+                                        $desc3=$rowedit['headingdesc3'];
+                                      $des3 =$rowedit['desc3'];
                                       echo "<h3><input type='text' name='heading7' value='heading7'></h3>";
                                       echo "<p><textarea rows='4' name='head7' cols='50' placeholder='7 texxt'></textarea></p>";
                                     }
@@ -221,9 +218,9 @@
                               <?php
                                     $upit2 ="SELECT * from product_des where id_product='1'";
                                     $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc4=$rez1['headingdesc4'];
-                                      $des4 =$rez1['desc3'];
+                                    while($rowedit=mysqli_fetch_array($result2)){
+                                        $desc4=$rowedit['headingdesc4'];
+                                      $des4 =$rowedit['desc3'];
                                       echo "<h3><input type='text' name='heading8' value='heading8'></h3>";
                                       echo "<p><textarea rows='4' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
                                     }
@@ -345,9 +342,9 @@
                 <?php
                       $upit2 ="SELECT * from product_des where id_product='1'";
                       $result2 = $conn->query($upit2);
-                      while($rez1=mysqli_fetch_array($result2)){
-                          $bigdescheading=$rez1['bigdescheading'];
-                        $bigdesc =$rez1['bigdesc'];
+                      while($rowedit=mysqli_fetch_array($result2)){
+                          $bigdescheading=$rowedit['bigdescheading'];
+                        $bigdesc =$rowedit['bigdesc'];
                         echo "<h3><input type='text' name='heading9' value='heading9'></h3>";
                         echo "<p><textarea rows='10' name='head9' cols='50' placeholder='1 texxt'></textarea></p>";
                       }
