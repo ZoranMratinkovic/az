@@ -47,28 +47,33 @@
             </div>
 
         </section>
+        <div class="container-fluid mrg">
+            <div class="row transpBg">
+              <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
+              <?php
+                   
 
-        <div class="row">
-          <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
-          <?php
-          $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
-              $result11 = $conn->query($upitz)or die("bat upit");
-                while($rez11=mysqli_fetch_array($result11)){
-                  $ostatak=$rez11['ostatak'];
-                  $ostatak=round($ostatak);
-                  $stylee="width:".$ostatak."%";
-                  $styleee="width:15%";
+                   $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
+                   $result11 = $conn->query($upitz)or die("bat upit");
+                    
+                    while($rez11=mysqli_fetch_array($result11))
+                    {
+                          
+                          $ostatak=$rez11['ostatak'];
+                          $ostatak=round($ostatak);
+                          $stylee="width:".$ostatak."%";
+                          $styleee="width:15%";
+
+                    }
+              ?>
+              <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
+                <p class="prozent">Nur noch  <?php echo $ostatak; ?>%</p>
+
+              </div>
 
 
-}
-          ?>
-          <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
-          aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-            <p class="prozent">Noch  <?php echo $ostatak; ?>% !!!</p>
-
-          </div>
-
-
+            </div>
         </div>
         <!-- Our Works Section -->
 

@@ -26,8 +26,21 @@ PRE LOADER
 .centar{
     text-align: center;
 }
+.transbg{
+  
+}
+.mrg{
+    margin-left:0!important;
+}
+.transpBg{
+    position: absolute;
+    width: 100%;
+    top: 685px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.35);
+}
 .slider1{
-  height: 833px!important;
+  height: 750px!important;
 }
 #vinoo,#pivoo,#phoness,#laptopss{
     display:none;
@@ -83,6 +96,9 @@ PRE LOADER
   font-size: 20px;
   padding:10px;
 }
+.padding-bar{
+    padding-top: 10px;
+}
 .DropDownPic{
   background-color: #fff;
   width:380px;
@@ -92,12 +108,23 @@ PRE LOADER
 .progress{
     height:40px!important;
     margin-bottom: 14px!important;
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    color:#fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35)!important;
 }
 .MenuPic{
     width: 100%;
 }
 .progress-bar{
-  background:#ff4472!important;
+    background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, red , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, red , yellow);
+  /*background:#ff4472!important;*/
   font-size:20px!important;
   line-height:30px!important;
 }
@@ -135,8 +162,10 @@ PRE LOADER
   width: 50%;
   float:right;
 }
+.pt{
+    padding-top:10px;
+}
 .des1{
-  text-align: center;
   padding:5px;
 
 }

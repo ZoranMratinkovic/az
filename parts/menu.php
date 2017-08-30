@@ -144,7 +144,7 @@
 
                 <div class="container">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <button type="button" class="nvavbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -172,7 +172,7 @@
                                 <li>
                                   <div class="DropDownPic">
 
-                                        <a href='<?php echo "index.php?page=product&id={$id_product}"; ?>'><img src="<?php echo $pic ?>" height="270" width="380" class="MenuPic"/></a>
+                                        <a href='<?php echo "index.php?page=product&id={$id_product}"; ?>'><img src="<?php echo $pic ?>" height="240" width="380" class="MenuPic"/></a>
 
                                         <?php
                                              $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1 and status=1";
@@ -196,23 +196,24 @@
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                             aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
 
-                                              <span>Noch  <?php echo $ostatak; ?>% !!!</span>
+                                              <span><?php echo $name_cat; ?></span>
 
                                           </div>
 
-                                          <div id="vino" class='vinoo'></div>
+                                          <div id="vino" class='vinoo padding-bar'></div>
 
                                       </div>
 
-                                      <div class="picDescr">
+                                      <div class="picDescr opisMenu">
 
-                                        <div class="col-xs-9">
-                                            <p class="des1 centered"><?php echo $description; ?></p>
+                                        <div class="col-xs-9 pt">
+                                            <p class=""><?php echo $name; ?></p>
+                                            <p class=""><?php echo $description; ?></p>
                                         </div>
 
-                                        <div class="col-xs-3">
-                                            <strike><p class="des1"><?php echo $old_price ?>CHF</p></strike>
-                                            <p class="des1"><?php echo $new_price ?>CHF</p>
+                                        <div class="col-xs-3 pt">
+                                            <strike><p class=""><?php echo $old_price ?>CHF</p></strike>
+                                            <p class=""><?php echo $new_price ?>CHF</p>
                                         </div>
 
 
@@ -242,23 +243,24 @@
 
                                     }
                                     ?>
-                                      <a href='<?php echo "index.php?page=product&id={$id_product1}"; ?>'>  <img src="<?php echo $pic1 ?>" height="270" width="380" class="MenuPic"/></a>
-                                        <div class="captionFig progress">
+                                      <a href='<?php echo "index.php?page=product&id={$id_product1}"; ?>'>  <img src="<?php echo $pic1 ?>" height="240" width="380" class="MenuPic"/></a>
+                                        <div class="captionFig progress transbg">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-                                            <span>Noch  <?php echo $ostatak; ?>% !!!</span>
+                                            <span><?php echo $name_cat1; ?></span>
 
                                           </div>
-                                          <div id="pivo"></div>
+                                          <div id="pivo" class='padding-bar'></div>
                                         </div>
 
-                                      <div class="picDescr">
-                                        <div class="col-xs-9">
-                                            <p class="des1 centered"><?php echo $description1; ?></p>
+                                      <div class="picDescr opisMenu">
+                                        <div class="col-xs-9 pt">
+                                            <p class=""><?php echo $name1; ?></p>
+                                            <p class=""><?php echo $description1; ?></p>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <strike><p class="des1"><?php echo $old_price1 ?>CHF</p></strike>
-                                            <p class="des1"><?php echo $new_price1 ?>CHF</p>
+                                        <div class="col-xs-3 pt">
+                                            <strike><p class=""><?php echo $old_price1 ?>CHF</p></strike>
+                                            <p class=""><?php echo $new_price1 ?>CHF</p>
                                         </div>
 
 
@@ -276,23 +278,24 @@
                                 <li>
                                   <div class="DropDownPic">
 
-                                       <a href='<?php echo "index.php?page=product&id={$id_product2}"; ?>'> <img src="<?php echo $pic2 ?>" height="270" width="380" class="MenuPic"/></a>
+                                       <a href='<?php echo "index.php?page=product&id={$id_product2}"; ?>'> <img src="<?php echo $pic2 ?>" height="240" width="380" class="MenuPic"/></a>
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-                                            <span>Noch  <?php echo $ostatak; ?>% !!!</span>
+                                            <span><?php echo $name_cat2; ?></span>
 
                                           </div>
-                                             <div id="phone"></div>
+                                             <div id="phone" class='padding-bar'></div>
                                         </div>
 
-                                        <div class="picDescr">
-                                        <div class="col-xs-9">
-                                            <p class="des1 centered"><?php echo $description2; ?></p>
+                                        <div class="picDescr opisMenu">
+                                        <div class="col-xs-9 pt">
+                                            <p class=""><?php echo $name2; ?></p>
+                                            <p class=""><?php echo $description2; ?></p>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <strike><p class="des1"><?php echo $old_price2 ?>CHF</p></strike>
-                                            <p class="des1"><?php echo $new_price2 ?>CHF</p>
+                                        <div class="col-xs-3 pt">
+                                            <strike><p class=""><?php echo $old_price2 ?>CHF</p></strike>
+                                            <p class=""><?php echo $new_price2 ?>CHF</p>
                                         </div>
 
 
@@ -321,24 +324,25 @@
 
                           }
                                     ?>
-                                        <a href='<?php echo "index.php?page=product&id={$id_product3}"; ?>'><img src="<?php echo $pic3 ?>" height="270" width="380" class="MenuPic"/></a>
+                                        <a href='<?php echo "index.php?page=product&id={$id_product3}"; ?>'><img src="<?php echo $pic3 ?>" height="240" width="380" class="MenuPic"/></a>
                                         <div class="captionFig progress">
                                           <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
-                                            <span>Noch  <?php echo $ostatak; ?>% !!!</span>
+                                            <span><?php echo $name_cat3; ?></span>
 
                                           </div>
-                                          <div id="laptop"></div>
+                                          <div id="laptop" class='padding-bar'></div>
 
                                         </div>
 
-                                      <div class="picDescr">
-                                        <div class="col-xs-9">
-                                            <p class="des1 centered"><?php echo $description3; ?></p>
+                                      <div class="picDescr opisMenu">
+                                        <div class="col-xs-9 pt">
+                                            <p class=""><?php echo $name3; ?></p>
+                                            <p class=""><?php echo $description3; ?></p>
                                         </div>
-                                        <div class="col-xs-3">
-                                            <strike><p class="des1"><?php echo $old_price3 ?>CHF</p></strike>
-                                            <p class="des1"><?php echo $new_price3 ?>CHF</p>
+                                        <div class="col-xs-3 pt">
+                                            <strike><p class=""><?php echo $old_price3 ?>CHF</p></strike>
+                                            <p class=""><?php echo $new_price3 ?>CHF</p>
                                         </div>
 
 
