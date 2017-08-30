@@ -12,7 +12,7 @@
 
                         <div class="col-sm-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-								<h1 class="newh1"><?php echo $name ?></h1>
+								<h1 class=""><?php echo $name ?></h1>
                                       <table class="tabela">
 
                                     <tr>
@@ -30,7 +30,7 @@
                                     </tr>
                           <tr>
 								<div class="button">
-									<td colspan="3"><p class="btn toogle">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
+									<td colspan="3"><p class="btn toogle btnmy">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
 
 								</div>
 							</div></tr>

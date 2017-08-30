@@ -67,15 +67,22 @@ PRE LOADER
 }
 .productss {
 
-    opacity: 0.8;;
     text-align: center;
-    min-height:201px!important;
-    border-radius: 5px;
-    background:#d2b1b1;
+    min-height: 255px!important;
+    background: rgba(2, 2, 2, 0.54);
     padding: 5px;
+    color: #fff;
 }
 .btnmy{
-    background-color: #ff4472!important;
+     background: red!important; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, red , yellow)!important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, red, yellow)!important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, red, yellow)!important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, red , yellow)!important;
+  border:none!important;
+  color:#fff!important;
+  margin-top:15px;
+  line-height:2.428571!important;
   }
   .toogle{
     background: #f65a7c;
