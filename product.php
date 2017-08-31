@@ -175,28 +175,20 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
-                          <h3><?php echo $heading[0]; ?></h3>
+                          <h3><?php echo $headings_descs[0]; ?></h3>
                           <p><?php echo $descs[0]; ?></p>
 
                             <div class="right_desc_bottom_text">
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-shield"></i>
                                     <div class="right_bottom_description">
-                                    <h6><?php echo $headings_descs[0];?></h6>
-                                    <p><?php echo $descs[0]; ?></p>
-                                    </div>
-                                </div>
-
-                                <div class="right_single_bottom_text">
-                                    <i class="fa fa-css3"></i>
-                                    <div class="right_bottom_description">
-                                     <h6><?php echo $headings_descs[1];?></h6>
+                                    <h6><?php echo $headings_descs[1];?></h6>
                                     <p><?php echo $descs[1]; ?></p>
                                     </div>
                                 </div>
 
                                 <div class="right_single_bottom_text">
-                                    <i class="fa fa-file-text"></i>
+                                    <i class="fa fa-css3"></i>
                                     <div class="right_bottom_description">
                                      <h6><?php echo $headings_descs[2];?></h6>
                                     <p><?php echo $descs[2]; ?></p>
@@ -204,10 +196,18 @@
                                 </div>
 
                                 <div class="right_single_bottom_text">
+                                    <i class="fa fa-file-text"></i>
+                                    <div class="right_bottom_description">
+                                     <h6><?php echo $headings_descs[3];?></h6>
+                                    <p><?php echo $descs[3]; ?></p>
+                                    </div>
+                                </div>
+
+                                <div class="right_single_bottom_text">
                                     <i class="fa fa-server"></i>
                                     <div class="right_bottom_description">
-                                        <h6><?php echo $headings_descs[3];?></h6>
-                                    <p><?php echo $descs[3]; ?></p>
+                                        <h6><?php echo $headings_descs[4];?></h6>
+                                    <p><?php echo $descs[4]; ?></p>
                                     </div>
                                 </div>
                             </div>

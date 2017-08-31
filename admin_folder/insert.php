@@ -74,14 +74,10 @@
                         <i class="fa fa-crop"></i>
 
                         <?php
-                              $upit2 ="SELECT * from product_des where id_product='1'";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                $headingtext1=$rez1['headingtext1'];
-                                $text1 =$rez1['text1'];
+                             
                                 echo "<h3><input type='text' name='heading1' value='heading1'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head1' placeholder='1 texxt'></textarea></p>";
-                              }
+                              
 
                          ?>
                     </div>
@@ -91,14 +87,10 @@
                         <i class="fa fa-cube"></i>
 
                         <?php
-                              $upit2 ="SELECT * from product_des where id_product=1";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                $headingtext2=$rez1['headingtext2'];
-                                $text2 =$rez1['text2'];
+                              
                                 echo "<h3><input type='text' name='heading2' value='heading2'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'></textarea></p>";
-                              }
+                              
 
                          ?>                            </div>
                 </div>
@@ -107,14 +99,10 @@
                         <i class="fa fa-magic"></i>
 
                         <?php
-                              $upit2 ="SELECT * from product_des where id_product='1'";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                  $headingtext3=$rez1['headingtext3'];
-                                $text3 =$rez1['text3'];
+                             
                                 echo "<h3><input type='text' name='heading3' value='heading3'></h3>";
                                 echo "<p><textarea rows='4' name='head3' cols='30' placeholder='1 texxt'></textarea></p>";
-                              }
+                              
 
                          ?>                            </div>
                 </div>
@@ -123,15 +111,11 @@
                         <i class="fa fa-code-fork"></i>
 
                         <?php
-                        
-                              $upit2 ="SELECT * from product_des where id_product='1'";
-                              $result2 = $conn->query($upit2);
-                              while($rez1=mysqli_fetch_array($result2)){
-                                  $headingtext4=$rez1['headingtext4'];
-                                $text4 =$rez1['text4'];
+
+                              
                                 echo "<h3><input type='text' name='heading4' value='heading4'></h3>";
                                 echo "<p><textarea rows='4' name='head4' cols='30' placeholder='1 texxt'></textarea></p>";
-                              }
+                              
 
                          ?>                            </div>
                 </div>
@@ -155,29 +139,18 @@
         <div class="row main_description">
             <div class="col-sm-6 col-xs-12">
                 <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                  <?php
-                  $upit2 ="SELECT * from product_des where id_product='1'";
-                  $result2 = $conn->query($upit2);
-                  while($rez1=mysqli_fetch_array($result2)){
-                    $slika=$rez1['picture_desc'];
-                    echo "<img src='$slika' />";
-                  }
-
-                  ?>
+                  
+                
 
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
                   <?php
-                        $upit2 ="SELECT * from product_des where id_product='1'";
-                        $result2 = $conn->query($upit2);
-                        while($rez1=mysqli_fetch_array($result2)){
-                            $desc1=$rez1['headingdesc1'];
-                          $des1 =$rez1['desc1'];
+                        
                           echo "<h3><input type='text' name='heading5' value='heading5'></h3>";
                           echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'></textarea></p>";
-                        }
+                        
 
                    ?>
 
@@ -186,14 +159,10 @@
                             <i class="fa fa-shield"></i>
                             <div class="right_bottom_description">
                               <?php
-                                    $upit2 ="SELECT * from product_des where id_product='1'";
-                                    $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc2=$rez1['headingdesc2'];
-                                      $des2 =$rez1['desc2'];
+                                   
                                       echo "<h3><input type='text' name='heading6' value='heading 6'></h3>";
                                       echo "<p><textarea rows='4' cols='50' name='head6' placeholder='1 texxt'></textarea></p>";
-                                    }
+                                    
 
                                ?>
                             </div>
@@ -203,31 +172,35 @@
                             <i class="fa fa-css3"></i>
                             <div class="right_bottom_description">
                               <?php
-                                    $upit2 ="SELECT * from product_des where id_product='1'";
-                                    $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc3=$rez1['headingdesc3'];
-                                      $des3 =$rez1['desc3'];
+                                    
                                       echo "<h3><input type='text' name='heading7' value='heading7'></h3>";
                                       echo "<p><textarea rows='4' name='head7' cols='50' placeholder='7 texxt'></textarea></p>";
-                                    }
+                                    
 
                                ?>
                             </div>
                         </div>
-
+            
                         <div class="right_single_bottom_text">
                             <i class="fa fa-file-text"></i>
                             <div class="right_bottom_description">
                               <?php
-                                    $upit2 ="SELECT * from product_des where id_product='1'";
-                                    $result2 = $conn->query($upit2);
-                                    while($rez1=mysqli_fetch_array($result2)){
-                                        $desc4=$rez1['headingdesc4'];
-                                      $des4 =$rez1['desc3'];
+                                   
                                       echo "<h3><input type='text' name='heading8' value='heading8'></h3>";
                                       echo "<p><textarea rows='4' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
-                                    }
+                                    
+
+                               ?>
+                            </div>
+                        </div>
+                         <div class="right_single_bottom_text">
+                            <i class="fa fa-file-text"></i>
+                            <div class="right_bottom_description">
+                              <?php
+                                   
+                                      echo "<h3><input type='text' name='heading9' value='heading9'></h3>";
+                                      echo "<p><textarea rows='4' name='head9' cols='50' placeholder='1 texxt'></textarea></p>";
+                                    
 
                                ?>
                             </div>
@@ -344,14 +317,10 @@
                     </div>
                 </div>
                 <?php
-                      $upit2 ="SELECT * from product_des where id_product='1'";
-                      $result2 = $conn->query($upit2);
-                      while($rez1=mysqli_fetch_array($result2)){
-                          $bigdescheading=$rez1['bigdescheading'];
-                        $bigdesc =$rez1['bigdesc'];
-                        echo "<h3><input type='text' name='heading9' value='heading9'></h3>";
-                        echo "<p><textarea rows='10' name='head9' cols='50' placeholder='1 texxt'></textarea></p>";
-                      }
+                    
+                        echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
+                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'></textarea></p>";
+                      
 
                  ?>
                 <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
@@ -396,6 +365,8 @@
                         $head8=$_REQUEST['head8'];
                         $heading9=$_REQUEST['heading9'];
                         $head9=$_REQUEST['head9'];
+                        $head10 = $_REQUEST['head10'];
+                        $heading10 = $_REQUEST['heading10'];
                       /*  echo $head1.$heading1."<br/>";
                         echo $head2.$heading2."<br/>";
                         echo $head3.$heading3."<br/>";
@@ -404,11 +375,21 @@
                         echo $head6.$heading6."<br/>";
                         echo $head7.$heading7."<br/>";
                         echo $head8.$heading8."<br/>";*/
+                  $headingArray = array($heading1,$heading2,$heading3,$heading4);
+                  $headingDb = implode(';',$headingArray);
 
-                        $upitubacp2="INSERT INTO product_des VALUES('','$head1','$head2','$head3','$head4','$heading1','$heading2','$heading3','$heading4','$bild','$head5','$head6','$head7','$head8','$heading5','$heading6','$heading7','$heading8','$bild','$heading9','$head9')";
-                            $resultubacp2 = $conn->query($upitubacp2)or die("losee".mysqli_error());
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$bild','$date',0)";
-                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error());
+                  $textArray = array($head1,$head2,$head3,$head4);
+                  $textDb = implode(';',$textArray);
+
+                  $descsArray = array($head5,$head6,$head7,$head8,$head9);
+                  $descsDb = implode(';',$descsArray);
+
+                  
+                  $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9);
+                  $headingDescDb = implode(';',$headingDescArray);
+
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild','$date',0)";
+                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
                   ?>
                 </form>
