@@ -56,6 +56,16 @@ PRE LOADER
 .centered{
     margin-top: 25px;
 }
+.tac{
+    text-align:center!important;
+}
+.naslov{
+
+    margin-bottom:60px;
+}
+.font{
+        font-size:32px!important;
+}
 .products {
     border-radius: 4px;
     float: right!important;
@@ -208,7 +218,10 @@ text-align: center;
     width: 100%;
     overflow: hidden !important;
 }
-
+#bgPic{
+    background: url('../images/testbg.jpg');
+    margin-bottom:60px;
+}
 .loaded {
     width: 60px;
     height: 60px;
@@ -531,9 +544,15 @@ p.bannerDescription{
 	-o-transform: scale(1.3);
 
 }
+h3{
+    margin-top:0!important;
+}
+.paddingUnderSlider{
+    margin-bottom:60px;
+}
 /* works content */
 .works_content{
-    padding: 130px 0px 40px 0px;
+    padding: 50px 0px 40px 0px;
 	overflow:hidden;
 }
 .single_works_text{
@@ -647,7 +666,7 @@ p.bannerDescription{
 /* Description Section CSS */
 #descriotion{}
 .main_description{
-	padding:130px 0px;
+	/*padding:130px 0px;*/
 }
 
 /* Second Description Section CSS */
@@ -769,6 +788,7 @@ a.info_right_text{
 #testimonial{
 	background:url(../images/testbg.jpg) no-repeat scroll center center;
 	background-size:cover;
+    margin-top:40px;
 
 }
 .main_testimonial_text{

@@ -1,6 +1,6 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
+   $sql = "SELECT p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
    $expired = 0;
    $id_cat = 1;
    $st = $conn->prepare($sql);
@@ -13,7 +13,7 @@
            while($row = $rez->fetch_assoc())
            {
 
-            $id_product = $row['id_product'];
+             $id_product = $row['id_product'];
              $date = $row['expire_date'];
              $timestamp = strtotime($date);
              $name_cat = $row['categorie'];
@@ -24,6 +24,11 @@
              $description = $row['description'];
              $pic = $row['pictures_slider'];
              $id_product = $row['id_product'];
+             $headingsAr = explode(';',$row['headings']);
+             $textAr = explode(';',$row['text']);
+             $headingDescAr = explode(';',$row['heading_descs']);
+             $descsAr = explode(';',$row['descs']);
+             $bigd = $row['big_desc'];
              echo
               "
                <script>
