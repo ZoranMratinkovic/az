@@ -388,7 +388,11 @@
                   $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9);
                   $headingDescDb = implode(';',$headingDescArray);
 
+<<<<<<< HEAD
                   $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
+=======
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$bild','$date',0)";
+>>>>>>> 6c50fe1a43d3d9ddbd769fece828fa52fbbedfbc
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
                   ?>

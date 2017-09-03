@@ -47,7 +47,7 @@
 
 
         <section id="home">
-            <div id="bgimage_pro" class="header-image">
+            <div id="bgimage_pro" class="header-image slider1">
                 <div class="container">
                     <div class="row centar">
 
@@ -58,27 +58,30 @@
                         </div>-->
                         <!--<img src="">-->
 
-                        <div class="col-sm-7 col-xs-12">
+                    <div class="col-sm-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-								<h1></h1>
-                                      <table>
+                             <h1 class=""><?php echo $name ?></h1>
+                                      <table class="tabela">
 
-                                    <tr>
+                                        <tr>
 
 
-                                    <td class="zindex">Old price: <strike><?php echo $old_price_pro; ?>CHF</strike></td>
-                                    <td class="zindex">new price: <?php echo $new_price_pro ?>CHF</td>
-                                      <td class="zindex">Ammount <?php echo $ammount_pro ?></td>
+                                            <td class="zindex" id='price'>Katalog Preis: </td>
+                                            <td class="zindex">Neuer Preis: </td>
+                                            <td class="zindex">Neuer Preis: </td>
 
-                                    </tr>
+                                        </tr>
+                                        <tr>
+                                             <td class="zindex"><?php echo $old_price_pro ?> CHF</td>
+                                              <td class="zindex">  <?php echo $new_price_pro ?> CHF</td>
+                                            <td class="zindex"><?php echo $new_price_pro ?> CHF</td>
+                                        </tr>
                           <tr>
+                                <div class="button">
+                                  <td colspan="3"><p class="btn toogle btnmy">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
 
-
-								<div class="button">
-									<td><p class="btn toogle">Details</p></td>
-									<td><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-play"></i>Jetzt Einkaufen!!</a></td>
-								</div>
-							</div></tr>
+                                </div>
+              </div></tr>
                 </table>
                         </div>
 
@@ -92,8 +95,8 @@
             </div>
 
         </section>
-
-        <div class="row">
+ <div class="container-fluid mrg">
+        <div class="row transpBg">
           <p class="col-xs-3 pull-right" id="vinoo">00:00:15</p>
           <p class="col-xs-3 pull-right" id="pivoo">00:00:15</p>
           <p class="col-xs-3 pull-right" id="phoness">00:00:15</p>
@@ -121,6 +124,7 @@
 
 
         </div>
+  </div>
         <!-- Our Works Section -->
 
         <section id="works" class="center-content">
@@ -174,7 +178,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
+                        <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
                           <h3><?php echo $headings_descs[0]; ?></h3>
                           <p><?php echo $descs[0]; ?></p>
 
