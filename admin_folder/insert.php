@@ -74,10 +74,10 @@
                         <i class="fa fa-crop"></i>
 
                         <?php
-                             
+
                                 echo "<h3><input type='text' name='heading1' value='heading1'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head1' placeholder='1 texxt'></textarea></p>";
-                              
+
 
                          ?>
                     </div>
@@ -87,10 +87,10 @@
                         <i class="fa fa-cube"></i>
 
                         <?php
-                              
+
                                 echo "<h3><input type='text' name='heading2' value='heading2'></h3>";
                                 echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'></textarea></p>";
-                              
+
 
                          ?>                            </div>
                 </div>
@@ -99,10 +99,10 @@
                         <i class="fa fa-magic"></i>
 
                         <?php
-                             
+
                                 echo "<h3><input type='text' name='heading3' value='heading3'></h3>";
                                 echo "<p><textarea rows='4' name='head3' cols='30' placeholder='1 texxt'></textarea></p>";
-                              
+
 
                          ?>                            </div>
                 </div>
@@ -112,10 +112,10 @@
 
                         <?php
 
-                              
+
                                 echo "<h3><input type='text' name='heading4' value='heading4'></h3>";
                                 echo "<p><textarea rows='4' name='head4' cols='30' placeholder='1 texxt'></textarea></p>";
-                              
+
 
                          ?>                            </div>
                 </div>
@@ -139,18 +139,18 @@
         <div class="row main_description">
             <div class="col-sm-6 col-xs-12">
                 <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                  
-                
+
+
 
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
                   <?php
-                        
+
                           echo "<h3><input type='text' name='heading5' value='heading5'></h3>";
                           echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'></textarea></p>";
-                        
+
 
                    ?>
 
@@ -159,10 +159,10 @@
                             <i class="fa fa-shield"></i>
                             <div class="right_bottom_description">
                               <?php
-                                   
+
                                       echo "<h3><input type='text' name='heading6' value='heading 6'></h3>";
                                       echo "<p><textarea rows='4' cols='50' name='head6' placeholder='1 texxt'></textarea></p>";
-                                    
+
 
                                ?>
                             </div>
@@ -172,23 +172,23 @@
                             <i class="fa fa-css3"></i>
                             <div class="right_bottom_description">
                               <?php
-                                    
+
                                       echo "<h3><input type='text' name='heading7' value='heading7'></h3>";
                                       echo "<p><textarea rows='4' name='head7' cols='50' placeholder='7 texxt'></textarea></p>";
-                                    
+
 
                                ?>
                             </div>
                         </div>
-            
+
                         <div class="right_single_bottom_text">
                             <i class="fa fa-file-text"></i>
                             <div class="right_bottom_description">
                               <?php
-                                   
+
                                       echo "<h3><input type='text' name='heading8' value='heading8'></h3>";
                                       echo "<p><textarea rows='4' name='head8' cols='50' placeholder='1 texxt'></textarea></p>";
-                                    
+
 
                                ?>
                             </div>
@@ -197,10 +197,10 @@
                             <i class="fa fa-file-text"></i>
                             <div class="right_bottom_description">
                               <?php
-                                   
+
                                       echo "<h3><input type='text' name='heading9' value='heading9'></h3>";
                                       echo "<p><textarea rows='4' name='head9' cols='50' placeholder='1 texxt'></textarea></p>";
-                                    
+
 
                                ?>
                             </div>
@@ -317,10 +317,10 @@
                     </div>
                 </div>
                 <?php
-                    
+
                         echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
                         echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'></textarea></p>";
-                      
+
 
                  ?>
                 <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
@@ -384,11 +384,11 @@
                   $descsArray = array($head5,$head6,$head7,$head8,$head9);
                   $descsDb = implode(';',$descsArray);
 
-                  
+
                   $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9);
                   $headingDescDb = implode(';',$headingDescArray);
 
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild','$date',0)";
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
                   ?>

@@ -41,7 +41,7 @@
                 </div> <!-- end of container -->
 
                 <div class="scrolldown">
-                    <a href="#works_2" class="scroll_btn"></a>
+                    <a href="#works" class="scroll_btn"></a>
                 </div>
 
             </div>
@@ -51,14 +51,14 @@
             <div class="row transpBg">
               <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
               <?php
-                   
+
 
                    $upitz = "SELECT 100/amount*lager as ostatak from product where id_cat=1";
                    $result11 = $conn->query($upitz)or die("bat upit");
-                    
+
                     while($rez11=mysqli_fetch_array($result11))
                     {
-                          
+
                           $ostatak=$rez11['ostatak'];
                           $ostatak=round($ostatak);
                           $stylee="width:".$ostatak."%";
