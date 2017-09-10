@@ -15,7 +15,7 @@
 
 <div class="container">
   <h2>Vertical (basic) form</h2>
-<form class="" action="admin.php?word=insert" method="post">
+<form class="" action="admin.php?word=insert" method="post" enctype = "multipart/form-data">
 
     <div class="form-group">
       <label for="email">Produkt name</label>
@@ -52,7 +52,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="picture">
+      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image1">
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
@@ -294,7 +294,7 @@
                         <!-- 4:3 aspect ratio -->
                         <div class="embed-responsive embed-responsive-4by3">
                           <h4>Video</h4>
-                          <input type="file" name="" value="">
+                          <input type="file" name="video" value="">
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
                         $description=$_REQUEST['description'];
-                        $bild=$_REQUEST['picture'];
+                        $bild=$_REQUEST['image1'];
                         $date=$_REQUEST['date'];
                         $description1=$_REQUEST['description1'];
                         $heading1=$_REQUEST['heading1'];
@@ -389,10 +389,36 @@
                   $headingDescDb = implode(';',$headingDescArray);
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
+      if(isset($_FILES['image1'])){
+$errors= array();
+$file_name = $_FILES['image1']['name'];
+$file_size = $_FILES['image1']['size'];
+$file_tmp = $_FILES['image1']['tmp_name'];
+$file_type = $_FILES['image1']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image1']['name'])));
 
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$bild','$date',0)";
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$putanja','$date',0)";
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
+
                   ?>
                 </form>
 
