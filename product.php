@@ -1,7 +1,7 @@
-<?php 
+<?php
       if(isset($_GET['id']))
       {
-        
+
         include("connectionFile/connection.php");
 
         $id_pro = $_GET['id'];
@@ -9,7 +9,7 @@
         $stmtPr = $conn->prepare($prikaz);
         $stmtPr -> bind_param('i',$id_pro);
         $stmtPr -> execute();
-        
+
         if($stmtPr)
         {
             if($rez= $stmtPr->get_result())
@@ -28,16 +28,16 @@
                  $pic_pro = $row['pictures_slider'];
                  $id_product_pro = $row['id_product'];
                  $text = explode(';',$row['text']);
-                 $heading = explode(';',$row['headings']); 
+                 $heading = explode(';',$row['headings']);
                  $descs = explode(';',$row['descs']);
                  $headings_descs = explode(';',$row['heading_descs']);
                  $big_desc = $row['big_desc'];
                  echo "<script>
                           var bgimage_pro ='{$row['pictures_slider']}';
                           var name_cat_pro = '{$name_cat_pro}';
-                        
+
                           var tmp = ".$timestamp_pro.";
-                         
+
                       </script>";
               }
             }
@@ -102,13 +102,13 @@
           <p class="col-xs-3 pull-right" id="phoness">00:00:15</p>
           <p class="col-xs-3 pull-right" id="laptopss">00:00:15</p>
           <?php
-          
+
                 $upitz = "SELECT 100/amount*lager as ostatak from product where id_product={$_GET['id']}";
-               
+
                 $result11 = $conn->query($upitz)or die("bat upit");
                 while($rez11=mysqli_fetch_array($result11))
                 {
-                  
+
                   $ostatak=$rez11['ostatak'];
                   $ostatak=round($ostatak);
                   $stylee="width:".$ostatak."%";
@@ -223,14 +223,14 @@
 
         <!-- Video Section -->
 
-        <section id="video">
+    <!--    <section id="video">
             <div class="video_overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="video_text center-content">
 
-                                <!-- 4:3 aspect ratio -->
+
                                 <div class="embed-responsive embed-responsive-4by3">
                                   <iframe class="embed-responsive-item" style="border-radius:10px;" width="940" height="600" src="https://www.youtube.com/embed/zpOULjyy-n8" frameborder="0" allowfullscreen></iframe>
                                 </div>
@@ -239,7 +239,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 
@@ -355,9 +355,9 @@
         <!-- Subscribe Section  -->
 <script type="text/javascript">
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
-           
+
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
 
-            
+
 
 </script>

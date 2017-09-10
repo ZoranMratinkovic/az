@@ -35,7 +35,7 @@
                   <th><img src='../{$row['pictures_slider']}' width='50' height='50'/></th>
                   <th>{$row['expire_date']}</th>
                   <th>{$row['expired']}</th>
-                  <td><a href='admin.php?word=edit&ids=".$row['id_product']."'class='brisanje'>Izmeni</a></td>
+                  <td><a href='admin.php?word=edit&ids=".$row['id_product']."'class='brisanje'>change</a></td>
                   <td><a href='admin.php?word=products&id=".$row['id_product']."'class='brisanje'>X</a></td>
               </tr>
               ";

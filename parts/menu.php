@@ -149,11 +149,7 @@
 
                 <div class="container">
                     <div class="navbar-header">
-                        <button type="button" class="nvavbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+
                         <a  href="#home" class="navbar-brand"><img src="images/logo2.png" alt="Logo" /></a>
                         <!-- <a class="navbar-brand" href="index.html"></a> -->
                     </div>
@@ -171,7 +167,7 @@
                                   }
 */
                              ?>-->
-                            <li><a href="#works" class=""><?php echo $name_cat ?></a>
+                            <li><a href="<?php echo "index.php?page=product&id={$id_product}"; ?>" class=""><?php echo $name_cat ?></a>
                             <ul>
                               <a href="#">
                                 <li>
@@ -231,7 +227,7 @@
                             </ul>
                             </li>
 
-                            <li><a href="#works" class=""><?php echo $name_cat1 ?></a>
+                            <li><a href="<?php echo "index.php?page=product&id={$id_product1}"; ?>" class=""><?php echo $name_cat1 ?></a>
                             <ul>
                               <a href="#">
                                 <li>
@@ -277,7 +273,7 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <li><a href="#" class=""><?php echo $name_cat2 ?></a>
+                            <li><a href="<?php echo "index.php?page=product&id={$id_product2}"; ?>" class=""><?php echo $name_cat2 ?></a>
                             <ul>
                               <a href="#">
                                 <li>
@@ -312,7 +308,7 @@
                                 <a href="#"><li>Link 2</li></a>
                             </ul>
                             </li>
-                            <li><a href="#" class=""><?php echo $name_cat3 ?></a>
+                            <li><a href="<?php echo "index.php?page=product&id={$id_product3}"; ?>" class=""><?php echo $name_cat3 ?></a>
                             <ul>
                               <a href="#">
                                 <li>
