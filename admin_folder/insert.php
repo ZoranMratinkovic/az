@@ -25,11 +25,11 @@
       <label for="pwd">Kategorie</label><br/>
       <select class="" name="categorie">
         <?php
-      $upitcat="SELECT * FROM categorie";
-      $result11 = $conn->query($upitcat);
-      while($rezcat=mysqli_fetch_array($result11)){
-        echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
-      }
+          $upitcat="SELECT * FROM categorie";
+          $result11 = $conn->query($upitcat);
+          while($rezcat=mysqli_fetch_array($result11)){
+            echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
+        }
         ?>
       </select>
 
