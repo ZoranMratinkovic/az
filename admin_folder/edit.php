@@ -15,7 +15,7 @@
 
   <div class="container">
     <h2>Vertical (basic) form</h2>
-  <form class="" action="admin.php?word=insert" method="post">
+  <form class="" action="admin.php?word=edit" method="post">
     <?php     $upitprikaz="SELECT * FROM product where id_product=".$_GET['ids'];
         $result12=$conn->query($upitprikaz)or die("errrorrr");
         $rowedit=mysqli_fetch_array($result12); ?>
@@ -345,7 +345,7 @@
                 <?php
 
                         echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
-                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'></textarea></p>";
+                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'>100</textarea></p>";
 
 
                  ?>
@@ -416,8 +416,8 @@
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
 
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$bild','$date',0)";
-                  $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,$stucke,price_old=$price,price_new=$price1,description='$description1',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc'$heading10',heading_descs='$headingDescDb',pictures_slider='$bild',expire_date='$date',0)";
+                  $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));
                       }
                   ?>
                 </form>
