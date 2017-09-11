@@ -121,14 +121,29 @@
             <p class="prozent">Noch  <?php echo $ostatak; ?>% !!!</p>
 
           </div>
-
+          
 
         </div>
+        <h4 id='comm'>Comments</h4>
   </div>
         <!-- Our Works Section -->
 
-        <section id="works" class="center-content">
+        <section id="works" class="">
             <div class="container">
+             <div class="row" id='CommentSection'>
+                    <div class="col-xs-12">
+                        <?php 
+                            include('functions.php');
+                            
+                            if(isset($_POST['commentSubmit']))
+                            {
+                                commentsInsert($id_pro);
+                            }
+                            commentsShow($id_pro);
+                         ?>
+
+                    </div>
+                </div>
                 <div class="row">
                     <div class="works_content text-center">
                         <div class="col-md-3 col-sm-6 col-xs-12">

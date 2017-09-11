@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
 <script type="text/javascript">
 
   function countdown(tm,id){
@@ -212,9 +213,9 @@ function countdown1(tm,name_cat){
                   case 'product':
                       include('product.php');
                       break;
-                      case 'change':
-                          include('change.php');
-                          break;
+                  case 'change':
+                      include('change.php');
+                      break;
                   default:
                       include("parts/content.php");
                       break;
@@ -265,10 +266,6 @@ function countdown1(tm,name_cat){
                document.getElementById('demo').innerHTML = output1;*/
               document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
 
-
-
-
-
 </script>
-    </body>
+</body>
 </html>

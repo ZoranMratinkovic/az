@@ -22,6 +22,7 @@ $(document).ready(function() {
 	      .find('ul')
 	      .stop(true,true)
 	      .fadeOut('fast');
+
 	  });
 		 /*dropdown close*/
     $('.navbar-collapse').find('a[href*=#]:not([href=#])').click(function () {
@@ -81,8 +82,20 @@ $('.scrolldown a').bind('click', function () {
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
 });
-
-
+//moj kod
+$('#textArea').focus(function(){
+			$('#commentCancel').fadeIn();
+			$('#commentSubmit').fadeIn();
+		});
+$('#commentCancel').click(function(){
+			$(this).fadeOut();
+			$('#commentSubmit').fadeOut();
+			$('#comErr').hide();
+		});
+$('#comm').click(function(){
+	$('#CommentSection').toggle('slow');
+});
+//moj kod
 /*<!-- =============================================== -->
 <!-- ========== navbardown.js ========== -->
 <!-- =============================================== -->*/

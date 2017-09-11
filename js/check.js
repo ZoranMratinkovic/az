@@ -106,3 +106,19 @@ function ispisi()
         }
         //page not found kada u isto vreme - resi!
     }
+
+    function comment(){
+        $comment = document.getElementById('textArea').value;
+        $commErr ="";
+        $com = new Array();
+        if($comment.length == 0){
+            $commErr = "";
+            document.getElementById('comErr').style.display='block';
+            return false;
+        } 
+        else
+        {
+            return true;
+        }
+
+}

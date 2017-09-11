@@ -71,14 +71,29 @@
                 <p class="prozent">Nur noch  <?php echo $ostatak; ?>%</p>
 
               </div>
-
+            
 
             </div>
+              <h4 id='comm'>Comments</h4>
         </div>
         <!-- Our Works Section -->
 
-        <section id="works" class="center-content">
+        <section id="works" class="">
             <div class="container" >
+                <div class="row" id='CommentSection'>
+                    <div class="col-xs-12">
+                        <?php 
+                            include('functions.php');
+                            
+                            if(isset($_POST['commentSubmit']))
+                            {
+                                commentsInsert($id_product);
+                            }
+                            commentsShow($id_product);
+                         ?>
+
+                    </div>
+                </div>
                 <div class="row">
                     <div class="works_content text-center col-xs-12" >
 
@@ -184,122 +199,6 @@
         </section>
 
         <!-- Description Second Section -->
-
-      <!--  <section id="description_second">
-            <div class="container">
-                <div class="row">
-                    <div class="main_description_second_contant">
-                        <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-duration="1.5s">
-                            <div class="second_heading_text top-margin">
-                                <h1>Description Second Layout</h1>
-                                <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
-                            </div>
-
-                            <div class="second_bottom_text">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="second_single_text">
-                                            <i class="fa fa-shield"></i>
-                                            <div class="right_bottom_description">
-                                                <h6>Hundreds of Icons</h6>
-                                                <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="second_single_text">
-                                            <i class="fa fa-css3"></i>
-                                            <div class="right_bottom_description">
-                                                <h6>Hundreds of Icons</h6>
-                                                <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="second_single_text">
-                                            <i class="fa fa-file-text"></i>
-                                            <div class="right_bottom_description">
-                                                <h6>Hundreds of Icons</h6>
-                                                <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="second_single_text">
-                                            <i class="fa fa-server"></i>
-                                            <div class="right_bottom_description">
-                                                <h6>Hundreds of Icons</h6>
-                                                <p>Ipsum dolor sit amet, consectetur adipiscing elit Integer tincidunt.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-md-6 col-sm-6">
-                            <div class="right_desc_img center-content wow fadeInRight" data-wow-duration="1.5s">
-                                <img src="images/iphone4.png" alt="" />
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
-        <!-- Video Section -->
-      <!--
-        <section id="video">
-            <div class="video_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="video_text center-content">
-
-
-                                <div class="embed-responsive embed-responsive-4by3">
-                                  <iframe class="embed-responsive-item" style="border-radius:10px;" width="940" height="600" src="https://www.youtube.com/embed/zpOULjyy-n8" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
--->
-
-
-
-        <!-- Description Third Section -->
-       <!-- <section id="description_third">
-            <div class="container">
-                <div class="row">
-                    <div class="main_des_third_contant">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                                <img src="images/iphone5.png" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
-                            <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                             
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>-->
-
-
-
-
 
         <!-- Apps Gallary  -->
 

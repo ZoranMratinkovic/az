@@ -23,6 +23,76 @@ body {
 PRE LOADER
 ==========================================*/
 /*Nas kod*/
+/*preporucujem kod*/
+#comm{
+    color:#EB008A;
+}
+#comm:hover{
+    cursor: pointer;
+}
+#CommentSection{
+    display:none;
+}
+.errorC{
+    display: none;
+    font-size:20px;
+    font-weight: bold;
+    color:#ff0000;
+}
+.comSection{
+    padding-top:30px;
+    margin-bottom:30px;
+}
+#textArea{
+    font-size:20px;
+}
+#commentSubmit,#commentCancel{
+    display:none;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius:0;
+    float:right;
+}
+#commentSubmit
+{
+    background-color:#e0764d!important;
+}
+#commentCancel{
+    background-color:#df5770!important;
+}
+.userIspis{
+ 
+    font-size: 51px;
+    padding: 15px;
+    background-color: #0a649d;
+    color:#fff;
+    width: 100%;
+    text-align: center;
+
+}
+.kolone{padding:0!important;margin:0;}
+
+.komentar_i_ime{
+    padding-left:5px;
+}
+.description{
+    font-size:18px;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    background-color: rgba(245, 245, 244, 0.18);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.17);
+}
+.desnoSpan{
+    float:right;
+}
+.ml{
+    margin-right:8px;
+}
+.color{
+    font-size:15px;
+}
+/*preporucujem kraj*/
 .centar{
     text-align: center;
 }

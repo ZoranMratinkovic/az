@@ -81,7 +81,7 @@
                                 $_SESSION['last_name'] = $row['last_name'];
                                 $_SESSION['email'] = $row['email'];
                                 $_SESSION['id_user']=$row['id_user'];
-                                
+                                $_SESSION['id_role']=$row['id_role'];
 
                                 echo
                                 "
