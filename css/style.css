@@ -235,7 +235,7 @@ PRE LOADER
 
 .prozent{
     font-size: 43px;
-   
+
     padding-top: 6px;
     float:left;
 }
@@ -899,7 +899,9 @@ a.info_right_text{
 #testimonial .owl-theme .owl-controls .owl-page span{
     background: #fff;
 }
-
+.mala {
+  margin-top: 15px!important;
+}
 /* Clients Logo Section */
 #clientsLogo{
 	background:#ddd;

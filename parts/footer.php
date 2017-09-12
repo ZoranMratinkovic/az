@@ -10,10 +10,10 @@
                   <div class="col-md-3 col-sm-3">
                     <h3>General links</h3>
                   <ul class="fot">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="ndex.php?page=fragen">Hilfe</a></li>
+                    <li><a href="index.php?page=contact">Kontakt</a></li>
+                    <li><a href="#">Ueber Uns</a></li>
 
                   </ul>
 
@@ -21,9 +21,9 @@
                   <div class="col-md-3 col-sm-3">
                     <h3>Kontakt</h3>
 
-                <p><i class="fa fa-phone"></i>  tel: 064 591 33 99</p>
-                <p><i class="fa fa-phone"></i>  tel: 064 591 33 99</p>
-                <p><i class="fa fa-phone"></i>  tel: 064 591 33 99</p>
+                <p class="mala"><i class="fa fa-map-marker"></i>  Adresse: Heimstrasse 7a </p>
+                <p class="mala"><i class="fa fa-email"></i>  email: info@webvi.ch</p>
+                <p class="mala"><i class="fa fa-envelope"></i>  tel: 064 591 33 99</p>
 
 
                   </div>
