@@ -183,7 +183,7 @@
                   <?php
 
                           echo "<h3><input type='text' name='heading5' value='$headings_descs[0]'></h3>";
-                          echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[1]</textarea></p>";
+                          echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[0]</textarea></p>";
 
 
                    ?>
@@ -194,9 +194,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                                      echo "<h3><input type='text' name='heading6' value='$descs[2]'></h3>";
-                                      echo "<p><textarea rows='4' cols='50' name='head6' placeholder='1 texxt'>$headings_descs[1]</textarea></p>";
-
+                              echo "<h3><input type='text' name='heading5' value='$headings_descs[1]'></h3>";
+                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[1]</textarea></p>";
 
                                ?>
                             </div>
@@ -207,8 +206,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                                      echo "<h3><input type='text' name='heading7' value='$descs[3];'></h3>";
-                                      echo "<p><textarea rows='4' name='head7' cols='50' placeholder='7 texxt'>$headings_descs[2]</textarea></p>";
+                              echo "<h3><input type='text' name='heading5' value='$headings_descs[3]'></h3>";
+                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[3]</textarea></p>";
 
 
                                ?>
@@ -220,8 +219,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                                      echo "<h3><input type='text' name='heading8' value='$descs[4]'></h3>";
-                                      echo "<p><textarea rows='4' name='head8' cols='50' placeholder='1 texxt'>$headings_descs[3]</textarea></p>";
+                              echo "<h3><input type='text' name='heading5' value='$headings_descs[4]'></h3>";
+                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[4]</textarea></p>";
 
 
                                ?>
@@ -232,8 +231,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                                      echo "<h3><input type='text' name='heading9' value='$descs[5]'></h3>";
-                                      echo "<p><textarea rows='4' name='head9' cols='50' placeholder='1 texxt'>$headings_descs[4]</textarea></p>";
+                              echo "<h3><input type='text' name='heading5' value='$headings_descs[5]'></h3>";
+                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[5]</textarea></p>";
 
 
                                ?>

@@ -340,7 +340,7 @@
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
                         $description=$_REQUEST['description'];
-                        $bild=$_REQUEST['image1'];
+                     @$bild=$_REQUEST['image1'];
                         $date=$_REQUEST['date'];
                         $description1=$_REQUEST['description1'];
                         $heading1=$_REQUEST['heading1'];
@@ -410,7 +410,8 @@ echo "Success";
 }else{
 print_r($errors);
 }
-}
+}                 $upitstatus="UPDATE product SET expired=1 where id_cat=".$categorie;
+                  $resultstatus = $conn->query($upitstatus)or die("losee".mysqli_error($conn));
                   $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$putanja','$date',0)";
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
