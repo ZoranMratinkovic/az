@@ -58,7 +58,7 @@
                         </div>-->
                         <!--<img src="">-->
 
-                    <div class="col-sm-5 col-xs-12 rightt">
+                    <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
                              <h1 class=""><?php echo $name ?></h1>
                                       <table class="tabela">
@@ -97,10 +97,10 @@
         </section>
  <div class="container-fluid mrg">
         <div class="row transpBg">
-          <p class="col-xs-3 pull-right" id="vinoo">00:00:15</p>
-          <p class="col-xs-3 pull-right" id="pivoo">00:00:15</p>
-          <p class="col-xs-3 pull-right" id="phoness">00:00:15</p>
-          <p class="col-xs-3 pull-right" id="laptopss">00:00:15</p>
+          <p class="col-xs-12 col-lg-3 pull-right" id="vinoo">00:00:15</p>
+          <p class="col-xs-12 col-lg-3 pull-right" id="pivoo">00:00:15</p>
+          <p class="col-xs-12 col-lg-3 pull-right" id="phoness">00:00:15</p>
+          <p class="col-xs-12 col-lg-3 pull-right" id="laptopss">00:00:15</p>
           <?php
 
                 $upitz = "SELECT 100/amount*lager as ostatak from product where id_product={$_GET['id']}";
@@ -116,7 +116,7 @@
 
                 }
           ?>
-          <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
+          <div class="progress-bar col-xs-12 col-lg-9" role="progressbar" aria-valuenow="70"
           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
             <p class="prozent">Noch  <?php echo $ostatak; ?>% !!!</p>
 
@@ -147,29 +147,49 @@
                 <div class="row">
                     <div class="works_content text-center">
                         <div class="col-md-3 col-sm-6 col-xs-12">
+<<<<<<< HEAD
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                                 <i class="fa fa-check"></i>
+=======
+                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration=".5s">
+                                <i class="fa fa-crop"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                  <h3><?php echo $heading[0]; ?></h3>
                                  <p><?php echo $text[0]; ?></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
+<<<<<<< HEAD
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".8s">
                                 <i class="fa fa-check"></i>
+=======
+                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration=".8s">
+                                <i class="fa fa-cube"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                 <h3><?php echo $heading[1]; ?></h3>
                                  <p><?php echo $text[1]; ?></p>
                                                    </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
+<<<<<<< HEAD
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.2s">
                                 <i class="fa fa-check"></i>
+=======
+                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration="1.2s">
+                                <i class="fa fa-magic"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                 <h3><?php echo $heading[2]; ?></h3>
                                  <p><?php echo $text[2]; ?></p>
                         </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
+<<<<<<< HEAD
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.5s">
                                 <i class="fa fa-check"></i>
+=======
+                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration="1.5s">
+                                <i class="fa fa-code-fork"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                 <h3><?php echo $heading[3]; ?></h3>
                                  <p><?php echo $text[3]; ?></p>
    </div>
@@ -186,44 +206,65 @@
         <section id="descriotion">
             <div class="container">
                 <div class="row main_description">
-                    <div class="col-sm-6 col-xs-12">
+                    <div class="col-sm-12 col-md-6 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                         <img src="<?php echo $pic_pro; ?>">
+                         <img class='picture21' src="<?php echo $pic_pro; ?>">
 
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-12 col-md-6 col-xs-12 martop">
                         <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                          <h3><?php echo $headings_descs[0]; ?></h3>
-                          <p><?php echo $descs[0]; ?></p>
+                          <h3 class='martopIpad'><?php echo $headings_descs[0]; ?></h3>
+                          <p class='centar1'><?php echo $descs[0]; ?></p>
 
+<<<<<<< HEAD
                             <div class="right_desc_bottom_text">
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
+=======
+                            <div class="right_desc_bottom_text row">
+                                <div class="right_single_bottom_text col-sm-6">
+                                    <i class="fa fa-shield"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                     <div class="right_bottom_description">
                                     <h6><?php echo $headings_descs[1];?></h6>
                                     <p><?php echo $descs[1]; ?></p>
                                     </div>
                                 </div>
 
+<<<<<<< HEAD
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
+=======
+                                <div class="right_single_bottom_text col-sm-6">
+                                    <i class="fa fa-css3"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                     <div class="right_bottom_description">
                                      <h6><?php echo $headings_descs[2];?></h6>
                                     <p><?php echo $descs[2]; ?></p>
                                     </div>
                                 </div>
 
+<<<<<<< HEAD
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
+=======
+                                <div class="right_single_bottom_text col-sm-6">
+                                    <i class="fa fa-file-text"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                     <div class="right_bottom_description">
                                      <h6><?php echo $headings_descs[3];?></h6>
                                     <p><?php echo $descs[3]; ?></p>
                                     </div>
                                 </div>
 
+<<<<<<< HEAD
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
+=======
+                                <div class="right_single_bottom_text col-sm-6">
+                                    <i class="fa fa-server"></i>
+>>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
                                     <div class="right_bottom_description">
                                         <h6><?php echo $headings_descs[4];?></h6>
                                     <p><?php echo $descs[4]; ?></p>
@@ -271,7 +312,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
-                            <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
+                            <div class="right_desc_text wow fadeIn marg marbot martop" data-wow-duration="1.5s">
                               <h3><?php echo $heading[0]; ?></h3>
                               <p><?php echo $big_desc; ?></p>
                             </div>

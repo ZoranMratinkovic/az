@@ -93,6 +93,20 @@ PRE LOADER
     font-size:15px;
 }
 /*preporucujem kraj*/
+.zind{
+    position:relative;
+    z-index:100000000;
+    float:right!important;
+}
+.abs{
+    position: absolute;
+    z-index:1;
+    left:0;
+}
+.abs span{
+    float: left;
+    margin-left: 20px;
+}
 .centar{
     text-align: center;
 }
@@ -220,8 +234,8 @@ PRE LOADER
 }
 
 .prozent{
-  font-size: 43px;
-    width: 50%;
+    font-size: 43px;
+   
     padding-top: 6px;
     float:left;
 }

@@ -19,25 +19,25 @@
 					 
 							while($row = $rez->fetch_assoc())
 							{
-								echo "<div class='kolone col-lg-12 col-sm-10 col-xs-10 komentar_i_ime'>";
-								echo "<div class='description col-xs-12'>";
-								echo "<span class='pull-right color col-xs-3'><i>".date('F d, Y h:i',$row['date'])."</i></span>";
+								echo "<div class='kolone col-lg-12 col-sm-12 col-xs-12 komentar_i_ime'>";
+								echo "<div class='description row'>";
+								echo "<span class='pull-right color col-xs-4'><i>".date('F d, Y h:i',$row['date'])."</i></span>";
 								if(isset($_SESSION['email']) && $_SESSION['id_role']==1)
 								{
 									echo "
-									<p class='col-xs-9'>
+									<p class='col-xs-8'>
 										<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>".$row['name']." ".$row['last_name']."<a href='deleteComm.php?id={$row['id_product']}&id_kom={$row['id_com']}' title='Obrisi komentar'> X</a>
 										</b>
 									</p>";
 								}
 								else
 								{
-								  echo "<p class='col-xs-9'>
+								  echo "<p class='col-xs-8'>
 											<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>".$row['name']." ".$row['last_name']." </b>
 										</p>";
 								}
 
-								echo "<p class='col-xs-12'><i class='pull-left'> ".$row['comment']."</i></p></div></div>"; 
+								echo "<p class='col-xs-12 cntr'><i class='pull-left'> ".$row['comment']."</i></p></div></div>"; 
 			
 							}
 

@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="css/themes/default/default.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/media.css">
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
@@ -51,8 +52,10 @@
         /*output = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         // Output the result in an element with id="demo"*/
+
         if(id==2)//kategorija vino
         {
+           
           document.getElementById("vino").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 
@@ -61,6 +64,7 @@
         }
         else if(id==1)//kategorija pivo
         {
+            
           document.getElementById("pivo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
@@ -79,20 +83,20 @@
         if (distance < 0 && id == 2) {
             updateVino();
             clearInterval(x);
-             document.getElementById("vino").innerHTML = "Expired"
+             document.getElementById("vino").innerHTML = "Expired";
              document.getElementById("demo").innerHTML = "Expired";
         }
         else if(distance < 0 && id == 1)
         {
           updatePivo();
           clearInterval(x);
-          document.getElementById("pivo").innerHTML = "Expired"
+          document.getElementById("pivo").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 3)
         {
           updatePhone();
           clearInterval(x);
-          document.getElementById("phone").innerHTML = "Expired"
+          document.getElementById("phone").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 4)
         {
@@ -153,20 +157,20 @@ function countdown1(tm,name_cat){
         if (distance < 0 && id == 2) {
             updateVino();
             clearInterval(x);
-             document.getElementById("vino").innerHTML = "Expired"
+             document.getElementById("vino").innerHTML = "Expired";
              document.getElementById("demo").innerHTML = "Expired";
         }
         else if(distance < 0 && id == 1)
         {
           updatePivo();
           clearInterval(x);
-          document.getElementById("pivo").innerHTML = "Expired"
+          document.getElementById("pivo").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 3)
         {
           updatePhone();
           clearInterval(x);
-          document.getElementById("phone").innerHTML = "Expired"
+          document.getElementById("phone").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 4)
         {
