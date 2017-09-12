@@ -10,7 +10,7 @@
                             </div>slika na slajderu
                         </div>-->
 
-                        <div class="col-sm-5 col-xs-12 rightt">
+                        <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
 								<h1 class=""><?php echo $name ?></h1>
                                       <table class="tabela">
@@ -49,7 +49,7 @@
         </section>
         <div class="container-fluid mrg">
             <div class="row transpBg">
-              <p class="col-xs-3 pull-right" id="demo">00:00:15</p>
+              <p class="col-lg-3 col-md-3 col-xs-12 col-sm-12 pull-right" id="demo">00:00:15</p>
               <?php
 
 
@@ -66,7 +66,7 @@
 
                     }
               ?>
-              <div class="progress-bar col-xs-9" role="progressbar" aria-valuenow="70"
+              <div class="progress-bar col-lg-9 col-md-9 col-xs-12 col-sm-12" role="progressbar" aria-valuenow="70"
               aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
                 <p class="prozent">Nur noch  <?php echo $ostatak; ?>%</p>
 
@@ -148,7 +148,7 @@
                 <div class="row main_description">
                     <div class="col-sm-12 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                         <img src="<?php echo $pic; ?>" alt="" height='530' width='100%'>
+                         <img src="<?php echo $pic; ?>" alt="" height='530' width='100%' class='picture21'>
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -160,35 +160,35 @@
                           
 
                             <div class="right_desc_bottom_text row">
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
                                     <i class="fa fa-shield"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[1]; ?></h3>
-                                        <p><?php echo $bigd; ?></p>
+                                        <p><?php echo $descsAr[0]; ?></p>
                                     </div>
                                 </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
                                     <i class="fa fa-css3"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[2]; ?></h3>
-                                        <p><?php echo $bigd; ?></p>
+                                        <p><?php echo $descsAr[1];?></p>
                                     </div>
                                 </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
                                     <i class="fa fa-file-text"></i>
                                     <div class="right_bottom_description">
                                        <h3><?php echo $headingDescAr[3]; ?></h3>
-                                        <p><?php echo $bigd; ?></p>
+                                        <p><?php echo $descsAr[2]; ?></p>
                                     </div>
                                 </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
                                     <i class="fa fa-server"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[4]; ?></h3>
-                                        <p><?php echo $bigd; ?></p>
+                                        <p><?php echo $descsAr[3]; ?></p>
                                     </div>
                                 </div>
                             </div>

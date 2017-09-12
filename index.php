@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="css/themes/default/default.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/media.css">
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
