@@ -147,49 +147,37 @@
                 <div class="row">
                     <div class="works_content text-center">
                         <div class="col-md-3 col-sm-6 col-xs-12">
-<<<<<<< HEAD
+
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                                 <i class="fa fa-check"></i>
-=======
-                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration=".5s">
-                                <i class="fa fa-crop"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                  <h3><?php echo $heading[0]; ?></h3>
                                  <p><?php echo $text[0]; ?></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-<<<<<<< HEAD
+
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".8s">
                                 <i class="fa fa-check"></i>
-=======
-                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration=".8s">
-                                <i class="fa fa-cube"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                 <h3><?php echo $heading[1]; ?></h3>
                                  <p><?php echo $text[1]; ?></p>
                                                    </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-<<<<<<< HEAD
+
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.2s">
                                 <i class="fa fa-check"></i>
-=======
-                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration="1.2s">
-                                <i class="fa fa-magic"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                 <h3><?php echo $heading[2]; ?></h3>
                                  <p><?php echo $text[2]; ?></p>
                         </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
-<<<<<<< HEAD
+
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.5s">
                                 <i class="fa fa-check"></i>
-=======
-                            <div class="single_works_text marg wow fadeInLeft" data-wow-duration="1.5s">
-                                <i class="fa fa-code-fork"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                 <h3><?php echo $heading[3]; ?></h3>
                                  <p><?php echo $text[3]; ?></p>
    </div>
@@ -217,54 +205,41 @@
                           <h3 class='martopIpad'><?php echo $headings_descs[0]; ?></h3>
                           <p class='centar1'><?php echo $descs[0]; ?></p>
 
-<<<<<<< HEAD
+
                             <div class="right_desc_bottom_text">
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
-=======
-                            <div class="right_desc_bottom_text row">
-                                <div class="right_single_bottom_text col-sm-6">
-                                    <i class="fa fa-shield"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                     <div class="right_bottom_description">
                                     <h6><?php echo $headings_descs[1];?></h6>
                                     <p><?php echo $descs[1]; ?></p>
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
+
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
-=======
-                                <div class="right_single_bottom_text col-sm-6">
-                                    <i class="fa fa-css3"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                     <div class="right_bottom_description">
                                      <h6><?php echo $headings_descs[2];?></h6>
                                     <p><?php echo $descs[2]; ?></p>
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
+
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
-=======
-                                <div class="right_single_bottom_text col-sm-6">
-                                    <i class="fa fa-file-text"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                     <div class="right_bottom_description">
                                      <h6><?php echo $headings_descs[3];?></h6>
                                     <p><?php echo $descs[3]; ?></p>
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
+
                                 <div class="right_single_bottom_text">
                                     <i class="fa fa-tag"></i>
-=======
-                                <div class="right_single_bottom_text col-sm-6">
-                                    <i class="fa fa-server"></i>
->>>>>>> df560259308562fe9cdeb3289c0ecfd88b420c60
+
                                     <div class="right_bottom_description">
                                         <h6><?php echo $headings_descs[4];?></h6>
                                     <p><?php echo $descs[4]; ?></p>

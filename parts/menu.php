@@ -379,8 +379,13 @@
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right drop">
+                          <?php if(isset($_SESSION['email'])&& $_SESSION['id_role']==1){ ?>
+                            <li><a href="admin_folder/admin.php">adminpanel</a></li>
+                          <?php }else { ?>
                           <li ><a href="index.php?page=fragen">Hilfe</a></li>
                           <li><a href="index.php?page=contact">Francais</a></li>
+
+                          <?php } ?>
                         </ul>
 
                     </div>

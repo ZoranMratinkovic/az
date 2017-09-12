@@ -15,7 +15,7 @@
 
   <div class="container">
     <h2>Vertical (basic) form</h2>
-  <form class="" action="#" method="post">
+  <form class="" action="#" method="post" enctype = "multipart/form-data">
     <?php
 
         $upitprikaz="SELECT * FROM product where id_product=".$_GET['ids'];
@@ -55,12 +55,12 @@
         <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['price_new']; ?>">
       </div>
       <div class="form-group">
-        <label for="pwd">Beschreibung</label>
+        <label for="pwd">Titel</label>
         <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description" value="<?php echo $rowedit['description']; ?>">
       </div>
       <div class="form-group">
         <label for="pwd">Bild</label>
-        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="picture" value="<?php echo $rowedit['pictures_slider']; ?>" >
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image2" value="<?php echo $rowedit['pictures_slider']; ?>" >
       </div>
       <div class="form-group">
         <label for="pwd">Ending date</label>
@@ -123,7 +123,7 @@
                         <?php
 
                                 echo "<h3><input type='text' name='heading2' value='$heading[1]'></h3>";
-                                echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'>$text[1];</textarea></p>";
+                                echo "<p><textarea rows='4' cols='30' name='head2' placeholder='2 texxt'>$text[1]</textarea></p>";
 
 
                          ?>                            </div>
@@ -134,8 +134,8 @@
 
                         <?php
 
-                                echo "<h3><input type='text' name='heading3' value='$heading[2]'></h3>";
-                                echo "<p><textarea rows='4' name='head3' cols='30' placeholder='1 texxt'>$text[2]</textarea></p>";
+                        echo "<h3><input type='text' name='heading3' value='$heading[2]'></h3>";
+                        echo "<p><textarea rows='4' cols='30' name='head3' placeholder='2 texxt'>$text[2]</textarea></p>";
 
 
                          ?>                            </div>
@@ -147,8 +147,8 @@
                         <?php
 
 
-                                echo "<h3><input type='text' name='heading4' value='$heading[3]'></h3>";
-                                echo "<p><textarea rows='4' name='head4' cols='30' placeholder='1 texxt'>$text[3]</textarea></p>";
+                        echo "<h3><input type='text' name='heading4' value='$heading[3]'></h3>";
+                        echo "<p><textarea rows='4' cols='30' name='head4' placeholder='2 texxt'>$text[3]</textarea></p>";
 
 
                          ?>                            </div>
@@ -194,8 +194,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                              echo "<h3><input type='text' name='heading5' value='$headings_descs[1]'></h3>";
-                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[1]</textarea></p>";
+                              echo "<h3><input type='text' name='heading6' value='$headings_descs[1]'></h3>";
+                              echo "<p><textarea rows='2' name='head6' cols='25' placeholder='1 texxt'>$descs[1]</textarea></p>";
 
                                ?>
                             </div>
@@ -206,8 +206,8 @@
                             <div class="right_bottom_description">
                               <?php
 
-                              echo "<h3><input type='text' name='heading5' value='$headings_descs[3]'></h3>";
-                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[3]</textarea></p>";
+                              echo "<h3><input type='text' name='heading7' value='$headings_descs[2]'></h3>";
+                              echo "<p><textarea rows='2' name='head7' cols='25' placeholder='1 texxt'>$descs[2]</textarea></p>";
 
 
                                ?>
@@ -219,25 +219,26 @@
                             <div class="right_bottom_description">
                               <?php
 
-                              echo "<h3><input type='text' name='heading5' value='$headings_descs[4]'></h3>";
-                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[4]</textarea></p>";
+                              echo "<h3><input type='text' name='heading8' value='$headings_descs[3]'></h3>";
+                              echo "<p><textarea rows='2' name='head8' cols='25' placeholder='1 texxt'>$descs[3]</textarea></p>";
 
 
                                ?>
                             </div>
                         </div>
-                         <div class="right_single_bottom_text">
+                        <div class="right_single_bottom_text">
                             <i class="fa fa-file-text"></i>
                             <div class="right_bottom_description">
                               <?php
 
-                              echo "<h3><input type='text' name='heading5' value='$headings_descs[5]'></h3>";
-                              echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[5]</textarea></p>";
+                              echo "<h3><input type='text' name='heading9' value='$headings_descs[4]'></h3>";
+                              echo "<p><textarea rows='2' name='head9' cols='25' placeholder='1 texxt'>$descs[4]</textarea></p>";
 
 
                                ?>
                             </div>
                         </div>
+
 
                     </div>
                 </div>
@@ -375,7 +376,7 @@
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
                         $description=$_REQUEST['description'];
-                        $bild=$_REQUEST['picture'];
+
                         $date=$_REQUEST['date'];
                         @$description1=$_REQUEST['description1'];
                         $heading1=$_REQUEST['heading1'];
@@ -420,8 +421,33 @@
                         $headingDescDb = implode(';',$headingDescArray);
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
+      if(isset($_FILES['image2'])){
+$errors= array();
+$file_name = $_FILES['image2']['name'];
+$file_size = $_FILES['image2']['size'];
+$file_tmp = $_FILES['image2']['tmp_name'];
+$file_type = $_FILES['image2']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
 
-                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description1',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$heading10',heading_descs='$headingDescDb',pictures_slider='$bild',expire_date='$date' WHERE id_product=".$_GET['ids'];
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 209710052) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja1="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$heading10',heading_descs='$headingDescDb',pictures_slider='$putanja1',expire_date='$date' WHERE id_product=".$_GET['ids'];
 
 
                   $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));

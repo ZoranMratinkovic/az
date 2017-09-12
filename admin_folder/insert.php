@@ -47,7 +47,7 @@
       <input type="text" class="form-control" id="pwd" placeholder="Neuer Preis" name="price2">
     </div>
     <div class="form-group">
-      <label for="pwd">Beschreibung</label>
+      <label for="pwd">Titel</label>
       <input type="text" class="form-control" id="pwd" placeholder="Beschreibung" name="description">
     </div>
     <div class="form-group">
