@@ -198,34 +198,38 @@
 
                             <div class="right_desc_bottom_text row">
 
-                                <div class="sredina">
-                                   
+                     
+                                   <div class="sredina">
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
-
+                               
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[1]; ?></h3>
                                         <p><?php echo $descsAr[1]; ?></p>
                                     </div>
+                                 </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
+                              
 
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[2]; ?></h3>
                                         <p><?php echo $descsAr[2];?></p>
                                     </div>
+                                  </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
                                        <h3><?php echo $headingDescAr[3]; ?></h3>
                                         <p><?php echo $descsAr[3]; ?></p>
                                     </div>
+                                </div>
 
-                                <div class="right_single_bottom_text col-xs-6">
+                                <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
@@ -234,7 +238,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
