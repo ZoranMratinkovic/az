@@ -71,7 +71,7 @@
                 <p class="prozent">Nur noch  <?php echo $ostatak; ?>%</p>
 
               </div>
-            
+
 
             </div>
               <h4 id='comm'>Comments</h4>
@@ -82,9 +82,9 @@
             <div class="container" >
                 <div class="row" id='CommentSection'>
                     <div class="col-xs-12">
-                        <?php 
+                        <?php
                             include('functions.php');
-                            
+
                             if(isset($_POST['commentSubmit']))
                             {
                                 commentsInsert($id_product);
@@ -100,33 +100,33 @@
                       <div class="col-xs-12 paddingUnderSlider">
                         <h1><?php echo $description; ?></h1>
                     </div>
-                   
+
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
-                                <i class="fa fa-crop"></i>
+                                <i class="fa fa-check"></i>
                                 <h3><?php echo $headingsAr[0]; ?></h3>
                                 <p><?php echo $textAr[0]; ?></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".8s">
-                                <i class="fa fa-cube"></i>
+                                <i class="fa fa-check"></i>
 
                                 <h3><?php echo $headingsAr[1]; ?></h3>
                                 <p><?php echo $textAr[1]; ?></p>                          </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.2s">
-                                <i class="fa fa-magic"></i>
+                                <i class="fa fa-check"></i>
 
                                 <h3><?php echo $headingsAr[2]; ?></h3>
-                                <p><?php echo $textAr[2]; ?></p>               
+                                <p><?php echo $textAr[2]; ?></p>
 
                              </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single_works_text wow fadeInLeft" data-wow-duration="1.5s">
-                                <i class="fa fa-code-fork"></i>
+                                <i class="fa fa-check"></i>
 
                               <h3><?php echo $headingsAr[3]; ?></h3>
                                 <p><?php echo $textAr[3]; ?></p>                          </div>
@@ -157,11 +157,11 @@
                           <h3 class='font'><?php echo $headingDescAr[0]; ?></h3>
                             <p><?php echo $descsAr[0]; ?></p>
                         </div>
-                          
+
 
                             <div class="right_desc_bottom_text row">
                                 <div class="right_single_bottom_text col-xs-6">
-                                    <i class="fa fa-shield"></i>
+                                    <i class="fa fa-tag"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[1]; ?></h3>
                                         <p><?php echo $bigd; ?></p>
@@ -169,7 +169,7 @@
                                 </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
-                                    <i class="fa fa-css3"></i>
+                                    <i class="fa fa-tag"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[2]; ?></h3>
                                         <p><?php echo $bigd; ?></p>
@@ -177,7 +177,7 @@
                                 </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
-                                    <i class="fa fa-file-text"></i>
+                                    <i class="fa fa-tag"></i>
                                     <div class="right_bottom_description">
                                        <h3><?php echo $headingDescAr[3]; ?></h3>
                                         <p><?php echo $bigd; ?></p>
@@ -185,7 +185,7 @@
                                 </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
-                                    <i class="fa fa-server"></i>
+                                    <i class="fa fa-tag"></i>
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[4]; ?></h3>
                                         <p><?php echo $bigd; ?></p>

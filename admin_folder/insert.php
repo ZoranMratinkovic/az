@@ -318,8 +318,8 @@
                 </div>
                 <?php
 
-                        echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
-                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'></textarea></p>";
+                        echo "<h3><input type='text' name='head10' value='heading10'></h3>";
+                        echo "<p><textarea rows='10' name='heading10' cols='50' placeholder='1 texxt'></textarea></p>";
 
 
                  ?>
