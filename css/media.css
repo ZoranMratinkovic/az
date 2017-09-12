@@ -32,11 +32,22 @@
 	.marg{
 		margin-bottom: 0!important;
 	}
+	.pedingnula{
+		padding:0!important; 
+	}
+	.single_works_text{
+		margin-bottom: 35px!important;
+	}
+
 }
 /*Iphone 5,6,6+ 320px width end*/
 @media (max-width:768px) and (min-width:415px){
 	.tabela{
 		margin:0 auto;
+	}
+	.sredina{
+		width: 80%;
+		margin:0 auto!important;
 	}
 	.rightt{
 		margin-top: 50px;

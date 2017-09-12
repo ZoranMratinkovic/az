@@ -95,6 +95,10 @@ $('#commentCancel').click(function(){
 $('#comm').click(function(){
 	$('#CommentSection').toggle('slow');
 });
+$('#dt').click(function(){
+	$('#details').toggle('slow');
+});
+
 //moj kod
 /*<!-- =============================================== -->
 <!-- ========== navbardown.js ========== -->

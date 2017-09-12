@@ -48,7 +48,7 @@
 
         <section id="home">
             <div id="bgimage_pro" class="header-image slider1">
-                <div class="container">
+                <div class="container pedingnula">
                     <div class="row centar">
 
                         <!--<div class="col-sm-5 col-xs-12">
@@ -58,10 +58,11 @@
                         </div>-->
                         <!--<img src="">-->
 
-                    <div class="col-sm-12 col-md-5 col-xs-12 rightt">
+                   
+                        <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-                             <h1 class=""><?php echo $name ?></h1>
-                                      <table class="tabela">
+                <h1 class=""><?php echo $name ?></h1>
+                                    <table class="tabela">
 
                                         <tr>
 
@@ -72,17 +73,54 @@
 
                                         </tr>
                                         <tr>
-                                             <td class="zindex"><?php echo $old_price_pro ?> CHF</td>
+                                              <td class="zindex"><?php echo $old_price_pro ?> CHF</td>
                                               <td class="zindex">  <?php echo $new_price_pro ?> CHF</td>
-                                            <td class="zindex"><?php echo $new_price_pro ?> CHF</td>
+                                              <td class="zindex"><?php echo $new_price_pro ?> CHF</td>
                                         </tr>
-                          <tr>
-                                <div class="button">
-                                  <td colspan="3"><p class="btn toogle btnmy">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
+                                        <tr>
+                            <div class="button">
+                              <td colspan="3"><p class="btn toogle btnmy" id='dt'>Details</p></td>
+                                              
+                            </div>
+                                        </tr>
 
-                                </div>
-              </div></tr>
-                </table>
+                                </table>
+               </div>
+                            <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
+                               <table class="tabela width">
+
+                                        <tr>
+
+
+                                            <td class="zindex" id='price'>Stucke:</td>
+                                            <td class="zindex">Liefer costen: </td>
+                                            <td class="zindex">Farbe: </td>
+
+                                        </tr>
+                                        <tr>
+                                              <td class="zindex">
+                                              <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="" class='form-control'>
+                                              </td>
+                                              <td class="zindex">9 CHF</td>
+                                              <td class="zindex">
+                                                  <select name='ddlFarbe' class='form-control'>
+                                                      <option  value="1">Red</option>
+                                                      <option  value="2">Green</option>
+                                                      <option  value="3">Blue</option>
+                                                  </select>
+                                              </td>
+                                        </tr>
+                                        <tr>
+                                            <div class="button">
+                                                <td colspan="3">
+                                                <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                            </div>
+                                        </tr>
+                                       
+
+                                </table>
+                            </div>
+                
                         </div>
 
                     </div> <!-- end of row -->

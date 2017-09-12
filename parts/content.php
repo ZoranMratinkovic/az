@@ -1,7 +1,7 @@
 
         <section id="home">
             <div id="bgimage" class="header-image slider1">
-                <div class="container">
+                <div class="container pedingnula">
                     <div class="row centar">
 
                         <!--<div class="col-sm-5 col-xs-12">
@@ -13,28 +13,65 @@
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
 								<h1 class=""><?php echo $name ?></h1>
-                                      <table class="tabela">
+                                    <table class="tabela">
 
-                                    <tr>
+                                        <tr>
 
 
-                                    <td class="zindex" id='price'>Katalog Preis: </td>
-                                    <td class="zindex">Neuer Preis: </td>
-                                      <td class="zindex">Neuer Preis: </td>
+                                            <td class="zindex" id='price'>Katalog Preis: </td>
+                                            <td class="zindex">Neuer Preis: </td>
+                                            <td class="zindex">Neuer Preis: </td>
 
-                                    </tr>
-                                    <tr>
-                                      <td class="zindex"><?php echo $old_price ?> CHF</td>
-                                        <td class="zindex">  <?php echo $new_price ?> CHF</td>
-                                          <td class="zindex"><?php echo $new_price ?> CHF</td>
-                                    </tr>
-                          <tr>
-								<div class="button">
-									<td colspan="3"><p class="btn toogle btnmy">Details</p><a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart"></i>  Jetzt Einkaufen!!</a></td>
+                                        </tr>
+                                        <tr>
+                                              <td class="zindex"><?php echo $old_price ?> CHF</td>
+                                              <td class="zindex">  <?php echo $new_price ?> CHF</td>
+                                              <td class="zindex"><?php echo $new_price ?> CHF</td>
+                                        </tr>
+                                        <tr>
+            								<div class="button">
+            									<td colspan="3"><p class="btn toogle btnmy" id='dt'>Details</p></td>
+                                              
+            								</div>
+                                        </tr>
 
-								</div>
-							</div></tr>
-                </table>
+                                </table>
+							 </div>
+                            <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
+                               <table class="tabela width">
+
+                                        <tr>
+
+
+                                            <td class="zindex" id='price'>Stucke:</td>
+                                            <td class="zindex">Liefer costen: </td>
+                                            <td class="zindex">Farbe: </td>
+
+                                        </tr>
+                                        <tr>
+                                              <td class="zindex">
+                                              <input type="number" min="0" max="<?php echo $ammount; ?>" step="1" value="1" name="" class='form-control'>
+                                              </td>
+                                              <td class="zindex">9 CHF</td>
+                                              <td class="zindex">
+                                                  <select name='ddlFarbe' class='form-control'>
+                                                      <option  value="1">Red</option>
+                                                      <option  value="2">Green</option>
+                                                      <option  value="3">Blue</option>
+                                                  </select>
+                                              </td>
+                                        </tr>
+                                        <tr>
+                                            <div class="button">
+                                                <td colspan="3">
+                                                <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                            </div>
+                                        </tr>
+                                       
+
+                                </table>
+                            </div>
+                
                         </div>
 
                     </div> <!-- end of row -->
@@ -160,35 +197,37 @@
                           
 
                             <div class="right_desc_bottom_text row">
-                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
-                                    <i class="fa fa-shield"></i>
-                                    <div class="right_bottom_description">
-                                        <h3><?php echo $headingDescAr[1]; ?></h3>
-                                        <p><?php echo $descsAr[0]; ?></p>
+                                <div class="sredina">
+                                    <div class="right_single_bottom_text col-xs-12 col-sm-6 col-lg-6">
+                                        <i class="fa fa-shield"></i>
+                                        <div class="right_bottom_description">
+                                            <h3><?php echo $headingDescAr[1]; ?></h3>
+                                            <p><?php echo $descsAr[0]; ?></p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
-                                    <i class="fa fa-css3"></i>
-                                    <div class="right_bottom_description">
-                                        <h3><?php echo $headingDescAr[2]; ?></h3>
-                                        <p><?php echo $descsAr[1];?></p>
+                                    <div class="right_single_bottom_text col-xs-12 col-sm-6 col-lg-6">
+                                        <i class="fa fa-css3"></i>
+                                        <div class="right_bottom_description">
+                                            <h3><?php echo $headingDescAr[2]; ?></h3>
+                                            <p><?php echo $descsAr[1];?></p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
-                                    <i class="fa fa-file-text"></i>
-                                    <div class="right_bottom_description">
-                                       <h3><?php echo $headingDescAr[3]; ?></h3>
-                                        <p><?php echo $descsAr[2]; ?></p>
+                                    <div class="right_single_bottom_text col-xs-12 col-sm-6 col-lg-6">
+                                        <i class="fa fa-file-text"></i>
+                                        <div class="right_bottom_description">
+                                           <h3><?php echo $headingDescAr[3]; ?></h3>
+                                            <p><?php echo $descsAr[2]; ?></p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="right_single_bottom_text col-xs-12 col-lg-6">
-                                    <i class="fa fa-server"></i>
-                                    <div class="right_bottom_description">
-                                        <h3><?php echo $headingDescAr[4]; ?></h3>
-                                        <p><?php echo $descsAr[3]; ?></p>
+                                    <div class="right_single_bottom_text col-xs-12 col-sm-6 col-lg-6">
+                                        <i class="fa fa-server"></i>
+                                        <div class="right_bottom_description">
+                                            <h3><?php echo $headingDescAr[4]; ?></h3>
+                                            <p><?php echo $descsAr[3]; ?></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
