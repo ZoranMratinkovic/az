@@ -377,6 +377,11 @@
                              ?>
 
                         </ul>
+                        <ul class="nav navbar-nav navbar-right drop">
+                          <li ><a href="index.php?page=fragen">Hilfe</a></li>
+                          <li><a href="index.php?page=contact">Francais</a></li>
+                        </ul>
+
                     </div>
                 </div>
             </div> <!-- end of navbar -->

@@ -61,7 +61,7 @@ PRE LOADER
     background-color:#df5770!important;
 }
 .userIspis{
- 
+
     font-size: 51px;
     padding: 15px;
     background-color: #0a649d;
@@ -97,7 +97,7 @@ PRE LOADER
     text-align: center;
 }
 .transbg{
-  
+
 }
 .mrg{
     margin-left:0!important;
@@ -1030,7 +1030,7 @@ a.info_right_text{
 .copyright_text p{
 	color:#D2D3D5;
 	font-size:17px;
-	padding:40px;
+
 }
 .copyright_text p i{
 	padding:0px 10px;
@@ -1039,6 +1039,10 @@ a.info_right_text{
 .copyright_text p a{
 	padding:0px 10px;
 	color:green;
+}
+footer h3 {
+  margin-bottom: 31px;
+  color:#CCC
 }
 
 /*scollup icon*/
@@ -1117,4 +1121,64 @@ fieldset fieldset{
 fieldset {
     border: 0;
 border-bottom: 1px solid #e5e5e5;
+}
+.bluec{
+  background-color: #f36!important;
+}
+/*concatk form*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #fe4271;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+
+    padding: 20px;
+}
+.margintopb{
+  margin-top: 150px;
+}
+
+.fot li {
+  border: 1px solid #fff;
+padding: 11px;
+margin-bottom: 3px;
+}
+.fot li a{
+  font-size: 16px;
+color: white;
+}
+footer {
+  color: #fff;
+margin-top: 33px;
+}
+footer p{
+  margin-top: 33px;
+}
+footer {
+  background: #fe4271;
 }

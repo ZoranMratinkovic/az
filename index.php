@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   
+
 <script type="text/javascript">
 
   function countdown(tm,id){
@@ -216,6 +216,12 @@ function countdown1(tm,name_cat){
                   case 'change':
                       include('change.php');
                       break;
+                      case 'fragen':
+                          include('fragen.php');
+                          break;
+                          case 'contact':
+                                include('contact.php');
+                                break;
                   default:
                       include("parts/content.php");
                       break;
