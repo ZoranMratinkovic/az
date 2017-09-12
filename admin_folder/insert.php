@@ -340,7 +340,7 @@
                         $price=$_REQUEST['price'];
                         $price1=$_REQUEST['price2'];
                         $description=$_REQUEST['description'];
-                        $bild=$_REQUEST['image1'];
+                     @$bild=$_REQUEST['image1'];
                         $date=$_REQUEST['date'];
                         $description1=$_REQUEST['description1'];
                         $heading1=$_REQUEST['heading1'];

@@ -1,6 +1,6 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.id_product,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
+   $sql = "SELECT p.id_cat,p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
    $expired = 0;
    $id_cat = 1;
    $st = $conn->prepare($sql);
@@ -23,7 +23,7 @@
              $new_price = $row['price_new'];
              $description = $row['description'];
              $pic = $row['pictures_slider'];
-             $id_product = $row['id_product'];
+             $id_catI = $row['id_cat'];
              $headingsAr = explode(';',$row['headings']);
              $textAr = explode(';',$row['text']);
              $headingDescAr = explode(';',$row['heading_descs']);
@@ -32,9 +32,10 @@
              echo
               "
                <script>
-               var id_product = ". $id_product . ";
+               var id_cat = ".$id_catI.";
                var timestamp = ".$timestamp.";
-                 countdown(timestamp,id_product);
+
+                 countdown(timestamp,id_cat);
 
                </script>
               ";
@@ -63,13 +64,13 @@
              $new_price1 = $row['price_new'];
              $description1 = $row['description'];
              $pic1 = $row['pictures_slider'];
-             $id_product1 = $row['id_product'];
+             $id_cat1II = $row['id_cat'];
              echo
               "
                <script>
-               var id_product1 = ". $id_product1 . ";
+               var id_cat1 = ". $id_cat1II . ";
                var timestamp1 = ".$timestamp1.";
-              countdown(timestamp1,id_product1);
+              countdown(timestamp1,id_cat1);
                </script>
               ";
             }
@@ -97,13 +98,13 @@
              $new_price2 = $row['price_new'];
              $description2 = $row['description'];
              $pic2 = $row['pictures_slider'];
-             $id_product2 = $row['id_product'];
+             $id_cat2II = $row['id_cat'];
              echo
               "
                <script>
-               var id_product2 = ". $id_product2 . ";
+               var id_cat2 = ". $id_cat2II . ";
                var timestamp2 = ".$timestamp2.";
-               countdown(timestamp2,id_product2);
+               countdown(timestamp2,id_cat2);
                </script>
               ";
             }
@@ -131,13 +132,13 @@
              $new_price3 = $row['price_new'];
              $description3 = $row['description'];
              $pic3 = $row['pictures_slider'];
-             $id_product3 = $row['id_product'];
+             $id_cat3II = $row['id_cat'];
              echo
               "
                <script>
-               var id_product3 = ". $id_product3 . ";
+               var id_cat3 = ". $id_cat3II . ";
                var timestamp3 = ".$timestamp3.";
-               countdown(timestamp3,id_product3);
+               countdown(timestamp3,id_cat3);
                </script>
               ";
             }
@@ -194,14 +195,14 @@
 
                                       <div class="captionFig progress">
 
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar abs" role="progressbar" aria-valuenow="70"
                                             aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
 
                                               <span><?php echo $name_cat; ?></span>
 
                                           </div>
 
-                                          <div id="vino" class='vinoo padding-bar'></div>
+                                          <div id="vino" class='vinoo padding-bar zind'></div>
 
                                       </div>
 
@@ -246,12 +247,12 @@
                                     ?>
                                       <a href='<?php echo "index.php?page=product&id={$id_product1}"; ?>'>  <img src="<?php echo $pic1 ?>" height="240" width="380" class="MenuPic"/></a>
                                         <div class="captionFig progress transbg">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar abs" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
                                             <span><?php echo $name_cat1; ?></span>
 
                                           </div>
-                                          <div id="pivo" class='padding-bar'></div>
+                                          <div id="pivo" class='padding-bar zind'></div>
                                         </div>
 
                                       <div class="picDescr opisMenu">
@@ -281,12 +282,12 @@
 
                                        <a href='<?php echo "index.php?page=product&id={$id_product2}"; ?>'> <img src="<?php echo $pic2 ?>" height="240" width="380" class="MenuPic"/></a>
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar abs" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
                                             <span><?php echo $name_cat2; ?></span>
 
                                           </div>
-                                             <div id="phone" class='padding-bar'></div>
+                                             <div id="phone" class='padding-bar zind'></div>
                                         </div>
 
                                         <div class="picDescr opisMenu">
@@ -327,12 +328,12 @@
                                     ?>
                                         <a href='<?php echo "index.php?page=product&id={$id_product3}"; ?>'><img src="<?php echo $pic3 ?>" height="240" width="380" class="MenuPic"/></a>
                                         <div class="captionFig progress">
-                                          <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                          <div class="progress-bar abs" role="progressbar" aria-valuenow="70"
                                           aria-valuemin="0" aria-valuemax="100" style="<?php echo $stylee; ?>">
                                             <span><?php echo $name_cat3; ?></span>
 
                                           </div>
-                                          <div id="laptop" class='padding-bar'></div>
+                                          <div id="laptop" class='padding-bar zind'></div>
 
                                         </div>
 
