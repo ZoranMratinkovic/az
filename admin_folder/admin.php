@@ -54,26 +54,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="admin.php?word=products">Products</a>
+                    <a href="admin.php?word=products">All Products</a>
                 </li>
                 <li>
-                    <a href="admin.php?word=text">Shortcuts</a>
+                    <a href="admin.php?word=text">Active Products</a>
                 </li>
                 <li>
-                    <a href="admin.php?word=insert">Einfuegen</a>
+                    <a href="admin.php?word=insert">New Product</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

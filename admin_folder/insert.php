@@ -36,31 +36,31 @@
     </div>
     <div class="form-group">
       <label for="pwd">Stücke</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="stucke">
+      <input type="text" class="form-control" id="pwd" placeholder="stücke" name="stucke">
     </div>
     <div class="form-group">
       <label for="pwd">Preis </label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price">
+      <input type="text" class="form-control" id="pwd" placeholder="Preis" name="price">
     </div>
     <div class="form-group">
       <label for="pwd">Aktion Preis</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2">
+      <input type="text" class="form-control" id="pwd" placeholder="Neuer Preis" name="price2">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description">
+      <input type="text" class="form-control" id="pwd" placeholder="Beschreibung" name="description">
     </div>
     <div class="form-group">
       <label for="pwd">Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image1">
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image1">
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
-      <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date">
+      <input type="datetime-local" class="form-control" id="pwd" placeholder="Ending date" name="date">
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>
-      <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description1">
+      <input type="text" class="form-control" id="pwd" placeholder="Beschreibung2" name="description1">
     </div>
 
 
@@ -329,10 +329,6 @@
                     </div>
                 </div>
 
-
-                  <div class="checkbox">
-                    <label><input type="checkbox" name="remember"> Remember me</label>
-                  </div>
                   <button type="submit" name="insert" class="btn btn-default">Submit</button>
                   <?php
 

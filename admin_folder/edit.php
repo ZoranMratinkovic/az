@@ -16,11 +16,11 @@
   <div class="container">
     <h2>Vertical (basic) form</h2>
   <form class="" action="#" method="post">
-    <?php     
+    <?php
 
         $upitprikaz="SELECT * FROM product where id_product=".$_GET['ids'];
         $result12=$conn->query($upitprikaz)or die("errrorrr");
-        $rowedit=mysqli_fetch_array($result12); 
+        $rowedit=mysqli_fetch_array($result12);
 
     ?>
 
@@ -72,12 +72,12 @@
   </div>
 <section id="works" class="center-content">
     <div class="container">
-      <?php         
+      <?php
 
               $id_pro = $_GET['ids'];
-             
+
               $prikaz = "SELECT * FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.id_product = ?";
-             
+
               $stmtPr = $conn->prepare($prikaz);
               $stmtPr -> bind_param('i',$id_pro);
               $stmtPr -> execute();
@@ -182,8 +182,8 @@
                 <div class="right_desc_text top-margin wow fadeIn" data-wow-duration="1.5s">
                   <?php
 
-                          echo "<h3><input type='text' name='heading5' value='$descs[1]'></h3>";
-                          echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$headings_descs[0]</textarea></p>";
+                          echo "<h3><input type='text' name='heading5' value='$headings_descs[0]'></h3>";
+                          echo "<p><textarea rows='2' name='head5' cols='25' placeholder='1 texxt'>$descs[1]</textarea></p>";
 
 
                    ?>
@@ -364,9 +364,6 @@
                 </div>
 
 
-                  <div class="checkbox">
-                    <label><input type="checkbox" name="remember"> Remember me</label>
-                  </div>
                   <button type="submit" name="edit" class="btn btn-default">Submit</button>
                   <?php
 
@@ -381,7 +378,7 @@
                         $description=$_REQUEST['description'];
                         $bild=$_REQUEST['picture'];
                         $date=$_REQUEST['date'];
-                        $description1=$_REQUEST['description1'];
+                        @$description1=$_REQUEST['description1'];
                         $heading1=$_REQUEST['heading1'];
                         $head1=$_REQUEST['head1'];
                         $heading2=$_REQUEST['heading2'];
@@ -425,8 +422,8 @@
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
 
-                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,$stucke,price_old=$price,price_new=$price1,description='$description1',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc'$heading10',heading_descs='$headingDescDb',pictures_slider='$bild',expire_date='$date',0) WHERE id_product=".$_GET['ids'];
-                  
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description1',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$heading10',heading_descs='$headingDescDb',pictures_slider='$bild',expire_date='$date' WHERE id_product=".$_GET['ids'];
+
 
                   $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));
 
@@ -439,7 +436,7 @@
                     echo "<srcipt>alert('nije');</script>";
                   }
             }
-                  
+
           ?>
                 </form>
 
