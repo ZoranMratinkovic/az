@@ -206,7 +206,7 @@
 
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[1]; ?></h3>
-                                        <p><?php echo $descsAr[0]; ?></p>
+                                        <p><?php echo $descsAr[1]; ?></p>
                                     </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
@@ -214,7 +214,7 @@
 
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[2]; ?></h3>
-                                        <p><?php echo $descsAr[1];?></p>
+                                        <p><?php echo $descsAr[2];?></p>
                                     </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
@@ -222,7 +222,7 @@
 
                                     <div class="right_bottom_description">
                                        <h3><?php echo $headingDescAr[3]; ?></h3>
-                                        <p><?php echo $descsAr[2]; ?></p>
+                                        <p><?php echo $descsAr[3]; ?></p>
                                     </div>
 
                                 <div class="right_single_bottom_text col-xs-6">
@@ -230,7 +230,7 @@
 
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[4]; ?></h3>
-                                        <p><?php echo $descsAr[3]; ?></p>
+                                        <p><?php echo $descsAr[4]; ?></p>
                                     </div>
                                 </div>
                             </div>

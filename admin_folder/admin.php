@@ -1,3 +1,6 @@
+<?php session_start();
+
+if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,8 +52,8 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
+                    <a href="../index.php">
+                        Back To home
                     </a>
                 </li>
                 <li>
@@ -127,3 +130,6 @@
 </body>
 
 </html>
+<?php  }else {
+  echo "<h1>no acces!!!!</h1>";
+}?>
