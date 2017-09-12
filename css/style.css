@@ -57,6 +57,10 @@ PRE LOADER
 {
     background-color:#e0764d!important;
 }
+.sredina{
+        width: 80%;
+        margin:0 auto!important;
+    }
 #commentCancel{
     background-color:#df5770!important;
 }
@@ -85,6 +89,10 @@ PRE LOADER
 }
 .desnoSpan{
     float:right;
+}
+
+.width{
+    width: 100%;
 }
 .ml{
     margin-right:8px;
@@ -132,6 +140,9 @@ PRE LOADER
 .sliderPic{
     border-radius: 4px;
 }
+#details{
+    display:none;
+}
 #demo,#pivoo,#vinoo,#phoness,#laptopss{
     font-size: 30px;
     font-weight: bold;
@@ -163,6 +174,14 @@ PRE LOADER
 
     text-align: center;
     min-height: 255px!important;
+    background: rgba(2, 2, 2, 0.54);
+    padding: 5px;
+    color: #fff;
+}
+.productss1{
+
+    text-align: center;
+    min-height: 150px!important;
     background: rgba(2, 2, 2, 0.54);
     padding: 5px;
     color: #fff;
