@@ -1,5 +1,55 @@
+@media (max-width:374px) and (min-width:320px){
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:15px!important;
+		text-align: center;
+	}
+	.prozent{
+		font-size:17px!important;
+	}
+	.transpBg{
+		top:670px!important;
+	}
+	.cntr{
+		margin-top:15px;
+		text-align: center!important;
+	}
+	#comm{
+		text-align: center;
+	}
+	.picture21{
+		height:270px;
+	}
+	.single_works_text,.martop{
+		margin-top: 35px!important;
+	}
+	.font{
+		margin-top: 35px!important;
+	}
+	.main_des_third_contant{
+		padding:0!important;
+	}
+	.marg{
+		margin-bottom: 0!important;
+	}
+	.pedingnula{
+		padding:0!important; 
+	}
+	.single_works_text{
+		margin-bottom: 35px!important;
+	}
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
+}
 /*Iphone 5,6,6+ 320px-414px width*/
-@media (max-width:414px) and (min-width:320px){
+@media (max-width:414px) and (min-width:375px){
 	#demo,#pivoo,#vinoo,#phoness,#laptopss{
 		font-size:15px!important;
 		text-align: center;
@@ -8,7 +58,7 @@
 		font-size:20px!important;
 	}
 	.transpBg{
-		top:668px!important;
+		top:667px!important;
 	}
 	.cntr{
 		margin-top:15px;
