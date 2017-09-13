@@ -221,6 +221,10 @@ PRE LOADER
   position: absolute;
   z-index:1000;
 }
+.pdNula{
+        padding-top:0!important;
+        padding-bottom:0!important;
+    }
 .progress{
     height:40px!important;
     margin-bottom: 14px!important;

@@ -417,7 +417,7 @@
                         $descsDb = implode(';',$descsArray);
 
 
-                        $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9);
+                        $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9,$heading10);
                         $headingDescDb = implode(';',$headingDescArray);
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
@@ -447,7 +447,7 @@ echo "Success";
 print_r($errors);
 }
 }
-                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$heading10',heading_descs='$headingDescDb',pictures_slider='$putanja1',expire_date='$date' WHERE id_product=".$_GET['ids'];
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$head10',heading_descs='$headingDescDb',pictures_slider='$putanja1',expire_date='$date' WHERE id_product=".$_GET['ids'];
 
 
                   $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));

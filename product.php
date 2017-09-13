@@ -61,7 +61,7 @@
                    
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-                <h1 class=""><?php echo $name ?></h1>
+                <h1 class=""><?php echo $name_pro ?></h1>
                                     <table class="tabela">
 
                                         <tr>
@@ -184,9 +184,14 @@ Comments</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="works_content text-center">
-                        <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="works_content text-center pdNula">
+                       
+                        <div class="col-xs-12 paddingUnderSlider">
+                            <h1><?php echo $description_pro; ?></h1>
+                        </div>
 
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                                 <i class="fa fa-check"></i>
 
@@ -250,7 +255,7 @@ Comments</h4>
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
-                                    <h6><?php echo $headings_descs[1];?></h6>
+                                    <h3><?php echo $headings_descs[1];?></h3>
                                     <p><?php echo $descs[1]; ?></p>
                                     </div>
                                 </div>
@@ -260,7 +265,7 @@ Comments</h4>
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
-                                     <h6><?php echo $headings_descs[2];?></h6>
+                                     <h3><?php echo $headings_descs[2];?></h3>
                                     <p><?php echo $descs[2]; ?></p>
                                     </div>
                                 </div>
@@ -270,7 +275,7 @@ Comments</h4>
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
-                                     <h6><?php echo $headings_descs[3];?></h6>
+                                     <h3><?php echo $headings_descs[3];?></h3>
                                     <p><?php echo $descs[3]; ?></p>
                                     </div>
                                 </div>
@@ -280,7 +285,7 @@ Comments</h4>
                                     <i class="fa fa-tag"></i>
 
                                     <div class="right_bottom_description">
-                                        <h6><?php echo $headings_descs[4];?></h6>
+                                        <h3><?php echo $headings_descs[4];?></h3>
                                     <p><?php echo $descs[4]; ?></p>
                                     </div>
                                 </div>
@@ -327,7 +332,7 @@ Comments</h4>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="right_desc_text wow fadeIn marg marbot martop" data-wow-duration="1.5s">
-                              <h3><?php echo $heading[0]; ?></h3>
+                              <h3><?php echo $headings_descs[5]; ?></h3>
                               <p><?php echo $big_desc; ?></p>
                             </div>
                         </div>

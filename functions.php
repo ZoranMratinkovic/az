@@ -21,11 +21,11 @@
 							{
 								echo "<div class='kolone col-lg-12 col-sm-12 col-xs-12 komentar_i_ime'>";
 								echo "<div class='description row'>";
-								echo "<span class='pull-right color col-xs-4'><i>".date('M d, H:i',$row['date'])."</i></span>";
+								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
 								if(isset($_SESSION['email']) && $_SESSION['id_role']==1)
 								{
 									echo "
-									<p class='col-xs-8'>
+									<p class='col-xs-8 col-lg-10'>
 										<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>".$row['name']." ".$row['last_name']."<a href='deleteComm.php?id={$row['id_product']}&id_kom={$row['id_com']}' title='Obrisi komentar'> X</a>
 										</b>
 									</p>";

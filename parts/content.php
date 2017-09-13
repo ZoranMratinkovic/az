@@ -111,7 +111,7 @@
 
 
             </div>
-              <h4 id='comm'>Comments</h4>
+             <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i> Comments</h4>
         </div>
         <!-- Our Works Section -->
 
