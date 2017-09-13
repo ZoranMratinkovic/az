@@ -21,7 +21,7 @@
 							{
 								echo "<div class='kolone col-lg-12 col-sm-12 col-xs-12 komentar_i_ime'>";
 								echo "<div class='description row'>";
-								echo "<span class='pull-right color col-xs-4'><i>".date('F d, Y h:i',$row['date'])."</i></span>";
+								echo "<span class='pull-right color col-xs-4'><i>".date('M d, H:i',$row['date'])."</i></span>";
 								if(isset($_SESSION['email']) && $_SESSION['id_role']==1)
 								{
 									echo "

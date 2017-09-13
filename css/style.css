@@ -234,6 +234,7 @@ PRE LOADER
 .MenuPic{
     width: 100%;
 }
+
 .progress-bar{
     background-image: linear-gradient(to right, rgba(254,79,104,0.85), rgba(255,117,59,0.85) 50%)!important;
   /*background:#ff4472!important;*/

@@ -38,10 +38,33 @@
 	.single_works_text{
 		margin-bottom: 35px!important;
 	}
-
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
 }
 /*Iphone 5,6,6+ 320px width end*/
 @media (max-width:768px) and (min-width:415px){
+	.navbar-brand>img{
+		margin: 0 auto!important;
+		width: 25%!important;
+	}
+	.navbar-brand{
+		float:none!important;
+	}
+	
+	.navbar-header{
+		width: 100%!important;
+	}
+	.nav>li>a{
+		padding:10px 15px!important;
+	}
 	.tabela{
 		margin:0 auto;
 	}

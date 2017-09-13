@@ -240,7 +240,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-xs-12 martop">
                         <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                          <h3 class='martopIpad'><?php echo $headings_descs[0]; ?></h3>
+                          <h3 class='martopIpad centar1'><?php echo $headings_descs[0]; ?></h3>
                           <p class='centar1'><?php echo $descs[0]; ?></p>
 
 
@@ -324,7 +324,7 @@
                                 <img src="<?php echo $pic_pro; ?>" alt="" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="right_desc_text wow fadeIn marg marbot martop" data-wow-duration="1.5s">
                               <h3><?php echo $heading[0]; ?></h3>
                               <p><?php echo $big_desc; ?></p>
