@@ -22,7 +22,7 @@
 								echo "<div class='kolone col-lg-12 col-sm-12 col-xs-12 komentar_i_ime'>";
 								echo "<div class='description row'>";
 								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
-								if(isset($_SESSION['email']) && $_SESSION['id_role']==1)
+								if(isset($_SESSION['email']) && $_SESSION['id_role'] == 1)
 								{
 									echo "
 									<p class='col-xs-8 col-lg-10'>
