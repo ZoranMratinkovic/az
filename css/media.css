@@ -1,14 +1,13 @@
-/*Iphone 5,6,6+ 320px-414px width*/
-@media (max-width:414px) and (min-width:320px){
+@media (max-width:374px) and (min-width:320px){
 	#demo,#pivoo,#vinoo,#phoness,#laptopss{
 		font-size:15px!important;
 		text-align: center;
 	}
 	.prozent{
-		font-size:20px!important;
+		font-size:17px!important;
 	}
 	.transpBg{
-		top:668px!important;
+		top:670px!important;
 	}
 	.cntr{
 		margin-top:15px;
@@ -38,10 +37,84 @@
 	.single_works_text{
 		margin-bottom: 35px!important;
 	}
-
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
+}
+/*Iphone 5,6,6+ 320px-414px width*/
+@media (max-width:414px) and (min-width:375px){
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:15px!important;
+		text-align: center;
+	}
+	.prozent{
+		font-size:20px!important;
+	}
+	.transpBg{
+		top:667px!important;
+	}
+	.cntr{
+		margin-top:15px;
+		text-align: center!important;
+	}
+	#comm{
+		text-align: center;
+	}
+	.picture21{
+		height:270px;
+	}
+	.single_works_text,.martop{
+		margin-top: 35px!important;
+	}
+	.font{
+		margin-top: 35px!important;
+	}
+	.main_des_third_contant{
+		padding:0!important;
+	}
+	.marg{
+		margin-bottom: 0!important;
+	}
+	.pedingnula{
+		padding:0!important; 
+	}
+	.single_works_text{
+		margin-bottom: 35px!important;
+	}
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
 }
 /*Iphone 5,6,6+ 320px width end*/
 @media (max-width:768px) and (min-width:415px){
+	.navbar-brand>img{
+		margin: 0 auto!important;
+		width: 25%!important;
+	}
+	.navbar-brand{
+		float:none!important;
+	}
+	
+	.navbar-header{
+		width: 100%!important;
+	}
+	.nav>li>a{
+		padding:10px 15px!important;
+	}
 	.tabela{
 		margin:0 auto;
 	}
@@ -81,5 +154,10 @@
 	#demo,#pivoo,#vinoo,#phoness,#laptopss{
 		font-size:26px!important;
 		text-align: center;
+	}
+}
+@media (max-width:1920px) and (min-width:1025px){
+	.navbar-nav{
+		height: 79px!important;
 	}
 }

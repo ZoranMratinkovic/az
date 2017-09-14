@@ -148,10 +148,10 @@
 <header id="home" class="header navbar-fixed-top">
             <div class="navbar navbar-default main-menu">
 
-                <div class="container">
+                <div class="container pdNula">
                     <div class="navbar-header">
 
-                        <a  href="#home" class="navbar-brand"><img src="images/logo2.png" alt="Logo" /></a>
+                        <a  href="#home" class="navbar-brand"><img class='picMenu' src="images/logo2.png" alt="Logo" /></a>
                         <!-- <a class="navbar-brand" href="index.html"></a> -->
                     </div>
                     <div class="collapse navbar-collapse">

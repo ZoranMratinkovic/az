@@ -318,8 +318,8 @@
                 </div>
                 <?php
 
-                        echo "<h3><input type='text' name='head10' value='heading10'></h3>";
-                        echo "<p><textarea rows='10' name='heading10' cols='50' placeholder='1 texxt'></textarea></p>";
+                        echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
+                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'></textarea></p>";
 
 
                  ?>
@@ -381,7 +381,7 @@
                   $descsDb = implode(';',$descsArray);
 
 
-                  $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9);
+                  $headingDescArray = array($heading5,$heading6,$heading7,$heading8,$heading9,$heading10);
                   $headingDescDb = implode(';',$headingDescArray);
 
       //            $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb',$bild',$date,0)";
