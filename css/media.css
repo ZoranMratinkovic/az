@@ -20,7 +20,7 @@
 		height:270px;
 	}
 	.single_works_text,.martop{
-		margin-top: 35px!important;
+		margin-top: 15px!important;
 	}
 	.font{
 		margin-top: 35px!important;
@@ -47,9 +47,30 @@
 	.works_content{
 		padding:0!important;
 	}
+	.centar .martopIpad{
+		font-size:22px!important;
+	}
+	.marbot h3{
+		margin-top: 35px!important;
+		text-align: center;
+	}
+	.download_heading_text{
+		padding-top:0!important;
+		padding-bottom:0!important;
+	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
+
+	.download_heading_text{
+		padding-top:0!important;
+		padding-bottom:0!important;
+	}
+	.marbot h3{
+	
+		text-align: center;
+	}
+
 	#demo,#pivoo,#vinoo,#phoness,#laptopss{
 		font-size:15px!important;
 		text-align: center;
@@ -71,7 +92,7 @@
 		height:270px;
 	}
 	.single_works_text,.martop{
-		margin-top: 35px!important;
+		margin-top: 20px!important;
 	}
 	.font{
 		margin-top: 35px!important;
@@ -98,6 +119,14 @@
 	.works_content{
 		padding:0!important;
 	}
+	.paddingUnderSlider{
+		margin-bottom: 25px!important;
+	}
+	.marbot h3{
+		margin-top: 35px!important;
+		text-align: center;
+	}
+
 }
 /*Iphone 5,6,6+ 320px width end*/
 @media (max-width:768px) and (min-width:415px){
@@ -145,6 +174,14 @@
 	}
 	.main-menu .navbar-nav > li > a{
 		font-size:13px!important;
+	}
+	.marbot{
+		margin-top: 45px!important;
+		
+	}
+	.marbot h3{
+		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 @media (max-width:1024px) and (min-width:769px){

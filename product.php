@@ -238,6 +238,12 @@ Comments</h4>
         <section id="descriotion">
             <div class="container">
                 <div class="row main_description">
+                
+                <div class="col-xs-12 centar">
+                  <h3 class='martopIpad centar1'><?php echo $headings_descs[0]; ?></h3>
+                  <p class='centar1'><?php echo $descs[0]; ?></p>
+                </div>
+
                     <div class="col-sm-12 col-md-6 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
                          <img class='picture21' src="<?php echo $pic_pro; ?>">
@@ -246,8 +252,7 @@ Comments</h4>
                     </div>
                     <div class="col-sm-12 col-md-6 col-xs-12 martop">
                         <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                          <h3 class='martopIpad centar1'><?php echo $headings_descs[0]; ?></h3>
-                          <p class='centar1'><?php echo $descs[0]; ?></p>
+                          
 
 
                             <div class="right_desc_bottom_text">
@@ -325,12 +330,12 @@ Comments</h4>
             <div class="container">
                 <div class="row">
                     <div class="main_des_third_contant">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
                                 <img src="<?php echo $pic_pro; ?>" alt="" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="right_desc_text wow fadeIn marg marbot martop" data-wow-duration="1.5s">
                               <h3><?php echo $headings_descs[5]; ?></h3>
                               <p><?php echo $big_desc; ?></p>
