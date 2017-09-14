@@ -1,12 +1,12 @@
-  <?php 
-        
+  <?php
+
         $fNameErr = $lNameErr = $emailErr = $passErr = $passErr1 = "";
         $fName = $lName = $email = $pass_reg = $pass1 = $hash_ver = "";
-        $errors = array();            
+        $errors = array();
         $id_role = 2; $pass_hashed = $id = "      ";
-        $options = 
+        $options =
         [
-        
+
           'cost' => 12,
         ];
           function test_input($data)
@@ -28,7 +28,7 @@
             else
             {
                 $fName = test_input($_POST["first_name"]);
-                
+
                 if(!preg_match("/^[A-Z][a-z]{2,35}$/",$fName)){
                     $fNameErr = "3-36 characters";
                     $errors[] = "fName";
@@ -44,7 +44,7 @@
             else
             {
                     $lName = test_input($_POST['last_name']);
-                   
+
                     if(!preg_match("/^[A-Z][a-z]{2,35}$/",$lName))
                     {
                         $lNameErr = "Last name not well formed";
@@ -72,7 +72,7 @@
                     {
                         $pass_hashed = password_hash($pass_reg,PASSWORD_BCRYPT,$options);
                         //$pass_hashed = trim($pass_hashed);
-                       
+
                     }
             }
             //password
@@ -85,10 +85,10 @@
             }
             else
             {
-                    
+
                     $pass1 = test_input($_POST['pass1']);
                     $verify = password_verify($pass1,$pass_hashed);
-                   
+
                     if($verify)
                     {
                         echo "<script>alert('u redu su');</script>";
@@ -102,22 +102,22 @@
 
             }
             //password1
-            
+
             //email
-            if (empty($_POST["email"])) 
+            if (empty($_POST["email"]))
             {
                       $emailErr = "Email is required";
                       $errors[] = "Email";
-            } 
-            else 
+            }
+            else
             {
-              
+
                     $email = test_input($_POST["email"]);
                     // check if e-mail address is well-formed
-                   
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
                     {
-                      $emailErr = "Invalid email format"; 
+                      $emailErr = "Invalid email format";
                       $errors[] = "email err";
                     }
             }
@@ -139,52 +139,52 @@
                 $result = $stmt->get_result();
                 if($result->num_rows > 0)
                 {
-                
+
                   echo"
-                    <script> 
-                        
-                        alert('Postoji takav user');       
-                        window.location.href='index.php?page=login';                 
+                    <script>
+
+                        alert('Postoji takav user');
+                        window.location.href='index.php?page=login';
                     </script>";
                      $stmt->close();
 
                 }
                 else
                 {
-                      
+
                       $stmt->close();
                       $hash_ver = md5(rand(0,1000));
                       $status = "";
                       $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-                      
+
                       $stm->bind_param("sssssssi",$id,$pass_hashed,$email,$fName,$lName,$hash_ver,$status,$id_role);
-                      
+
                       $stm->execute();
                       echo strlen($pass_hashed);
                       //send mail after inserting into database
                       if($stm)
                       {
                         echo "<script>alert('Upis izvrsen');</script>";
-                      
+
                           include('phpmailer/PHPMailerAutoload.php');
                           include("connectionFile/define.php");
                           $mail = new PHPMailer;
 
-                          //Enable SMTP debugging. 
-                          //$mail->SMTPDebug = 3; -> client ---> server dialog                           
+                          //Enable SMTP debugging.
+                          //$mail->SMTPDebug = 3; -> client ---> server dialog
                           //Set PHPMailer to use SMTP.
-                         $mail->isSMTP();            
-                          //Set SMTP host name                          
+                        // $mail->isSMTP();
+                          //Set SMTP host name
                           $mail->Host = "smtp.gmail.com";
                           //Set this to true if SMTP host requires authentication to send email
-                          $mail->SMTPAuth = true;                          
-                          //Provide username and password     
-                          $mail->Username = USERNAME;                 
-                          $mail->Password = PASSWORD;                           
+                          $mail->SMTPAuth = true;
+                          //Provide username and password
+                          $mail->Username = USERNAME;
+                          $mail->Password = PASSWORD;
                           //If SMTP requires TLS encryption then set it
-                          $mail->SMTPSecure = "tls";                           
-                          //Set TCP port to connect to 
-                          $mail->Port = 587;                                   
+                          $mail->SMTPSecure = "tls";
+                          //Set TCP port to connect to
+                          $mail->Port = 587;
 
                           $mail->From = EMAIL;
                           $mail->FromName = NAME;
@@ -198,17 +198,17 @@
 
                               <i>Your name is: $fName $lName</i><br/>
                               <i>Your password is: {$_POST['pass']}</i>
-                              <b><a href='localhost/qoqa/az/verify.php?hash={$hash_ver}&email={$email}'>Click on this link to activate your account:</a></b>
+                              <b><a href='www.qoqa.alpikom.rs/verify.php?hash={$hash_ver}&email={$email}'>Click on this link to activate your account:</a></b>
 
                           ";
                           $mail->AltBody = "Your name is: $fName $lName";
 
-                          if(!$mail->send()) 
+                          if(!$mail->send())
                           {
                               echo "Mailer Error: " . $mail->ErrorInfo;
                                echo "<script>alert('mail nije poslat');</script>";
-                          } 
-                          else 
+                          }
+                          else
                           {
                                echo "<script>alert('mail poslat');</script>";
                           }
@@ -219,10 +219,10 @@
                       }
 
                 }            //unique email ends
-                
+
             }                //no errors end
-        }             
-           
+        }
+
 
    ?>
 

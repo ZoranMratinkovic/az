@@ -58,7 +58,7 @@
                         </div>-->
                         <!--<img src="">-->
 
-                   
+
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
                 <h1 class=""><?php echo $name ?></h1>
@@ -80,7 +80,7 @@
                                         <tr>
                             <div class="button">
                               <td colspan="3"><p class="btn toogle btnmy" id='dt'>Details</p></td>
-                                              
+
                             </div>
                                         </tr>
 
@@ -116,11 +116,11 @@
                                                 <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
                                             </div>
                                         </tr>
-                                       
+
 
                                 </table>
                             </div>
-                
+
                         </div>
 
                     </div> <!-- end of row -->
@@ -324,7 +324,7 @@
                                 <img src="<?php echo $pic_pro; ?>" alt="" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 top-margin">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="right_desc_text wow fadeIn marg marbot martop" data-wow-duration="1.5s">
                               <h3><?php echo $heading[0]; ?></h3>
                               <p><?php echo $big_desc; ?></p>
