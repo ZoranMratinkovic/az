@@ -24,6 +24,16 @@ PRE LOADER
 ==========================================*/
 /*Nas kod*/
 /*preporucujem kod*/
+.picture21{
+    margin-top:55px;
+    height:400px;
+}
+.marbot p{
+    line-height: 1.9;
+}
+.right_bottom_description p{
+    line-height: 1.5;
+}
 #comm{
     color:#EB008A;
 }
