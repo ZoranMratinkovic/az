@@ -55,12 +55,24 @@
         <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['price_new']; ?>">
       </div>
       <div class="form-group">
+        <label for="pwd">Lieferkosten</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['lieferkosten']; ?>">
+      </div>
+      <div class="form-group">
         <label for="pwd">Titel</label>
         <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="description" value="<?php echo $rowedit['description']; ?>">
       </div>
       <div class="form-group">
         <label for="pwd">Bild</label>
         <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image2" value="<?php echo $rowedit['pictures_slider']; ?>" >
+      </div>
+      <div class="form-group">
+        <label for="pwd">Bild 1</label>
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image3" value="<?php echo $rowedit['pictures_slider']; ?>" >
+      </div>
+      <div class="form-group">
+        <label for="pwd">Bild 2</label>
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image4" value="<?php echo $rowedit['pictures_slider']; ?>" >
       </div>
       <div class="form-group">
         <label for="pwd">Ending date</label>
@@ -399,6 +411,7 @@
                         $head9=$_REQUEST['head9'];
                         $head10 = $_REQUEST['head10'];
                         $heading10 = $_REQUEST['heading10'];
+                        $lieferkosten=$_REQUEST['lieferkosten'];
                       /*  echo $head1.$heading1."<br/>";
                         echo $head2.$heading2."<br/>";
                         echo $head3.$heading3."<br/>";
@@ -447,7 +460,62 @@ echo "Success";
 print_r($errors);
 }
 }
-                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$head10',heading_descs='$headingDescDb',pictures_slider='$putanja1',expire_date='$date' WHERE id_product=".$_GET['ids'];
+
+if(isset($_FILES['image3'])){
+$errors= array();
+$file_name = $_FILES['image3']['name'];
+$file_size = $_FILES['image3']['size'];
+$file_tmp = $_FILES['image3']['tmp_name'];
+$file_type = $_FILES['image3']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image3']['name'])));
+
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja2="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+
+
+if(isset($_FILES['image3'])){
+$errors= array();
+$file_name = $_FILES['image4']['name'];
+$file_size = $_FILES['image4']['size'];
+$file_tmp = $_FILES['image4']['tmp_name'];
+$file_type = $_FILES['image4']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image4']['name'])));
+
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja3="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,lieferkosten=$lieferkosten,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$head10',heading_descs='$headingDescDb',pictures_slider='$putanja1','bild2'='$putanja2','bild3'='$putanja3',expire_date='$date' WHERE id_product=".$_GET['ids'];
 
 
                   $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));

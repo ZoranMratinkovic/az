@@ -24,8 +24,11 @@
                  $ammount_pro = $row['amount'];
                  $old_price_pro = $row['price_old'];
                  $new_price_pro = $row['price_new'];
+                 $lieferkosten1=$row['lieferkosten'];
                  $description_pro = $row['description'];
                  $pic_pro = $row['pictures_slider'];
+                 $pic_pro1 =$row['bild2'];
+                 @$pic_pro2 =$row['bild3'];
                  $id_product_pro = $row['id_product'];
                  $text = explode(';',$row['text']);
                  $heading = explode(';',$row['headings']);
@@ -79,7 +82,7 @@
                                         </tr>
                                         <tr>
                             <div class="button">
-                              <td colspan="3"><p class="btn toogle btnmy" id='dt'>Details</p></td>
+                              <td colspan="3"><p class="btn toogle btnmy" id='dt'>Jetzt Bestellen</p></td>
 
                             </div>
                                         </tr>
@@ -93,7 +96,7 @@
 
 
                                             <td class="zindex" id='price'>Stucke:</td>
-                                            <td class="zindex">Liefer costen: </td>
+                                            <td class="zindex">Liefer Kosten: </td>
                                             <td class="zindex">Farbe: </td>
 
                                         </tr>
@@ -101,7 +104,7 @@
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="" class='form-control'>
                                               </td>
-                                              <td class="zindex">9 CHF</td>
+                                              <td class="zindex"><?php echo $lieferkosten1 ?> CHF</td>
                                               <td class="zindex">
                                                   <select name='ddlFarbe' class='form-control'>
                                                       <option  value="1">Red</option>
@@ -185,13 +188,13 @@ Comments</h4>
                 </div>
                 <div class="row">
                     <div class="works_content text-center pdNula">
-                       
+
                         <div class="col-xs-12 paddingUnderSlider">
                             <h1><?php echo $description_pro; ?></h1>
                         </div>
 
                         <div class="col-md-3 col-sm-6 col-xs-12">
-                            
+
                             <div class="single_works_text wow fadeInLeft" data-wow-duration=".5s">
                                 <i class="fa fa-check"></i>
 
@@ -327,7 +330,7 @@ Comments</h4>
                     <div class="main_des_third_contant">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                                <img src="<?php echo $pic_pro; ?>" alt="" />
+                                <img src="<?php echo $pic_pro1; ?>" alt="" />
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -429,7 +432,7 @@ Comments</h4>
 
         <!-- Subscribe Section  -->
 <script type="text/javascript">
-      document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
+      document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro2; ?>)";
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
 

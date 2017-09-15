@@ -47,12 +47,24 @@
       <input type="text" class="form-control" id="pwd" placeholder="Neuer Preis" name="price2">
     </div>
     <div class="form-group">
+      <label for="pwd">Lieferkosten</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Neuer Preis" name="lieferkosten">
+    </div>
+    <div class="form-group">
       <label for="pwd">Titel</label>
       <input type="text" class="form-control" id="pwd" placeholder="Beschreibung" name="description">
     </div>
     <div class="form-group">
-      <label for="pwd">Bild</label>
+      <label for="pwd">Bild Slider</label>
       <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image1">
+    </div>
+    <div class="form-group">
+      <label for="pwd">1 Bild</label>
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image2">
+    </div>
+    <div class="form-group">
+      <label for="pwd">2 Bild</label>
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image3">
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
@@ -363,6 +375,7 @@
                         $head9=$_REQUEST['head9'];
                         $head10 = $_REQUEST['head10'];
                         $heading10 = $_REQUEST['heading10'];
+                        $lieferkosten=$_REQUEST['lieferkosten'];
                       /*  echo $head1.$heading1."<br/>";
                         echo $head2.$heading2."<br/>";
                         echo $head3.$heading3."<br/>";
@@ -410,9 +423,65 @@ echo "Success";
 }else{
 print_r($errors);
 }
-}                 $upitstatus="UPDATE product SET expired=1 where id_cat=".$categorie;
+}
+if(isset($_FILES['image2'])){
+$errors= array();
+$file_name = $_FILES['image2']['name'];
+$file_size = $_FILES['image2']['size'];
+$file_tmp = $_FILES['image2']['tmp_name'];
+$file_type = $_FILES['image2']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
+
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja1="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+
+
+if(isset($_FILES['image3'])){
+$errors= array();
+$file_name = $_FILES['image3']['name'];
+$file_size = $_FILES['image3']['size'];
+$file_tmp = $_FILES['image3']['tmp_name'];
+$file_type = $_FILES['image3']['type'];
+$file_ext=strtolower(end(explode('.',$_FILES['image3']['name'])));
+
+$expensions= array("jpeg","jpg","png");
+
+if(in_array($file_ext,$expensions)=== false){
+$errors[]="extension not allowed, please choose a JPEG or PNG file.";
+}
+
+if($file_size > 2097152) {
+$errors[]='File size must be excately 2 MB';
+}
+
+if(empty($errors)==true) {
+move_uploaded_file($file_tmp,"../images/".$file_name);
+$putanja2="images/".$file_name;
+echo "Success";
+}else{
+print_r($errors);
+}
+}
+
+           $upitstatus="UPDATE product SET expired=1 where id_cat=".$categorie;
                   $resultstatus = $conn->query($upitstatus)or die("losee".mysqli_error($conn));
-                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,'$description','$textDb','$headingDb','$descsDb','$heading10','$headingDescDb','$putanja','$date',0)";
+                  $upitubacp1="INSERT INTO product VALUES('','$produkt',$categorie,1,$stucke,$stucke,$price,$price1,$lieferkosten,'$description','$textDb','$headingDb','$descsDb','$head10','$headingDescDb','$putanja','$putanja1','$putanja2','$date',0)";
                   $resultubacp = $conn->query($upitubacp1)or die("losee".mysqli_error($conn));
                       }
 

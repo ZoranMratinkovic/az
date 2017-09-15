@@ -30,8 +30,8 @@
                                         </tr>
                                         <tr>
             								<div class="button">
-            									<td colspan="3"><p class="btn toogle btnmy" id='dt'>Details</p></td>
-                                              
+            									<td colspan="3"><p class="btn toogle btnmy" id='dt'>Jetzt einkaufen</p></td>
+
             								</div>
                                         </tr>
 
@@ -52,7 +52,7 @@
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount; ?>" step="1" value="1" name="" class='form-control'>
                                               </td>
-                                              <td class="zindex">9 CHF</td>
+                                              <td class="zindex"><?php echo $lieferkosten ?> CHF</td>
                                               <td class="zindex">
                                                   <select name='ddlFarbe' class='form-control'>
                                                       <option  value="1">Red</option>
@@ -64,14 +64,14 @@
                                         <tr>
                                             <div class="button">
                                                 <td colspan="3">
-                                                <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                                <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
                                             </div>
                                         </tr>
-                                       
+
 
                                 </table>
                             </div>
-                
+
                         </div>
 
                     </div> <!-- end of row -->
@@ -198,12 +198,12 @@
 
                             <div class="right_desc_bottom_text row">
 
-                     
+
                                    <div class="sredina">
 
                                 <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
-                               
+
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[1]; ?></h3>
                                         <p><?php echo $descsAr[1]; ?></p>
@@ -212,7 +212,7 @@
 
                                 <div class="right_single_bottom_text col-xs-12 col-sm-6">
                                     <i class="fa fa-tag"></i>
-                              
+
 
                                     <div class="right_bottom_description">
                                         <h3><?php echo $headingDescAr[2]; ?></h3>

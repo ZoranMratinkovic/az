@@ -129,8 +129,8 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="message_content">
                             <div class="message_heading_text center-content wow zoomIn" data-wow-duration="1s">
-                                <h2>Login for better experience</h2>
-                                <p>Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
+                                <h2>Login </h2>
+                                <p>Hier können Sie sich einloggen</p>
                             </div>
 
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST" onSubmit="return login_check();">

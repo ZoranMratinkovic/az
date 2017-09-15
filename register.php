@@ -29,7 +29,7 @@
             {
                 $fName = test_input($_POST["first_name"]);
 
-                if(!preg_match("/^[A-Z][a-z]{2,35}$/",$fName)){
+                if(!preg_match("/^[A-z]{2,35}$/",$fName)){
                     $fNameErr = "3-36 characters";
                     $errors[] = "fName";
                 }
@@ -38,16 +38,16 @@
             //lastName
             if(empty($_POST['last_name']))
             {
-                    $lNameErr = "Last Name required";
+                    $lNameErr = "Nachname eingeben!";
                     $errors[] = "Lname";
             }
             else
             {
                     $lName = test_input($_POST['last_name']);
 
-                    if(!preg_match("/^[A-Z][a-z]{2,35}$/",$lName))
+                    if(!preg_match("/^[A-z]{2,35}$/",$lName))
                     {
-                        $lNameErr = "Last name not well formed";
+                        $lNameErr = "Ihr nachname wurde nicht richtig geschrieben!";
                         $errors[] = "Lname preg match";
                     }
             }
@@ -65,7 +65,7 @@
 
                     if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_reg))
                     {
-                        $passErr = "Password not well formed";
+                        $passErr = "Password mindestens 8 buchstaben und 1 ziffer";
                         $errors[] = "Pass error";
                     }
                     else
@@ -91,13 +91,13 @@
 
                     if($verify)
                     {
-                        echo "<script>alert('u redu su');</script>";
+                        echo "<script>alert('Ihr Password ist genügend sicher!');</script>";
                     }
                     else
                     {
                               $errors[] = "Pass1 err";
-                              $passErr1 = "Passwords don't match";
-                              echo "<script>alert('nisu iste sifre');</script>";
+                              $passErr1 = "Passwörter stimmen nicht überrein";
+                              echo "<script>alert('Passwörter nicht gleich!');</script>";
                     }
 
             }
@@ -117,7 +117,7 @@
 
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL))
                     {
-                      $emailErr = "Invalid email format";
+                      $emailErr = "Email form nicht richtig";
                       $errors[] = "email err";
                     }
             }
@@ -126,7 +126,7 @@
             //it errors exist
             if(count($errors) != 0)
             {
-                     echo "<script>alert('Ima gresaka');</script>";
+                     echo "<script>alert('Es sind fehler aufgetreten bitte versuchen sie es erneut');</script>";
             }
             else
             {
@@ -143,7 +143,7 @@
                   echo"
                     <script>
 
-                        alert('Postoji takav user');
+                        alert('es besteht bereits ein user mit dieser email adresse');
                         window.location.href='index.php?page=login';
                     </script>";
                      $stmt->close();
@@ -206,16 +206,16 @@
                           if(!$mail->send())
                           {
                               echo "Mailer Error: " . $mail->ErrorInfo;
-                               echo "<script>alert('mail nije poslat');</script>";
+                               echo "<script>alert('verifikations email nicht gesendet!');</script>";
                           }
                           else
                           {
-                               echo "<script>alert('mail poslat');</script>";
+                               echo "<script>alert('Bitte verifizieren sie ihre email adresse');</script>";
                           }
                       }      //query successful ends
                       else
                       {
-                        echo "<script>alert('Upis nije izvrsen');</script>";
+                        echo "<script>alert('Sie haben sich erfolgreich registriert');</script>";
                       }
 
                 }            //unique email ends
@@ -235,8 +235,8 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="message_content">
                             <div class="message_heading_text center-content wow zoomIn" data-wow-duration="1s">
-                                <h2>Get in Touch</h2>
-                                <p id="neuspeh" >Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
+                                <h2>Registration</h2>
+                                <p id="neuspeh" >Hier können sie sich registrieren.</p>
                             </div>
 
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">

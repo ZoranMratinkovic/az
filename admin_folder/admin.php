@@ -66,7 +66,7 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                     <a href="admin.php?word=insert">New Product</a>
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a href="#">Bestellte Produkte</a>
                 </li>
 
             </ul>
