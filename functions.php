@@ -41,7 +41,8 @@
 			
 							}
 
-							if(isset($_SESSION['email'])){//if the user is logged in
+							if(isset($_SESSION['email']))
+							{//if the user is logged in
 
 								echo "<form method='post' action='#' onSubmit='return comment();'><textarea class='col-lg-12' name='taComment' placeholder='Add a public comment...' id='textArea' rows='4'></textarea>";
 								echo "<input type='submit' class='btn btn-lg' name='commentSubmit' id='commentSubmit' value='Comment'/>";
@@ -101,5 +102,32 @@ function commentsInsert($id)
 			}
 }
 
+function select_color($id_pr)
+{
+	include("connectionFile/connection.php");
+	$selectQ = "SELECT * FROM color c INNER JOIN colorProduct cp on c.id_color=cp.id_color INNER JOIN product p on p.id_product = cp.id_product WHERE p.id_product =?";
+	$stmtQ = $conn->prepare($selectQ);
+	$stmtQ -> bind_param('i',$id_pr);
+	$stmtQ->execute();
+	echo "<select name='ddlFarbe' class='form-control' id='selectQ'>
+	<option value='0'>Farbe</option>";
+	if($stmtQ)
+	{
+		if($rez = $stmtQ->get_result())
+		{
+			while($row = $rez->fetch_assoc())
+			{
+				echo "<option value='{$row['id_product']}'>{$row['color_name']}</option>";
+			}
+			echo "</select>";
+		}
+	}
+	else
+	{
+		echo "<option value='noFarbe'>No Farbe</option></select>";
+	}
+}
+	
+ 
 
  ?>

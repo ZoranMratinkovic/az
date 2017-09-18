@@ -28,7 +28,7 @@
                  $description_pro = $row['description'];
                  $pic_pro = $row['pictures_slider'];
                  $pic_pro1 =$row['bild2'];
-                 @$pic_pro2 =$row['bild3'];
+                 $pic_pro2 =$row['bild3'];
                  $id_product_pro = $row['id_product'];
                  $text = explode(';',$row['text']);
                  $heading = explode(';',$row['headings']);
@@ -106,11 +106,10 @@
                                               </td>
                                               <td class="zindex"><?php echo $lieferkosten1 ?> CHF</td>
                                               <td class="zindex">
-                                                  <select name='ddlFarbe' class='form-control'>
-                                                      <option  value="1">Red</option>
-                                                      <option  value="2">Green</option>
-                                                      <option  value="3">Blue</option>
-                                                  </select>
+                                                  <?php 
+                                                  require_once('functions.php');
+                                                  select_color($id_prod);
+                                                   ?>
                                               </td>
                                         </tr>
                                         <tr>
@@ -175,7 +174,7 @@ Comments</h4>
              <div class="row" id='CommentSection'>
                     <div class="col-xs-12">
                         <?php
-                            include('functions.php');
+                            
 
                             if(isset($_POST['commentSubmit']))
                             {

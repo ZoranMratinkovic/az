@@ -6,7 +6,7 @@
 
                         <!--<div class="col-sm-5 col-xs-12">
                             <div class="iphone center-content wow fadeInLeft" data-wow-duration="1s">
-                                <img class="sliderPic" src="<?php //echo $pic ?>" alt="" height="400"/>
+                                <img class="sliderPic" src="<//echo $pic ?>" alt="" height="400"/>
                             </div>slika na slajderu
                         </div>-->
 
@@ -54,11 +54,10 @@
                                               </td>
                                               <td class="zindex"><?php echo $lieferkosten ?> CHF</td>
                                               <td class="zindex">
-                                                  <select name='ddlFarbe' class='form-control'>
-                                                      <option  value="1">Red</option>
-                                                      <option  value="2">Green</option>
-                                                      <option  value="3">Blue</option>
-                                                  </select>
+                                                  <?php 
+                                                      require_once('functions.php');
+                                                     select_color($id_product); 
+                                                  ?>
                                               </td>
                                         </tr>
                                         <tr>
@@ -120,7 +119,7 @@
                 <div class="row" id='CommentSection'>
                     <div class="col-xs-12">
                         <?php
-                            include('functions.php');
+                          
 
                             if(isset($_POST['commentSubmit']))
                             {
@@ -185,7 +184,7 @@
                 <div class="row main_description">
                     <div class="col-sm-12 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                         <img src="<?php echo $pic; ?>" alt="" height='530' width='100%' class='picture21'>
+                         <img src="<?php echo $pic; ?>" alt="" height='530' width='80%' class='picture21 picture2121'>
                         </div>
                     </div>
                     <div class="col-sm-12">

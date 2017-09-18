@@ -1,6 +1,6 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.id_cat,p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
+   $sql = "SELECT p.bild2,p.bild3,p.lieferkosten,p.id_cat,p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
    $expired = 0;
    $id_cat = 1;
    $st = $conn->prepare($sql);
@@ -25,7 +25,7 @@
              $description = $row['description'];
              $pic = $row['pictures_slider'];
              $pic1 =$row['bild2'];
-             @$pic2 =$row['bild3'];
+             $pic2 =$row['bild3'];
              $id_catI = $row['id_cat'];
              $headingsAr = explode(';',$row['headings']);
              $textAr = explode(';',$row['text']);
