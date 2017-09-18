@@ -37,7 +37,7 @@
         while($rezcat=mysqli_fetch_array($result11)){
           echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
         }
-
+      
           ?>
         </select>
 
@@ -56,7 +56,7 @@
       </div>
       <div class="form-group">
         <label for="pwd">Lieferkosten</label>
-        <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['lieferkosten']; ?>">
+        <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="lieferkosten" value="<?php echo $rowedit['lieferkosten']; ?>">
       </div>
       <div class="form-group">
         <label for="pwd">Titel</label>
@@ -364,8 +364,8 @@
                 </div>
                 <?php
 
-                        echo "<h3><input type='text' name='heading10' value='heading10'></h3>";
-                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'>100</textarea></p>";
+                        echo "<h3><input type='text' name='heading10' value='$headings_descs[5]'></h3>";
+                        echo "<p><textarea rows='10' name='head10' cols='50' placeholder='1 texxt'>$big_desc</textarea></p>";
 
 
                  ?>
@@ -515,18 +515,18 @@ echo "Success";
 print_r($errors);
 }
 }
-                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,lieferkosten=$lieferkosten,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$head10',heading_descs='$headingDescDb',pictures_slider='$putanja1','bild2'='$putanja2','bild3'='$putanja3',expire_date='$date' WHERE id_product=".$_GET['ids'];
+                  $upitizmena="UPDATE product SET product_name='$produkt',id_cat=$categorie,lager=$stucke,price_old=$price,price_new=$price1,lieferkosten=$lieferkosten,description='$description',text='$textDb',headings='$headingDb',descs='$descsDb',big_desc='$head10',heading_descs='$headingDescDb',pictures_slider='$putanja1',bild2='$putanja2',bild3='$putanja3',expire_date='$date' WHERE id_product=".$_GET['ids'];
 
 
                   $resultizmena = $conn->query($upitizmena)or die("losee".mysqli_error($conn));
 
                   if($resultizmena)
                   {
-                    echo "<srcipt>alert('izvrseno');</script>";
+                    echo "<scrcipt>alert('efolgreich gewechselt');</script>";
                   }
                   else
                   {
-                    echo "<srcipt>alert('nije');</script>";
+                    echo "<srcipt>alert('Eroor check again');</script>";
                   }
             }
 
