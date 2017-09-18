@@ -29,7 +29,7 @@
           {
               $fName = test_input($_POST["first_name"]);
 
-              if(!preg_match("/^[A-Z][a-z]{2,35}$/",$fName)){
+              if(!preg_match("/^[A-z]{2,35}$/",$fName)){
                   $fNameErr = "3-36 characters";
                   $errors[] = "fName";
               }
@@ -45,7 +45,7 @@
           {
                   $lName = test_input($_POST['last_name']);
 
-                  if(!preg_match("/^[A-Z][a-z]{2,35}$/",$lName))
+                  if(!preg_match("/^[A-z]{2,35}$/",$lName))
                   {
                       $lNameErr = "Last name not well formed";
                       $errors[] = "Lname preg match";
@@ -63,9 +63,9 @@
           {
                   $pass_reg = test_input($_POST["pass"]);
 
-                  if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_reg))
+                  if(!preg_match("/^[a-zA-Z0-9!@#$%^&*-_]{6,}$/",$pass_reg))
                   {
-                      $passErr = "Password not well formed";
+                      $passErr = "Password nicht gut";
                       $errors[] = "Pass error";
                   }
                   else

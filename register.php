@@ -63,9 +63,9 @@
             {
                     $pass_reg = test_input($_POST["pass"]);
 
-                    if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_reg))
+                    if(!preg_match("/^[a-zA-Z0-9!@#$%^&*-_]{6,}$/",$pass_reg))
                     {
-                        $passErr = "Password mindestens 8 buchstaben und 1 ziffer";
+                        $passErr = "Password mindestens 6 buchstaben und 1 ziffer";
                         $errors[] = "Pass error";
                     }
                     else
