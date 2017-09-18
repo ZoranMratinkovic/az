@@ -120,6 +120,7 @@ PRE LOADER
     position:relative;
     z-index:100000000;
     float:right!important;
+    padding-right: 30px;
 }
 .abs{
     position: absolute;

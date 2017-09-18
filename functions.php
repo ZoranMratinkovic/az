@@ -117,7 +117,7 @@ function select_color($id_pr)
 		{
 			while($row = $rez->fetch_assoc())
 			{
-				echo "<option value='{$row['id_product']}'>{$row['color_name']}</option>";
+				echo "<option value='{$row['id_color']}'>{$row['color_name']}</option>";
 			}
 			echo "</select>";
 		}
