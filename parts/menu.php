@@ -155,9 +155,15 @@
                     <div class="navbar-header">
 
                         <a  href="#home" class="navbar-brand"><img class='picMenu' src="images/logo2.png" alt="Logo" /></a>
+                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <!-- <a class="navbar-brand" href="index.html"></a> -->
                     </div>
-                    <div class="collapse navbar-collapse">
+                    <div id="navbar" aria-expended='false' class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
                              <li><a href="index.php" class="" >HOME</a></li>
                              <!--
@@ -227,7 +233,7 @@
                                 </li>
                             </a>
 
-                                <a href="#"><li>Link 2</li></a>
+                                
                             </ul>
                             </li>
 
@@ -274,7 +280,7 @@
                                 </li>
                             </a>
 
-                                <a href="#"><li>Link 2</li></a>
+                                
                             </ul>
                             </li>
                             <li><a href="<?php echo "index.php?page=product&id={$id_product2}"; ?>" class=""><?php echo $name_cat2 ?></a>
@@ -309,7 +315,7 @@
                                 </li>
                             </a>
 
-                                <a href="#"><li>Link 2</li></a>
+                                
                             </ul>
                             </li>
                             <li><a href="<?php echo "index.php?page=product&id={$id_product3}"; ?>" class=""><?php echo $name_cat3 ?></a>
@@ -356,7 +362,7 @@
                                 </li>
                             </a>
 
-                                <a href="#"><li>Link 2</li></a>
+                                
                             </ul>
                             </li>
                              <?php

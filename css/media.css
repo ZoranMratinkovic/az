@@ -58,10 +58,22 @@
 		padding-top:0!important;
 		padding-bottom:0!important;
 	}
+	.main-menu .navbar-nav > li > a{
+		padding: 5px 13px 25px 13px!important;
+		border-bottom: 2px solid #ccc!important;
+		text-align: center;
+	}
+	.DropDownPic{
+		display:none!important;
+	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
-
+	.main-menu .navbar-nav > li > a{
+		padding: 5px 13px 25px 13px!important;
+		border-bottom: 2px solid #ccc!important;
+		text-align: center;
+	}
 	.download_heading_text{
 		padding-top:0!important;
 		padding-bottom:0!important;
@@ -126,7 +138,9 @@
 		margin-top: 35px!important;
 		text-align: center;
 	}
-
+	.DropDownPic{
+		display:none!important;
+	}
 }
 /*Iphone 5,6,6+ 320px width end*/
 @media (max-width:768px) and (min-width:415px){
