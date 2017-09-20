@@ -17,7 +17,7 @@
 		text-align: center;
 	}
 	.picture21{
-		height:270px;
+		height:270px!important;
 	}
 	.single_works_text,.martop{
 		margin-top: 15px!important;
@@ -78,7 +78,7 @@
 		font-size:14px!important;
 	}
 	.header-image{
-		padding-top:130px;
+		padding-top:110px;
 	}
 	.scrolldown{
 		display:none;
@@ -90,9 +90,16 @@
 		height:40px!important;
 		width:100px!important;
 	}
+	#bgimage{
+		background-attachment: scroll!important: 
+	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
+	#bgimage{
+		
+		background-attachment: scroll!important: 
+	}
 	.main-menu .navbar-nav > li > a{
 		padding: 5px 13px 25px 13px!important;
 		border-bottom: 2px solid #ccc!important;
@@ -125,7 +132,7 @@
 		text-align: center;
 	}
 	.picture21{
-		height:270px;
+		height:270px!important;
 	}
 	.single_works_text,.martop{
 		margin-top: 20px!important;
