@@ -35,6 +35,15 @@
 
     </div>
     <div class="form-group">
+      <label for="pwd">Farbe</label><br/>
+      <input type="checkbox" name="" value="">Rot<br/>
+      <input type="checkbox" name="" value="">Blau<br/>
+      <input type="checkbox" name="" value="">Gruen<br/>
+      <input type="checkbox" name="" value="">Gelb<br/>
+      <input type="checkbox" name="" value="">Schwarz<br/>
+      <input type="checkbox" name="" value="">Weiss<br/>
+    </div>
+    <div class="form-group">
       <label for="pwd">Stücke</label>
       <input type="text" class="form-control" id="pwd" placeholder="stücke" name="stucke">
     </div>

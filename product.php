@@ -72,13 +72,16 @@
 
                                             <td class="zindex" id='price'>Katalog Preis: </td>
                                             <td class="zindex">Neuer Preis: </td>
-                                            <td class="zindex">Neuer Preis: </td>
+                                            <td class="zindex">Preis Rabat: </td>
 
                                         </tr>
-                                        <tr>
+                                        <tr>    <?php $rabat = $old_price_pro-$new_price_pro;
+                                                      $rabat2 = $old_price_pro/$rabat;
+                                                      $rabat1 = 100/$rabat2;
+                                                              $rabatp=round($rabat1,2);?>
                                               <td class="zindex"><?php echo $old_price_pro ?> CHF</td>
                                               <td class="zindex">  <?php echo $new_price_pro ?> CHF</td>
-                                              <td class="zindex"><?php echo $new_price_pro ?> CHF</td>
+                                              <td class="zindex"><?php echo $rabatp ?> %</td>
                                         </tr>
                                         <tr>
                             <div class="button">
@@ -106,7 +109,7 @@
                                               </td>
                                               <td class="zindex"><?php echo $lieferkosten1 ?> CHF</td>
                                               <td class="zindex">
-                                                  <?php 
+                                                  <?php
                                                   require_once('functions.php');
                                                   select_color($id_prod);
                                                    ?>
@@ -115,7 +118,7 @@
                                         <tr>
                                             <div class="button">
                                                 <td colspan="3">
-                                                <a href="" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                                <a href="cart/pay.php" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
                                             </div>
                                         </tr>
 
@@ -174,7 +177,7 @@ Comments</h4>
              <div class="row" id='CommentSection'>
                     <div class="col-xs-12">
                         <?php
-                            
+
 
                             if(isset($_POST['commentSubmit']))
                             {
@@ -240,7 +243,7 @@ Comments</h4>
         <section id="descriotion">
             <div class="container">
                 <div class="row main_description">
-                
+
                 <div class="col-xs-12 centar">
                   <h3 class='martopIpad centar1'><?php echo $headings_descs[0]; ?></h3>
                   <p class='centar1'><?php echo $descs[0]; ?></p>
@@ -254,7 +257,7 @@ Comments</h4>
                     </div>
                     <div class="col-sm-12 col-md-6 col-xs-12 martop">
                         <div class="right_desc_text wow fadeIn" data-wow-duration="1.5s">
-                          
+
 
 
                             <div class="right_desc_bottom_text">

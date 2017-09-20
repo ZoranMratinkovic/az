@@ -41,6 +41,9 @@ PRE LOADER
 }
 #comm{
     color:#EB008A;
+    margin-top: 20px;
+text-align: center;
+font-size: 25px;
 }
 #comm:hover{
     cursor: pointer;
