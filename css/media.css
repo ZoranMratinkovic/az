@@ -90,15 +90,24 @@
 		height:40px!important;
 		width:100px!important;
 	}
-	#bgimage{
+	#bgimage,#bgimagePro{ 
+		background-position: 0 0!important;
+		-o-background-size: cover;
+    	-moz-background-size: cover;
+    	-webkit-background-size:cover;
+    	background-size: cover;
 		background-attachment: scroll!important: 
 	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
-	#bgimage{
-		
-		background-attachment: scroll!important: 
+	#bgimage,#bgimagePro{
+		background-position: 0 0!important;
+		-o-background-size: cover;
+    	-moz-background-size: cover;
+    	-webkit-background-size:cover;
+    	background-size: cover;
+		background-attachment: scroll!important:  
 	}
 	.main-menu .navbar-nav > li > a{
 		padding: 5px 13px 25px 13px!important;
