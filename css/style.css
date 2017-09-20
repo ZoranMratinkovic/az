@@ -25,12 +25,12 @@ PRE LOADER
 /*Nas kod*/
 /*preporucujem kod*/
 .picture21{
-    margin-top:55px;
+    margin-top:20px;
     height:400px;
 }
 .picture2121{
-    margin-top:55px;
-    height:450px!important;
+    margin-top:20px;
+    height:500px!important;
 }
 
 .marbot p{
@@ -598,7 +598,7 @@ p.description {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-attachment: fixed;
+	
 	height: 100%;
 	overflow: hidden;
 }
@@ -679,7 +679,7 @@ h3{
 }
 /* works content */
 .works_content{
-    padding: 50px 0px 40px 0px;
+    padding: 5px 0px 40px 0px;
 	overflow:hidden;
 }
 .single_works_text{
