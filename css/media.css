@@ -7,7 +7,7 @@
 		font-size:17px!important;
 	}
 	.transpBg{
-		top:670px!important;
+		top:488px!important;
 	}
 	.cntr{
 		margin-top:15px;
@@ -66,6 +66,30 @@
 	.DropDownPic{
 		display:none!important;
 	}
+
+
+	.slider1 {
+    	height: 568px!important;
+	}
+	.single_home_content h1{
+		font-size: 22px;
+	}
+	.zindex{
+		font-size:14px!important;
+	}
+	.header-image{
+		padding-top:130px;
+	}
+	.scrolldown{
+		display:none;
+	}
+	.productss{
+		min-height:130px!important;
+	}
+	.btnmy{
+		height:40px!important;
+		width:100px!important;
+	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
@@ -91,7 +115,7 @@
 		font-size:20px!important;
 	}
 	.transpBg{
-		top:667px!important;
+		top:584px!important;
 	}
 	.cntr{
 		margin-top:15px;
@@ -140,6 +164,29 @@
 	}
 	.DropDownPic{
 		display:none!important;
+	}
+
+	.slider1 {
+    	height: 667px!important;
+	}
+	.single_home_content h1{
+		font-size: 22px;
+	}
+	.zindex{
+		font-size:17px!important;
+	}
+	.header-image{
+		padding-top:150px!important;
+	}
+	.scrolldown{
+		display:none;
+	}
+	.productss{
+		min-height:130px!important;
+	}
+	.btnmy{
+		height:40px!important;
+		width:100px!important;
 	}
 }
 /*Iphone 5,6,6+ 320px width end*/
