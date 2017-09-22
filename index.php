@@ -128,25 +128,25 @@ function countdown1(tm,name_cat){
         /*output = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         // Output the result in an element with id="demo"*/
-        if(name_cat=='Vine')//kategorija vino
+        if(name_cat=='Restaurants')//kategorija vino
         {
           document.getElementById('vinoo').style.display='block';
           document.getElementById("vinoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Beer')//kategorija pivo
+        else if(name_cat=='Gourmet')//kategorija pivo
         {
            document.getElementById('pivoo').style.display='block';
           document.getElementById("pivoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Phones')//kategorija phone
+        else if(name_cat=='Beauty')//kategorija phone
         {
            document.getElementById('phoness').style.display='block';
           document.getElementById("phoness").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Laptops')//kategorija laptop
+        else if(name_cat=='Freizeit')//kategorija laptop
         {
            document.getElementById('laptopss').style.display='block';
           document.getElementById("laptopss").innerHTML = days + "d " + hours + "h "
