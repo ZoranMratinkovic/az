@@ -443,7 +443,7 @@ Comments</h4>
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
              
-            function myFunction1() {
+             function myFunction1() {
                 
                   setInterval(function()
                   { 
