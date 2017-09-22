@@ -199,7 +199,7 @@ function countdown1(tm,name_cat){
          //Loading header
          include("parts/menu.php");
          ?>
-
+        
 
         <?php
         if(isset($_GET["page"]))
@@ -216,6 +216,7 @@ function countdown1(tm,name_cat){
                       break;
                   case 'product':
                       include('product.php');
+           
                       break;
                   case 'change':
                       include('change.php');
@@ -235,6 +236,7 @@ function countdown1(tm,name_cat){
         else
         {
             include('parts/content.php');
+        
         }
 
         ?>
@@ -274,8 +276,42 @@ function countdown1(tm,name_cat){
 <script type="text/javascript">
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
-              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
+              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
+             
+ 
+              function myFunction() {
+                
+                  setInterval(function()
+                  { 
+                        picct = 'url("<?php echo $pic; ?>")';
+                        
+                        if(document.getElementById('bgimage').style.backgroundImage==picct)
+                        {
+                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
 
+                        }
+                        else
+                        {
+                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
+                          
+                             
+                        }
+                        
+
+                  }, 4000);
+              }
+             
+              
 </script>
+<?php 
+  if(isset($_GET['page']) && $_GET['page']=='product')
+  {
+    echo "<script>myFunction1()</script>";
+  }
+  else
+  {
+    echo "<script>myFunction()</script>";
+  }
+ ?>
 </body>
 </html>

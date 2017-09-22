@@ -1,7 +1,7 @@
 
-        <section id="home">
+      <section id="home">
             <div id="bgimage" class="header-image slider1">
-                <div class="container pedingnula">
+                <div class="container pedingnula ">
                     <div class="row centar">
 
                         <!--<div class="col-sm-5 col-xs-12">

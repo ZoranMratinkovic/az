@@ -439,10 +439,31 @@ Comments</h4>
 
         <!-- Subscribe Section  -->
 <script type="text/javascript">
-      document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro2; ?>)";
+      document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
+             
+            function myFunction1() {
+                
+                  setInterval(function()
+                  { 
+                         pic1 = 'url("<?php echo $pic_pro; ?>")';
+                        
+                        if(document.getElementById('bgimage_pro').style.backgroundImage==pic1)
+                        {
+                          document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro1; ?>)";
 
+                        }
+                        else
+                        {
+                          document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
+                    
+                          
+                        }
+                        
+
+                  }, 4000);
+              }
 
 
 </script>

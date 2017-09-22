@@ -24,8 +24,8 @@
              $lieferkosten=$row['lieferkosten'];
              $description = $row['description'];
              $pic = $row['pictures_slider'];
-             $pic1 =$row['bild2'];
-             $pic2 =$row['bild3'];
+             $pic11 =$row['bild2'];
+             $pic21 =$row['bild3'];
              $id_catI = $row['id_cat'];
              $headingsAr = explode(';',$row['headings']);
              $textAr = explode(';',$row['text']);
