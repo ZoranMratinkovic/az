@@ -128,25 +128,25 @@ function countdown1(tm,name_cat){
         /*output = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         // Output the result in an element with id="demo"*/
-        if(name_cat=='Vine')//kategorija vino
+        if(name_cat=='Restaurants')//kategorija vino
         {
           document.getElementById('vinoo').style.display='block';
           document.getElementById("vinoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Beer')//kategorija pivo
+        else if(name_cat=='Gourmet')//kategorija pivo
         {
            document.getElementById('pivoo').style.display='block';
           document.getElementById("pivoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Phones')//kategorija phone
+        else if(name_cat=='Beauty')//kategorija phone
         {
            document.getElementById('phoness').style.display='block';
           document.getElementById("phoness").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Laptops')//kategorija laptop
+        else if(name_cat=='Freizeit')//kategorija laptop
         {
            document.getElementById('laptopss').style.display='block';
           document.getElementById("laptopss").innerHTML = days + "d " + hours + "h "
@@ -199,7 +199,7 @@ function countdown1(tm,name_cat){
          //Loading header
          include("parts/menu.php");
          ?>
-
+        
 
         <?php
         if(isset($_GET["page"]))
@@ -216,6 +216,7 @@ function countdown1(tm,name_cat){
                       break;
                   case 'product':
                       include('product.php');
+           
                       break;
                   case 'change':
                       include('change.php');
@@ -235,6 +236,7 @@ function countdown1(tm,name_cat){
         else
         {
             include('parts/content.php');
+        
         }
 
         ?>
@@ -274,8 +276,42 @@ function countdown1(tm,name_cat){
 <script type="text/javascript">
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
-              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic ?>)";
+              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
+             
+ 
+              function myFunction() {
+                
+                  setInterval(function()
+                  { 
+                        picct = 'url("<?php echo $pic; ?>")';
+                        
+                        if(document.getElementById('bgimage').style.backgroundImage==picct)
+                        {
+                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
 
+                        }
+                        else
+                        {
+                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
+                          
+                             
+                        }
+                        
+
+                  }, 4000);
+              }
+             
+              
 </script>
+<?php 
+  if(isset($_GET['page']) && $_GET['page']=='product')
+  {
+    echo "<script>myFunction1()</script>";
+  }
+  else
+  {
+    echo "<script>myFunction()</script>";
+  }
+ ?>
 </body>
 </html>

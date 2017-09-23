@@ -7,6 +7,7 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 html {
     width: 100%;
     overflow-x: hidden;
@@ -229,7 +230,6 @@ font-size: 25px;
   opacity:1;
   font-size: 20px;
   padding:10px;
-  width:30%;
 }
 .padding-bar{
     padding-top: 10px;
@@ -598,7 +598,7 @@ p.description {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
+	
 	height: 100%;
 	overflow: hidden;
 }

@@ -98,7 +98,15 @@ $('#comm').click(function(){
 $('#dt').click(function(){
 	$('#details').toggle('slow');
 });
-
+$("#slideshow > div:gt(0)").hide();
+		setInterval(function(e) { 
+  		$('#slideshow > div:first')
+		    .fadeIn(800)
+		    .next()
+		    .fadeOut(800)
+		    .end()
+		    .appendTo('#slideshow');
+},  2000);
 //moj kod
 /*<!-- =============================================== -->
 <!-- ========== navbardown.js ========== -->
