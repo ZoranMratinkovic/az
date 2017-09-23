@@ -41,7 +41,7 @@
             {
                 $pass_login = test_input($_POST['password_login']);
 
-                if(!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/",$pass_login))
+                if(!preg_match("/^[a-zA-Z0-9!@#$%^&*-_]{6,}$/",$pass_login))
                 {
                     $passErr = "Invalid password format";
                     $errors[] = "Invalid password";

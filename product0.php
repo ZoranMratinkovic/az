@@ -70,9 +70,9 @@
                                         <tr>
 
 
-                                            <td class="zindex" id='price'>Markt Preis </td>
-                                            <td class="zindex">Neuer Preis </td>
-                                            <td class="zindex">Rabatt </td>
+                                            <td class="zindex" id='price'>Katalog Preis: </td>
+                                            <td class="zindex">Neuer Preis: </td>
+                                            <td class="zindex">Preis Rabat: </td>
 
                                         </tr>
                                         <tr>    <?php $rabat = $old_price_pro-$new_price_pro;
@@ -98,9 +98,9 @@
                                         <tr>
 
 
-                                            <td class="zindex" id='price'>Anzahl</td>
-                                            <td class="zindex">Lieferkosten </td>
-                                            <td class="zindex">Dealwahl  </td>
+                                            <td class="zindex" id='price'>Stucke:</td>
+                                            <td class="zindex">Liefer Kosten: </td>
+                                            <td class="zindex">Farbe: </td>
 
                                         </tr>
                                         <tr>

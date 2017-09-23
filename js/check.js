@@ -1,9 +1,9 @@
 //My code
 function login_check()
-{   
+{
     var email = document.getElementById("email_login").value;
     var pass = document.getElementById("password_login").value;
-    var reg_pass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    var reg_pass = /^[a-zA-Z0-9!@#$%^&*-_]{6,}$/;
     var erros = new Array();
     if(!reg_pass.test(pass))
     {
@@ -24,20 +24,20 @@ function ispisi()
 
     function kreiraj()
     {
-        if (window.XMLHttpRequest){ 
-            request = new XMLHttpRequest(); 
+        if (window.XMLHttpRequest){
+            request = new XMLHttpRequest();
             return request;
         }
         else
-        { 
-            request = new ActiveXObject("Microsoft.XMLHTTP"); 
+        {
+            request = new ActiveXObject("Microsoft.XMLHTTP");
         }
     }
-    
+
     function updateVino()
     {
         request = kreiraj();
-    
+
         if(!request)
         {
             alert('Nije napravljen kanal za filtriranje.');
@@ -53,7 +53,7 @@ function ispisi()
     function updatePivo()
     {
         request = kreiraj();
-    
+
         if(!request)
         {
             alert('Nije napravljen kanal za filtriranje.');
@@ -69,7 +69,7 @@ function ispisi()
     function updatePhone()
     {
         request = kreiraj();
-    
+
         if(!request)
         {
             alert('Nije napravljen kanal za filtriranje.');
@@ -85,7 +85,7 @@ function ispisi()
     function updateLaptop()
     {
         request = kreiraj();
-    
+
         if(!request)
         {
             alert('Nije napravljen kanal za filtriranje.');
@@ -115,7 +115,7 @@ function ispisi()
             $commErr = "";
             document.getElementById('comErr').style.display='block';
             return false;
-        } 
+        }
         else
         {
             return true;

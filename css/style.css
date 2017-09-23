@@ -230,6 +230,7 @@ font-size: 25px;
   opacity:1;
   font-size: 20px;
   padding:10px;
+  width:30%;
 }
 .padding-bar{
     padding-top: 10px;
@@ -598,7 +599,7 @@ p.description {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
+
 	height: 100%;
 	overflow: hidden;
 }
