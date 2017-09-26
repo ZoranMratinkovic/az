@@ -37,22 +37,22 @@
         while($rezcat=mysqli_fetch_array($result11)){
           echo "<option value=".$rezcat['id_cat'].">".$rezcat['categorie']."</option>";
         }
-      
+
           ?>
         </select>
 
       </div>
       <div class="form-group">
         <label for="pwd">Stücke</label>
-        <input type="text" class="form-control" id="pwd" placeholder="Enter password" value="<?php echo $rowedit['lager']; ?>" name="stucke">
+        <input type="text" class="form-control" id="pwd" placeholder="anzahl" value="<?php echo $rowedit['lager']; ?>" name="stucke">
       </div>
       <div class="form-group">
         <label for="pwd">Preis </label>
-        <input type="text" class="form-control" id="pwd" placeholder="Enter password" value="<?php echo $rowedit['price_old']; ?>" name="price">
+        <input type="text" class="form-control" id="pwd" placeholder="alterpreis" value="<?php echo $rowedit['price_old']; ?>" name="price">
       </div>
       <div class="form-group">
         <label for="pwd">Aktion Preis</label>
-        <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="price2" value="<?php echo $rowedit['price_new']; ?>">
+        <input type="text" class="form-control" id="pwd" placeholder="neuerpreis" name="price2" value="<?php echo $rowedit['price_new']; ?>">
       </div>
       <div class="form-group">
         <label for="pwd">Lieferkosten</label>
@@ -64,19 +64,19 @@
       </div>
       <div class="form-group">
         <label for="pwd">Bild</label>
-        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image2" value="<?php echo $rowedit['pictures_slider']; ?>" >
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image2" value="<?php echo $rowedit['pictures_slider']; ?>" required>
       </div>
       <div class="form-group">
         <label for="pwd">Bild 1</label>
-        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image3" value="<?php echo $rowedit['pictures_slider']; ?>" >
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image3" value="<?php echo $rowedit['pictures_slider']; ?>" required>
       </div>
       <div class="form-group">
         <label for="pwd">Bild 2</label>
-        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image4" value="<?php echo $rowedit['pictures_slider']; ?>" >
+        <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="image4" value="<?php echo $rowedit['pictures_slider']; ?>" required>
       </div>
       <div class="form-group">
         <label for="pwd">Ending date</label>
-        <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date" value="<?php echo $rowedit['expire_date']; ?>">
+        <input type="datetime-local" class="form-control" id="pwd" placeholder="Enter password" name="date" value="<?php echo $rowedit['expire_date']; ?>" required>
       </div>
 
 
