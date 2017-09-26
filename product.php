@@ -93,38 +93,34 @@
                                 </table>
                </div>
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
-                               <table class="tabela width">
 
-                                        <tr>
-
-
-                                            <td class="zindex" id='price'>Anzahl</td>
-
-                                            <td class="zindex">Total  </td>
-
-                                        </tr>
-                                        <tr>
-                                              <td class="zindex">
-                                              <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="" class='form-control'>
-                                              </td>
-
-                                              <td class="zindex">
-                                                59 CHF
                                                   <?php
                                                   require_once('functions.php');
 
                                                    ?>
-                                              </td>
-                                        </tr>
-                                        <tr>
-                                            <div class="button">
-                                                <td colspan="3">
-                                                <a href="cart/pay.php" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
-                                            </div>
-                                        </tr>
+                                                   <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price_pro; ?>">
 
 
-                                </table>
+
+                                                           <div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+                                                               Anzahl<br/> <input type="number" ng-model="quantity" class="black">
+                                                               <input type="number" ng-model="price" hidden>
+
+                                                           </div>
+                                                           <div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+
+                                                               <b>Total</b><br/> {{quantity * price}} CHF
+
+                                                           </div>
+                                                   </div>
+                                                   <div class="col-sm-12 col-md-12 col-xs-12">
+
+                                                       <td colspan="3">
+                                                           <a href="<?php echo "index.php?page=product?karte&id={$id_prod}"; ?>" class="btn btn-default white-btn youtube-media btnmy plac"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a>
+                                                       </td>
+                                                   </div>
                             </div>
 
                         </div>
@@ -449,13 +445,13 @@ Kommentare</h4>
 
                   setInterval(function()
                   {
-                       
+
 
                          if(bool1 == true)
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro1; ?>)";
                           bool1 = false;
-                        
+
                         }
                         else
                         {

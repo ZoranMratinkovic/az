@@ -230,6 +230,11 @@ function countdown1(tm,name_cat){
                                 case 'karte':
                                     include('karte.php');
                                     break;
+                                    include('contact.php');
+                                    break;
+                                    case 'tester':
+                                        include('tester.php');
+                                        break;
                   default:
                       include("parts/content.php");
                       break;
@@ -287,13 +292,13 @@ function countdown1(tm,name_cat){
 
                   setInterval(function()
                   {
-                       
+
 
                         if(bool == true)
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
                           bool = false;
-                        
+
                         }
                         else
                         {

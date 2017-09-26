@@ -68,8 +68,9 @@
                                         </div>
 
                                             <div class="col-sm-12 col-md-12 col-xs-12">
+
                                                 <td colspan="3">
-                                                    <a href="index.php?page=karte" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a>
+                                                    <a href="<?php echo "index.php?page=karte&id={$id_product}"; ?>" class="btn btn-default white-btn youtube-media btnmy plac"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a>
                                                 </td>
                                             </div>
 
