@@ -280,24 +280,26 @@ function countdown1(tm,name_cat){
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
               document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
+              var bool = true;
 
 
               function myFunction() {
 
                   setInterval(function()
                   {
-                        picct = 'url("<?php echo $pic; ?>")';
+                       
 
-                        if(document.getElementById('bgimage').style.backgroundImage==picct)
+                        if(bool == true)
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
+                          bool = false;
+                        
                         }
                         else
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
-
+                          bool = true;
                         }
-
 
                   }, 4000);
               }

@@ -443,23 +443,23 @@ Kommentare</h4>
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
-
+            var bool1 = true;
              function myFunction1() {
 
                   setInterval(function()
                   {
-                         pic1 = 'url("<?php echo $pic_pro; ?>")';
+                       
 
-                        if(document.getElementById('bgimage_pro').style.backgroundImage==pic1)
+                         if(bool1 == true)
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro1; ?>)";
-
+                          bool1 = false;
+                        
                         }
                         else
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
-
-
+                          bool1 = true;
                         }
 
 

@@ -48,25 +48,29 @@
                                                   ?>
 
 
-                                          <td><div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price ?>">
+                                          <td>
+                                        <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price; ?>">
 
 
 
-<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+                                                <div class="col-sm-6 col-md-6 col-xs-6 zindex">
 
-Anzahl<br/><input type="number" ng-model="quantity" class="black">
-<input type="number" ng-model="price" hidden>
-</div>
-<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+                                                    Anzahl<br/> <input type="number" ng-model="quantity" class="black">
+                                                    <input type="number" ng-model="price" hidden>
+
+                                                </div>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 zindex">
 
 
-<b>Total</b><br/> {{quantity * price}} CHF
-</div>
-</div>
+                                                    <b>Total</b><br/> {{quantity * price}} CHF
+
+                                                </div>
+                                        </div>
 
                                             <div class="col-sm-12 col-md-12 col-xs-12">
                                                 <td colspan="3">
-                                                <a href="index.php?page=karte" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
+                                                    <a href="index.php?page=karte" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a>
+                                                </td>
                                             </div>
 
                             </div>
