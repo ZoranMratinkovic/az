@@ -64,7 +64,7 @@
 
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-                <h1 class=""><?php echo $name_pro ?></h1>
+                            <h1 class="NameOnSlider"><?php echo $name_pro ?></h1>
                                     <table class="tabela">
 
                                         <tr>
@@ -252,7 +252,7 @@ Kommentare</h4>
 
                     <div class="col-sm-12 col-md-6 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                         <img class='picture21' src="<?php echo $pic_pro; ?>">
+                         <img class='picture21' src="<?php echo $pic_pro; ?>" >
 
                         </div>
                     </div>
@@ -338,7 +338,7 @@ Kommentare</h4>
                     <div class="main_des_third_contant">
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                                <img src="<?php echo $pic_pro1; ?>" alt="" />
+                                <img src="<?php echo $pic_pro1; ?>" alt="" class='slika2Product'/>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -443,6 +443,7 @@ Kommentare</h4>
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
+
             var bool1 = true;
              function myFunction1() {
 

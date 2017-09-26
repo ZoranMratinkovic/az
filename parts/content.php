@@ -12,7 +12,7 @@
 
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
-								<h1 class=""><?php echo $name ?></h1>
+								<h1 class="NameOnSlider"><?php echo $name ?></h1>
                                     <table class="tabela">
 
                                         <tr>
@@ -33,7 +33,7 @@
                                         </tr>
                                         <tr>
             								<div class="button">
-            									<td colspan="3"><p class="btn toogle btnmy" id='dt'>Jetzt einkaufen</p></td>
+            									<td colspan="3"><p class="btn btn-md toogle btnmy" id='dt'>Jetzt einkaufen</p></td>
 
             								</div>
                                         </tr>
@@ -188,7 +188,7 @@
                 <div class="row main_description">
                     <div class="col-sm-12 col-xs-12">
                         <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                         <img src="<?php echo $pic; ?>" alt="" height='530' width='80%' class='picture21 picture2121'>
+                         <img src="<?php echo $pic; ?>" alt="" height='530' width='95%' class='picture21 picture2121'>
                         </div>
                     </div>
                     <div class="col-sm-12">

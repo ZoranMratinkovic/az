@@ -72,7 +72,7 @@
     	height: 568px!important;
 	}
 	.single_home_content h1{
-		font-size: 22px;
+		font-size: 20px;
 	}
 	.zindex{
 		font-size:14px!important;
@@ -83,14 +83,19 @@
 	.scrolldown{
 		display:none;
 	}
-	.productss{
+	.productss,.productss1{
 		min-height:130px!important;
+		width: 80%!important;
+		margin:auto;
 	}
 	.btnmy{
 		height:40px!important;
 		width:100px!important;
 	}
-	
+	.slika2Product{
+		height: 215px;
+		width: 95%;
+	}
 }
 /*Iphone 5,6,6+ 320px-414px width*/
 @media (max-width:414px) and (min-width:375px){
@@ -172,7 +177,7 @@
     	height: 667px!important;
 	}
 	.single_home_content h1{
-		font-size: 22px;
+		font-size: 20px;
 	}
 	.zindex{
 		font-size:17px!important;
@@ -183,12 +188,18 @@
 	.scrolldown{
 		display:none;
 	}
-	.productss{
+	.productss,.productss1{
 		min-height:130px!important;
+		width: 80%!important;
+		margin:auto;
 	}
 	.btnmy{
 		height:40px!important;
 		width:100px!important;
+	}
+	.slika2Product{
+		height: 215px;
+		width: 95%;
 	}
 }
 /*Iphone 5,6,6+ 320px width end*/
@@ -218,11 +229,24 @@
 		margin-top: 50px;
 		float:none!important;
 	}
+	.productss,.productss1{
+		width: 52%!important;
+		margin:auto;
+	}
 	.transpBg{
-		top:627px!important;
+		top:649px!important;
+	}
+	.prozent{
+		font-size: 28px!important;
+	}
+	.zindex{
+		font-size:19px!important;
+	}
+	.NameOnSlider{
+		font-size: 21px!important;
 	}
 	#demo,#pivoo,#vinoo,#phoness,#laptopss{
-		font-size:28px!important;
+		font-size:22px!important;
 		text-align: center;
 	}
 	.martopIpad{
@@ -236,7 +260,7 @@
 		padding:0!important;
 	}
 	.main-menu .navbar-nav > li > a{
-		font-size:13px!important;
+		font-size:10px!important;
 	}
 	.marbot{
 		margin-top: 45px!important;
@@ -245,6 +269,9 @@
 	.marbot h3{
 		text-align: center;
 		margin-bottom: 20px;
+	}
+	.header-image{
+		padding-top: 110px!important;
 	}
 }
 @media (max-width:1024px) and (min-width:769px){
