@@ -119,7 +119,7 @@
                                         <tr>
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="anzahl" id="anzahl" class='form-control' onchange="izmena();">
-                                              
+                                               
                                               </td>
 
                                               <td class="zindex">
