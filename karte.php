@@ -1,3 +1,4 @@
+
 <?php
       if(isset($_GET['id1']))
       {
@@ -47,6 +48,7 @@
         }
       }
  ?>
+
 <br/>
 <br/>
 <br/>
@@ -78,16 +80,17 @@
 									</div>
 								</div>
 							</td>
-							<td data-th="Price"><?php echo $new_price_pro ?> CHF</td>
+							<td data-th="Price" id='tab'><?php echo $new_price_pro ?> CHF</td>
 							<td data-th="Quantity">
 								<input type="number" class="form-control text-center" value="1">
 							</td>
-							<td data-th="Subtotal" name="anzahl" class="text-center">1.99</td>
+							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro ?></td>
 							<td class="actions" data-th="">
-								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-info btn-sm" onclick="change();" name="refresh"><i class="fa fa-refresh"></i></button>
 								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
 							</td>
 						</tr>
+
 					</tbody>
 					<tfoot>
 						<tr class="visible-xs">

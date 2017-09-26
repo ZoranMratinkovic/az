@@ -93,6 +93,18 @@
                                 </table>
                </div>
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
+
+                              <form class="" action="index.php?page=karte&id1=<?php echo $id_prod; ?>&br=PERA" method="post">
+                                
+                                <script type="text/javascript">
+                                  function izmena(){
+                                    var anzahl=document.getElementById('anzahl').value
+                                    document.getElementById('toti').innerHTML('BLABLA');
+                                  }
+
+                                </script>
+
+
                                <table class="tabela width">
 
                                         <tr>
@@ -105,7 +117,8 @@
                                         </tr>
                                         <tr>
                                               <td class="zindex">
-                                              <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="" class='form-control'>
+                                              <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="anzahl" id="anzahl" class='form-control' onchange="izmena();">
+                                              <input type="hidden" name="tota" id='toti' value="">
                                               </td>
 
                                               <td class="zindex">
@@ -119,12 +132,14 @@
                                         <tr>
                                             <div class="button">
                                                 <td colspan="3">
-                                                <a href="index.php?page=karte&id1=<?php echo $id_prod; ?>" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                                <input type="submit" name="" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!"></td>
                                             </div>
                                         </tr>
 
 
                                 </table>
+
+                                </form>
                             </div>
 
                         </div>
