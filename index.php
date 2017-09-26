@@ -288,13 +288,12 @@ function countdown1(tm,name_cat){
                         if(document.getElementById('bgimage').style.backgroundImage==picct)
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
-
                         }
                         else
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
                           
-                             
+
                         }
                         
 
