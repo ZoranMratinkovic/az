@@ -128,7 +128,7 @@
 
                                                    ?>
 
-                                            <div class="">
+                                            <div class="col-xs-12 col-lg-12 col-sm-12">
 
                                                 <input type="submit" name="sub" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!">
 
