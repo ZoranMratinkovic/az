@@ -119,7 +119,7 @@
                                         <tr>
                                             <div class="button">
                                                 <td colspan="3">
-                                                <a href="cart/pay.php" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
+                                                <a href="index.php?page=karte&id1=<?php echo $id_prod; ?>" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt Einkaufen!!</a></td>
                                             </div>
                                         </tr>
 
@@ -449,13 +449,13 @@ Kommentare</h4>
 
                   setInterval(function()
                   {
-                       
+
 
                          if(bool1 == true)
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro1; ?>)";
                           bool1 = false;
-                        
+
                         }
                         else
                         {
