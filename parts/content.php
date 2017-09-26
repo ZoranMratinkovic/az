@@ -18,9 +18,9 @@
                                         <tr>
 
 
-                                            <td class="zindex" id='price'>Katalog Preis: </td>
-                                            <td class="zindex">Neuer Preis: </td>
-                                            <td class="zindex">Preis Rabat: </td>
+                                            <td class="zindex" id='price'>Markt Preis </td>
+                                            <td class="zindex">Neuer Preis </td>
+                                            <td class="zindex">Rabatt </td>
 
                                         </tr>
                                         <tr>      <?php $rabat11 = $old_price-$new_price;
@@ -41,37 +41,34 @@
                                 </table>
 							 </div>
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
-                               <table class="tabela width">
 
-                                        <tr>
-
-
-                                            <td class="zindex" id='price'>Stucke:</td>
-                                            <td class="zindex">Liefer costen: </td>
-                                            <td class="zindex">Farbe: </td>
-
-                                        </tr>
-                                        <tr>
-                                              <td class="zindex">
-                                              <input type="number" min="0" max="<?php echo $ammount; ?>" step="1" value="1" name="" class='form-control'>
-                                              </td>
-                                              <td class="zindex"><?php echo $lieferkosten ?> CHF</td>
-                                              <td class="zindex">
                                                   <?php
                                                       require_once('functions.php');
-                                                     select_color($id_product);
+
                                                   ?>
-                                              </td>
-                                        </tr>
-                                        <tr>
-                                            <div class="button">
+
+
+                                          <td><div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price ?>">
+
+
+
+<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+Anzahl<br/><input type="number" ng-model="quantity" class="black">
+<input type="number" ng-model="price" hidden>
+</div>
+<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+
+<b>Total</b><br/> {{quantity * price}} CHF
+</div>
+</div>
+
+                                            <div class="col-sm-12 col-md-12 col-xs-12">
                                                 <td colspan="3">
-                                                <a href="cart/pay.php" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
+                                                <a href="index.php?page=karte" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
                                             </div>
-                                        </tr>
 
-
-                                </table>
                             </div>
 
                         </div>
@@ -113,7 +110,7 @@
 
 
             </div>
-             <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i> Comments</h4>
+             <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i>Kommentare</h4>
         </div>
         <!-- Our Works Section -->
 
@@ -261,12 +258,12 @@
                 <div class="row">
                     <div class="main_testimonial_text center-content">
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Super Produkte einfach nur zum empfehlen</p>
+                            <a href="">Hans Petter</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Kaufe gerne hier ein es ist einfach am günstigsten hier online einzukaufen empfehle alle Produkte</p>
+                            <a href="">Keyvan</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
@@ -296,7 +293,7 @@
             <div class="container">
                 <div class="row">
                     <div class="client_heading_text center-content wow zoomIn" data-wow-duration="1.5s">
-                        <h1>As Seen On</h1>
+                        <h1>Unsere Partnere</h1>
 
                         <a href=""><img src="images/c1.png" alt="" /></a>
                         <a href=""><img src="images/c2.png" alt="" /></a>
@@ -314,8 +311,8 @@
             <div class="container">
                 <div class="row">
                     <div class="download_heading_text center-content">
-                        <h1>Download the App</h1>
-                        <p>Phasellus nisl leo congue eu malesuada lobortis fringilla et nulla. Curabitur posuere sem nec bibendum finibus.</p>
+                        <h1>Apps</h1>
+                        <p>Hier können sie die Apps für IOS und Android herunterladen</p>
 
                         <div class="down_text_des wow fadeInUp" data-wow-duration="1.5s">
                             <a href=""><img src="images/d1.png" alt="" /></a>

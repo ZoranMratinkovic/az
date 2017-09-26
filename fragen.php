@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-             <h1 class="tag-home bluec">Häufig gestellte Fragen</strong></h1><br>
+
 
 
                <hr />
@@ -11,6 +11,7 @@
             </div>
           </div>
           <div class="container">
+             <h1 class="tag-home">Häufig gestellte Fragen</strong></h1><br>
             <div class="col-xs-12">
               <div class="">
                 <h3 class="bold1">Wann erhalte ich die Kontaktdaten des Zahnarztes?  </h3>

@@ -22,8 +22,8 @@
             //firstNAme
             if(empty($_POST["first_name"]))
             {
-                $fNameErr = "Name is required";
-                $errors[] = "fName";
+                $fNameErr = "Name ist ein Pflichtfeld!";
+                $errors[] = "Name ist ein Pflichtfeld!";
             }
             else
             {
@@ -56,8 +56,8 @@
             //password
             if(empty($_POST['pass']))
             {
-                    $passErr = "Password required!";
-                    $errors[] = "Pass error";
+                    $passErr = "Geben sie ein Passwort ein!";
+                    $errors[] = "Passwort eingeben!";
             }
             else
             {
@@ -106,7 +106,7 @@
             //email
             if (empty($_POST["email"]))
             {
-                      $emailErr = "Email is required";
+                      $emailErr = "Email eingeben!";
                       $errors[] = "Email";
             }
             else
@@ -117,7 +117,7 @@
 
                     if (!filter_var($email, FILTER_VALIDATE_EMAIL))
                     {
-                      $emailErr = "Email form nicht richtig";
+                      $emailErr = "Email überprüfen";
                       $errors[] = "email err";
                     }
             }
@@ -198,7 +198,7 @@
 
                               <i>Your name is: $fName $lName</i><br/>
                               <i>Your password is: {$_POST['pass']}</i>
-                              <b><a href='www.qoqa.alpikom.rs/verify.php?hash={$hash_ver}&email={$email}'>Click on this link to activate your account:</a></b>
+                              <b><a href='www.qoqa.alpikom.rs/verify.php?hash={$hash_ver}&email={$email}'>Klicken sie hier um Ihren Account zu verifizieren:</a></b>
 
                           ";
                           $mail->AltBody = "Your name is: $fName $lName";
@@ -210,7 +210,7 @@
                           }
                           else
                           {
-                               echo "<script>alert('Bitte verifizieren sie ihre email adresse');</script>";
+                               echo "<script>alert('Erfolgreich registert! Bitte verifizieren Sie ihre Email');</script>";
                           }
                       }      //query successful ends
                       else
@@ -242,14 +242,14 @@
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="first_name" placeholder="first name" required="">
+                                        <input type="text" class="form-control" name="first_name" placeholder="Name" required="">
                                         <span class="error"> <?php echo $fNameErr;?></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="last_name" placeholder="last name" required="">
+                                        <input type="text" class="form-control" name="last_name" placeholder="Vorname" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
@@ -261,17 +261,17 @@
                                     </div> <!-- end of form-group -->
 
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" name="pass" required="">
+                                        <input type="password" class="form-control" placeholder="Passwort" name="pass" required="">
                                         <span class="error"> <?php echo $passErr;?></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Repeat password" name="pass1" required="">
+                                        <input type="password" class="form-control" placeholder="Passwort nochmal" name="pass1" required="">
                                         <span class="error"> <?php echo $passErr1;?></span>
                                     </div>
 
 
                                     <div class="center-content">
-                                        <input type="submit" value="Submit" class="btn larg-btn" name="submit_register">
+                                        <input type="submit" value="Jetzt registrieren" class="btn larg-btn" name="submit_register">
                                     </div>
                                 </div>
                             </form>

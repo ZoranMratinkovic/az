@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
         <link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script type="text/javascript">
 
   function countdown(tm,id){
@@ -55,7 +55,7 @@
 
         if(id==2)//kategorija vino
         {
-           
+
           document.getElementById("vino").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 
@@ -64,7 +64,7 @@
         }
         else if(id==1)//kategorija pivo
         {
-            
+
           document.getElementById("pivo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
@@ -199,7 +199,7 @@ function countdown1(tm,name_cat){
          //Loading header
          include("parts/menu.php");
          ?>
-        
+
 
         <?php
         if(isset($_GET["page"]))
@@ -216,7 +216,7 @@ function countdown1(tm,name_cat){
                       break;
                   case 'product':
                       include('product.php');
-           
+
                       break;
                   case 'change':
                       include('change.php');
@@ -227,6 +227,9 @@ function countdown1(tm,name_cat){
                           case 'contact':
                                 include('contact.php');
                                 break;
+                                case 'karte':
+                                    include('karte.php');
+                                    break;
                   default:
                       include("parts/content.php");
                       break;
@@ -236,7 +239,7 @@ function countdown1(tm,name_cat){
         else
         {
             include('parts/content.php');
-        
+
         }
 
         ?>
@@ -277,14 +280,14 @@ function countdown1(tm,name_cat){
   /*var output1 = countdown(timestamp1);
                document.getElementById('demo').innerHTML = output1;*/
               document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
-             
- 
+
+
               function myFunction() {
-                
+
                   setInterval(function()
-                  { 
+                  {
                         picct = 'url("<?php echo $pic; ?>")';
-                        
+
                         if(document.getElementById('bgimage').style.backgroundImage==picct)
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
@@ -292,17 +295,16 @@ function countdown1(tm,name_cat){
                         else
                         {
                           document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
-                          
 
                         }
-                        
+
 
                   }, 4000);
               }
-             
-              
+
+
 </script>
-<?php 
+<?php
   if(isset($_GET['page']) && $_GET['page']=='product')
   {
     echo "<script>myFunction1()</script>";

@@ -165,7 +165,7 @@
                     </div>
                     <div id="navbar" aria-expended='false' class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
-                             <li><a href="index.php" class="" >HOME</a></li>
+                             <li><a href="index.php" class="" >Brands</a></li>
                              <!--
                                   $upit1 ="SELECT * from categorie";
                                   $result1 = $conn->query($upit1);
@@ -233,7 +233,7 @@
                                 </li>
                             </a>
 
-                                
+
                             </ul>
                             </li>
 
@@ -280,7 +280,7 @@
                                 </li>
                             </a>
 
-                                
+
                             </ul>
                             </li>
                             <li><a href="<?php echo "index.php?page=product&id={$id_product2}"; ?>" class=""><?php echo $name_cat2 ?></a>
@@ -315,7 +315,7 @@
                                 </li>
                             </a>
 
-                                
+
                             </ul>
                             </li>
                             <li><a href="<?php echo "index.php?page=product&id={$id_product3}"; ?>" class=""><?php echo $name_cat3 ?></a>
@@ -362,7 +362,7 @@
                                 </li>
                             </a>
 
-                                
+
                             </ul>
                             </li>
                              <?php
@@ -381,7 +381,7 @@
                                     echo
                                     "
                                         <li><a href='index.php?page=login' class=''>Login</a></li>
-                                        <li><a href='index.php?page=register' class=''>Register</a></li>
+                                        <li><a href='index.php?page=register' class=''>Jetzt registrieren</a></li>
                                     ";
                                 }
                              ?>
@@ -392,7 +392,7 @@
                             <li><a href="admin_folder/admin.php">adminpanel</a></li>
                           <?php }else { ?>
                           <li ><a href="index.php?page=fragen">Hilfe</a></li>
-                          <li><a href="index.php?page=contact">Francais</a></li>
+                          <li><a href="index.php?page=contact">Kontakt</a></li>
 
                           <?php } ?>
                         </ul>
