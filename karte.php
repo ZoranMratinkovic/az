@@ -82,9 +82,9 @@
 							</td>
 							<td data-th="Price" id='tab'><?php echo $new_price_pro ?> CHF</td>
 							<td data-th="Quantity">
-								<input type="number" class="form-control text-center" value="1">
+								<input type="number" class="form-control text-center" value="<?php echo $_POST['nmbr']; ?>">
 							</td>
-							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro ?></td>
+							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro*$_POST['nmbr']; ?></td>
 							<td class="actions" data-th="">
 								<button class="btn btn-info btn-sm" onclick="change();" name="refresh"><i class="fa fa-refresh"></i></button>
 								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>

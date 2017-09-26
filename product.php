@@ -61,7 +61,7 @@
                             </div>slika na slajderu
                         </div>-->
                         <!--<img src="">-->
-  <form class="" action="index.php?page=karte&id1=<?php echo $id_prod; ?>&br="+anzahl+"" method="post">
+          <form class="" action="index.php?page=karte&id1=<?php echo $id_prod; ?>" method="post">
 
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
@@ -96,23 +96,13 @@
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
 
 
-
-                                <script type="text/javascript">
-                                  function izmena(){
-                                    var anzahl=document.getElementById('anzahl').value
-                                    document.getElementById('toti').innerHTML('BLABLA');
-                                  }
-
-                                </script>
-
-
                                 <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price; ?>">
 
 
 
                                         <div class="col-sm-6 col-md-6 col-xs-6 zindex">
 
-                                            Anzahl<br/> <input type="number" ng-model="quantity" class="black">
+                                            Anzahl<br/> <input name='nmbr' type="number" ng-model="quantity" class="black">
                                             <input type="number" ng-model="price" hidden>
 
                                         </div>
