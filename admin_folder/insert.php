@@ -34,15 +34,7 @@
       </select>
 
     </div>
-    <div class="form-group">
-      <label for="pwd">Farbe</label><br/>
-      <input type="checkbox" name="" value="">Rot<br/>
-      <input type="checkbox" name="" value="">Blau<br/>
-      <input type="checkbox" name="" value="">Gruen<br/>
-      <input type="checkbox" name="" value="">Gelb<br/>
-      <input type="checkbox" name="" value="">Schwarz<br/>
-      <input type="checkbox" name="" value="">Weiss<br/>
-    </div>
+
     <div class="form-group">
       <label for="pwd">Stücke</label>
       <input type="text" class="form-control" id="pwd" placeholder="stücke" name="stucke">
@@ -65,19 +57,19 @@
     </div>
     <div class="form-group">
       <label for="pwd">Bild Slider</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image1">
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image1" required>
     </div>
     <div class="form-group">
       <label for="pwd">1 Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image2">
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image2" required>
     </div>
     <div class="form-group">
       <label for="pwd">2 Bild</label>
-      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image3">
+      <input type="file" class="form-control" id="pwd" placeholder="Bild" name="image3" required>
     </div>
     <div class="form-group">
       <label for="pwd">Ending date</label>
-      <input type="datetime-local" class="form-control" id="pwd" placeholder="Ending date" name="date">
+      <input type="datetime-local" class="form-control" id="pwd" placeholder="Ending date" name="date" required>
     </div>
     <div class="form-group">
       <label for="pwd">Beschreibung</label>

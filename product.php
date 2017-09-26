@@ -35,6 +35,7 @@
                  $descs = explode(';',$row['descs']);
                  $headings_descs = explode(';',$row['heading_descs']);
                  $big_desc = $row['big_desc'];
+
                  echo "<script>
                           var bgimage_pro ='{$row['pictures_slider']}';
                           var name_cat_pro = '{$name_cat_pro}';
@@ -60,7 +61,7 @@
                             </div>slika na slajderu
                         </div>-->
                         <!--<img src="">-->
-
+  <form class="" action="index.php?page=karte&id1=<?php echo $id_prod; ?>&br="+anzahl+"" method="post">
 
                         <div class="col-sm-12 col-md-5 col-xs-12 rightt">
                             <div class="single_home_content wow zoomIn  productss" data-wow-duration="1s">
@@ -94,8 +95,8 @@
                </div>
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
 
-                              <form class="" action="index.php?page=karte&id1=<?php echo $id_prod; ?>&br=PERA" method="post">
-                                
+
+
                                 <script type="text/javascript">
                                   function izmena(){
                                     var anzahl=document.getElementById('anzahl').value
@@ -118,7 +119,7 @@
                                         <tr>
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="anzahl" id="anzahl" class='form-control' onchange="izmena();">
-                                              <input type="hidden" name="tota" id='toti' value="">
+                                              
                                               </td>
 
                                               <td class="zindex">
@@ -132,7 +133,8 @@
                                         <tr>
                                             <div class="button">
                                                 <td colspan="3">
-                                                <input type="submit" name="" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!"></td>
+                                                <input type="submit" name="sub" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!"></td>
+
                                             </div>
                                         </tr>
 
