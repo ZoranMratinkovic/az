@@ -36,7 +36,7 @@
   <input type="checkbox" name="" value="">  Ich habe die AGBS gelesen und bin einverstanden
 </div>
 <div class="form-group">
-  <input type="button" class="btn-sm" name="" value="Jetzt Bestellen">
+  <a href="cart/pay.php"><input type="button" class="btn-sm" name="" value="Jetzt Bestellen"></a>
 </div>
 </div>
 

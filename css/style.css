@@ -301,6 +301,10 @@ font-size: 25px;
 .pt{
     padding-top:10px;
 }
+.black{
+  width: 63%;
+color: #000;
+}
 .des1{
   padding:5px;
 

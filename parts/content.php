@@ -41,38 +41,34 @@
                                 </table>
 							 </div>
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
-                               <table class="tabela width">
 
-                                        <tr>
-
-
-                                            <td class="zindex" id='price'>Anzahl</td>
-
-                                            <td class="zindex">Total </td>
-
-                                        </tr>
-                                        <tr>
-                                              <td class="zindex">
-                                              <input type="number" min="0" max="<?php echo $ammount; ?>" step="1" value="1" name="" class='form-control'>
-                                              </td>
-
-                                              <td class="zindex">
-                                                50 CHF
                                                   <?php
                                                       require_once('functions.php');
 
                                                   ?>
-                                              </td>
-                                        </tr>
-                                        <tr>
-                                            <div class="button">
+
+
+                                          <td><div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price ?>">
+
+
+
+<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+Anzahl<br/><input type="number" ng-model="quantity" class="black">
+<input type="number" ng-model="price" hidden>
+</div>
+<div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+
+<b>Total</b><br/> {{quantity * price}} CHF
+</div>
+</div>
+
+                                            <div class="col-sm-12 col-md-12 col-xs-12">
                                                 <td colspan="3">
-                                                <a href="cart/pay.php" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
+                                                <a href="index.php?page=karte" class="btn btn-default white-btn youtube-media btnmy"><i class="fa fa-shopping-cart" id='kaufen'></i>  Jetzt bezahlen!!</a></td>
                                             </div>
-                                        </tr>
 
-
-                                </table>
                             </div>
 
                         </div>
