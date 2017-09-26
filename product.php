@@ -106,40 +106,36 @@
                                 </script>
 
 
-                               <table class="tabela width">
-
-                                        <tr>
+                                <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price; ?>">
 
 
-                                            <td class="zindex" id='price'>Anzahl</td>
 
-                                            <td class="zindex">Total  </td>
+                                        <div class="col-sm-6 col-md-6 col-xs-6 zindex">
 
-                                        </tr>
-                                        <tr>
-                                              <td class="zindex">
-                                              <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="anzahl" id="anzahl" class='form-control' onchange="izmena();">
-                                               
-                                              </td>
+                                            Anzahl<br/> <input type="number" ng-model="quantity" class="black">
+                                            <input type="number" ng-model="price" hidden>
 
-                                              <td class="zindex">
-                                                59 CHF
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-xs-6 zindex">
+
+
+                                            <b>Total</b><br/> {{quantity * price}} CHF
+
+                                        </div>
+                                </div>
                                                   <?php
                                                   require_once('functions.php');
 
                                                    ?>
-                                              </td>
-                                        </tr>
-                                        <tr>
-                                            <div class="button">
-                                                <td colspan="3">
-                                                <input type="submit" name="sub" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!"></td>
+
+                                            <div class="">
+
+                                                <input type="submit" name="sub" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!">
 
                                             </div>
-                                        </tr>
 
 
-                                </table>
+
 
                                 </form>
                             </div>
