@@ -31,12 +31,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script type="text/javascript">
-
-  function countdown(tm,id){
-// Set the date we're counting down to
-    var countDownDate = new Date(tm*1000).getTime();
+function count2(tm,id)
+{
+  var countDownDate = new Date(tm*1000).getTime();
     // Update the count down every 1 second
-    var x = setInterval(function() {
 
         // Get todays date and time
         var now = new Date().getTime();
@@ -57,9 +55,6 @@
         {
 
           document.getElementById("vino").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
         else if(id==1)//kategorija pivo
@@ -84,7 +79,6 @@
             updateVino();
             clearInterval(x);
              document.getElementById("vino").innerHTML = "Expired";
-             document.getElementById("demo").innerHTML = "Expired";
         }
         else if(distance < 0 && id == 1)
         {
@@ -104,17 +98,16 @@
           clearInterval(x);
           document.getElementById("laptop").innerHTML = "Expired";
         }
-    }, 1000);
 }
 
 
-function countdown1(tm,name_cat){
-// Set the date we're counting down to
+function count1(tm,name_cat)
+{
+  //this one displays tiimer on slider
+  // Set the date we're counting down to
     var countDownDate = new Date(tm*1000).getTime();
     // Update the count down every 1 second
-    var y = setInterval(function() {
-
-        // Get todays date and time
+  // Get todays date and time
         var now = new Date().getTime();
 
         // Find the distance between now an the count down date
@@ -158,7 +151,6 @@ function countdown1(tm,name_cat){
             updateVino();
             clearInterval(y);
              document.getElementById("vino").innerHTML = "Expired";
-             document.getElementById("demo").innerHTML = "Expired";
         }
         else if(distance < 0 && id == 1)
         {
@@ -178,7 +170,15 @@ function countdown1(tm,name_cat){
           clearInterval(y);
           document.getElementById("laptop").innerHTML = "Expired";
         }
-    }, 1000);
+}
+
+function countdown(tm,id){
+    
+    var x = setInterval(count2, 1000,tm,id);
+}
+function countdown1(tm,name_cat){
+
+    var y = setInterval(count1, 1000,tm,name_cat);
 }
 </script>
 
@@ -216,29 +216,28 @@ function countdown1(tm,name_cat){
                       break;
                   case 'product':
                       include('product.php');
-
                       break;
                   case 'change':
                       include('change.php');
                       break;
-                      case 'fragen':
-                          include('fragen.php');
-                          break;
-                          case 'contact':
-                                include('contact.php');
-                                break;
-                                case 'karte':
-                                    include('karte.php');
-                                    break;
+                    case 'fragen':
+                      include('fragen.php');
+                      break;
+                    case 'contact':
+                      include('contact.php');
+                      break;
+                    case 'karte':
+                      include('karte.php');
+                      break;
                   default:
-                      include("parts/content.php");
+                      header("Location: index.php?page=product&id={$id_product}");
                       break;
               }
         }
 
         else
         {
-            include('parts/content.php');
+           header("Location: index.php?page=product&id={$id_product}");
 
         }
 
@@ -275,45 +274,10 @@ function countdown1(tm,name_cat){
         <script src="js/jquery-easing/jquery.easing.1.3.js"></script>
         <script src="js/superslide/jquery.superslides.js"></script>
         <script src="js/wow/wow.min.js"></script>
-
-<script type="text/javascript">
-  /*var output1 = countdown(timestamp1);
-               document.getElementById('demo').innerHTML = output1;*/
-              document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
-              var bool = true;
-
-
-              function myFunction() {
-
-                  setInterval(function()
-                  {
-                       
-
-                        if(bool == true)
-                        {
-                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic11; ?>)";
-                          bool = false;
-                        
-                        }
-                        else
-                        {
-                          document.getElementById('bgimage').style.backgroundImage="url(<?php echo $pic; ?>)";
-                          bool = true;
-                        }
-
-                  }, 4000);
-              }
-
-
-</script>
 <?php
   if(isset($_GET['page']) && $_GET['page']=='product')
   {
     echo "<script>myFunction1()</script>";
-  }
-  else
-  {
-    echo "<script>myFunction()</script>";
   }
  ?>
 </body>
