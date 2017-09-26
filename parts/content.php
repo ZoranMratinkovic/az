@@ -47,19 +47,20 @@
 
 
                                             <td class="zindex" id='price'>Anzahl</td>
-                                            <td class="zindex">Lieferkosten </td>
-                                            <td class="zindex">Dealwahl </td>
+
+                                            <td class="zindex">Total </td>
 
                                         </tr>
                                         <tr>
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount; ?>" step="1" value="1" name="" class='form-control'>
                                               </td>
-                                              <td class="zindex"><?php echo $lieferkosten ?> CHF</td>
+
                                               <td class="zindex">
+                                                50 CHF
                                                   <?php
                                                       require_once('functions.php');
-                                                     select_color($id_product);
+
                                                   ?>
                                               </td>
                                         </tr>
@@ -113,7 +114,7 @@
 
 
             </div>
-             <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i> Comments</h4>
+             <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i>Kommentare</h4>
         </div>
         <!-- Our Works Section -->
 
@@ -261,12 +262,12 @@
                 <div class="row">
                     <div class="main_testimonial_text center-content">
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Super Produkte einfach nur zum empfehlen</p>
+                            <a href="">Hans Petter</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Kaufe gerne hier ein es ist einfach am günstigsten hier online einzukaufen empfehle alle Produkte</p>
+                            <a href="">Keyvan</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
@@ -296,7 +297,7 @@
             <div class="container">
                 <div class="row">
                     <div class="client_heading_text center-content wow zoomIn" data-wow-duration="1.5s">
-                        <h1>As Seen On</h1>
+                        <h1>Unsere Partnere</h1>
 
                         <a href=""><img src="images/c1.png" alt="" /></a>
                         <a href=""><img src="images/c2.png" alt="" /></a>
@@ -314,8 +315,8 @@
             <div class="container">
                 <div class="row">
                     <div class="download_heading_text center-content">
-                        <h1>Download the App</h1>
-                        <p>Phasellus nisl leo congue eu malesuada lobortis fringilla et nulla. Curabitur posuere sem nec bibendum finibus.</p>
+                        <h1>Apps</h1>
+                        <p>Hier können sie die Apps für IOS und Android herunterladen</p>
 
                         <div class="down_text_des wow fadeInUp" data-wow-duration="1.5s">
                             <a href=""><img src="images/d1.png" alt="" /></a>

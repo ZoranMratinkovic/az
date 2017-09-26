@@ -99,19 +99,20 @@
 
 
                                             <td class="zindex" id='price'>Anzahl</td>
-                                            <td class="zindex">Lieferkosten </td>
-                                            <td class="zindex">Dealwahl  </td>
+
+                                            <td class="zindex">Total  </td>
 
                                         </tr>
                                         <tr>
                                               <td class="zindex">
                                               <input type="number" min="0" max="<?php echo $ammount_pro; ?>" step="1" value="1" name="" class='form-control'>
                                               </td>
-                                              <td class="zindex"><?php echo $lieferkosten1 ?> CHF</td>
+
                                               <td class="zindex">
+                                                59 CHF
                                                   <?php
                                                   require_once('functions.php');
-                                                  select_color($id_prod);
+
                                                    ?>
                                               </td>
                                         </tr>
@@ -168,7 +169,7 @@
 
         </div>
         <h4 id='comm'><i class="fa fa-comments-o" aria-hidden="true"></i>
-Comments</h4>
+Kommentare</h4>
   </div>
         <!-- Our Works Section -->
 
@@ -368,12 +369,12 @@ Comments</h4>
                 <div class="row">
                     <div class="main_testimonial_text center-content">
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Super Produkte kaufe gerne hier ein!</p>
+                            <a href="">Jhone Due, Käufer</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
+                            <p>Super alles Top sicher und schnell einfeg</p>
+                            <a href="">Hans Musterman</a>
                         </div>
                         <div class="col-md-12 col-sm-12 single_testimonial_text item">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
@@ -442,13 +443,13 @@ Comments</h4>
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
 
             countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
-             
+
              function myFunction1() {
-                
+
                   setInterval(function()
-                  { 
+                  {
                          pic1 = 'url("<?php echo $pic_pro; ?>")';
-                        
+
                         if(document.getElementById('bgimage_pro').style.backgroundImage==pic1)
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro1; ?>)";
@@ -457,10 +458,10 @@ Comments</h4>
                         else
                         {
                           document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
-                    
-                          
+
+
                         }
-                        
+
 
                   }, 4000);
               }

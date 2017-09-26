@@ -206,7 +206,7 @@ $(document).ready(function() {
 <script type="text/javascript">
             // this identifies your website in the createToken call below
             Stripe.setPublishableKey('<Stripe Publishable Key>');
- 
+
             function stripeResponseHandler(status, response) {
                 if (response.error) {
                     // re-enable the submit button
@@ -225,7 +225,7 @@ $(document).ready(function() {
                     form$.get(0).submit();
                 }
             }
- 
+
 
 </script>
 </head>
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <div class="row row-centered">
   <div class="col-md-4 col-md-offset-4">
   <div class="page-header">
-    <h2 class="gdfg">Secure Payment Form</h2>
+    <h2 class="gdfg">Sicheres Bezahlen</h2>
   </div>
   <noscript>
   <div class="bs-callout bs-callout-danger">
@@ -247,7 +247,7 @@ require 'lib/Stripe.php';
 
 $error = '';
 $success = '';
-	  
+
 if ($_POST) {
   Stripe::setApiKey("<Stripe Secret Key>");
 
@@ -277,51 +277,51 @@ if ($_POST) {
   <?= $error ?>
   </span>
   <fieldset>
-  
+
   <!-- Form Name -->
-  <legend>Billing Details</legend>
-  
+  <legend>Zahlungs Details</legend>
+
   <!-- Street -->
   <div class="form-group">
-    <label class="col-sm-4 control-label" for="textinput">Street</label>
+    <label class="col-sm-4 control-label" for="textinput">Strasse</label>
     <div class="col-sm-6">
       <input type="text" name="street" placeholder="Street" class="address form-control">
     </div>
   </div>
-  
+
   <!-- City -->
   <div class="form-group">
-    <label class="col-sm-4 control-label" for="textinput">City</label>
+    <label class="col-sm-4 control-label" for="textinput">Stadt</label>
     <div class="col-sm-6">
       <input type="text" name="city" placeholder="City" class="city form-control">
     </div>
   </div>
-  
+
   <!-- State -->
   <div class="form-group">
-    <label class="col-sm-4 control-label" for="textinput">State</label>
+    <label class="col-sm-4 control-label" for="textinput">Kanton</label>
     <div class="col-sm-6">
       <input type="text" name="state" maxlength="65" placeholder="State" class="state form-control">
     </div>
   </div>
-  
+
   <!-- Postcal Code -->
   <div class="form-group">
-    <label class="col-sm-4 control-label" for="textinput">Postal Code</label>
+    <label class="col-sm-4 control-label" for="textinput">Postleitzahl</label>
     <div class="col-sm-6">
       <input type="text" name="zip" maxlength="9" placeholder="Postal Code" class="zip form-control">
     </div>
   </div>
-  
+
   <!-- Country -->
   <div class="form-group">
-    <label class="col-sm-4 control-label" for="textinput">Country</label>
-    <div class="col-sm-6"> 
+    <label class="col-sm-4 control-label" for="textinput">Land</label>
+    <div class="col-sm-6">
       <!--input type="text" name="country" placeholder="Country" class="country form-control"-->
       <div class="country bfh-selectbox bfh-countries" name="country" placeholder="Select Country" data-flags="true" data-filter="true"> </div>
     </div>
   </div>
-  
+
   <!-- Email -->
   <div class="form-group">
     <label class="col-sm-4 control-label" for="textinput">Email</label>
@@ -332,26 +332,26 @@ if ($_POST) {
   </fieldset>
   <fieldset>
     <legend>Card Details</legend>
-    
+
     <!-- Card Holder Name -->
     <div class="form-group">
-      <label class="col-sm-4 control-label"  for="textinput">Card Holder's Name</label>
+      <label class="col-sm-4 control-label"  for="textinput">Karten inhabers name</label>
       <div class="col-sm-6">
         <input type="text" name="cardholdername" maxlength="70" placeholder="Card Holder Name" class="card-holder-name form-control">
       </div>
     </div>
-    
+
     <!-- Card Number -->
     <div class="form-group">
-      <label class="col-sm-4 control-label" for="textinput">Card Number</label>
+      <label class="col-sm-4 control-label" for="textinput">Kartennummer</label>
       <div class="col-sm-6">
         <input type="text" id="cardnumber" maxlength="19" placeholder="Card Number" class="card-number form-control">
       </div>
     </div>
-    
+
     <!-- Expiry-->
     <div class="form-group">
-      <label class="col-sm-4 control-label" for="textinput">Card Expiry Date</label>
+      <label class="col-sm-4 control-label" for="textinput">Ablaufdatum</label>
       <div class="col-sm-6">
         <div class="form-inline">
           <select name="select2" data-stripe="exp-month" class="card-expiry-month stripe-sensitive required form-control">
@@ -374,15 +374,15 @@ if ($_POST) {
           <script type="text/javascript">
             var select = $(".card-expiry-year"),
             year = new Date().getFullYear();
- 
+
             for (var i = 0; i < 12; i++) {
                 select.append($("<option value='"+(i + year)+"' "+(i === 0 ? "selected" : "")+">"+(i + year)+"</option>"))
             }
-        </script> 
+        </script>
         </div>
       </div>
     </div>
-    
+
     <!-- CVV -->
     <div class="form-group">
       <label class="col-sm-4 control-label" for="textinput">CVV/CVV2</label>
@@ -390,7 +390,7 @@ if ($_POST) {
         <input type="text" id="cvv" placeholder="CVV" maxlength="4" class="card-cvc form-control">
       </div>
     </div>
-    
+
     <!-- Important notice -->
     <div class="form-group">
     <div class="panel panel-success">
@@ -398,17 +398,16 @@ if ($_POST) {
         <h3 class="panel-title">Important notice</h3>
       </div>
       <div class="panel-body">
-        <p>Your card will be charged 30€ after submit.</p>
-        <p>Your account statement will show the following booking text:
-          XXXXXXX </p>
+        <p></p>
+        <p> </p>
       </div>
     </div>
-    
+
     <!-- Submit -->
     <div class="control-group">
       <div class="controls">
         <center>
-          <button class="btn btn-success" type="submit">Pay Now</button>
+          <button class="btn btn-success" type="submit">Jetzt bezahlen</button>
         </center>
       </div>
     </div>

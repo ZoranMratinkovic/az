@@ -381,7 +381,7 @@
                                     echo
                                     "
                                         <li><a href='index.php?page=login' class=''>Login</a></li>
-                                        <li><a href='index.php?page=register' class=''>Register</a></li>
+                                        <li><a href='index.php?page=register' class=''>Jetzt registrieren</a></li>
                                     ";
                                 }
                              ?>

@@ -34,7 +34,7 @@
 
             if(empty($_POST['password_login']))
             {
-                $emailErr = "You must enter password";
+                $emailErr = "Bitte geben sie ein password ein";
                 $array[] = "password";
             }
             else
@@ -43,14 +43,14 @@
 
                 if(!preg_match("/^[a-zA-Z0-9!@#$%^&*-_]{6,}$/",$pass_login))
                 {
-                    $passErr = "Invalid password format";
-                    $errors[] = "Invalid password";
+                    $passErr = "Bitte überprüfen Sie Ihr Passwort";
+                    $errors[] = "Bitte überprüfen Sie Ihr Passwort";
                 }
             }
 
             if(count($array) != 0)
             {
-                echo "<script>alert('There are mistakes')</script>";
+                echo "<script>alert('Bitte überprüfen sie ihre Daten')</script>";
             }
             else
             {
@@ -102,13 +102,13 @@
                         else
                         {
 
-                            echo "<script>alert('Email or password incorrect');</script>";
+                            echo "<script>alert('Email oder Passwort stimme nicht');</script>";
                         }
 
                      }           //there is only one match ends
                      else
                      {
-                        echo "<script>alert('There is no user with such email address');</script>";
+                        echo "<script>alert('Es gibt keinen User mit dieser Email adresse');</script>";
                      }
 
                 }               //there are some result end
@@ -136,22 +136,22 @@
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST" onSubmit="return login_check();">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email_login" id="email_login" placeholder="Email address" required="">
+                                        <input type="email" class="form-control" name="email_login" id="email_login" placeholder="Email " required="">
                                     </div>
                                     <span id="emailErr" class="errors"> <?php echo $emailErr;?></span>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password_login" id="password_login" placeholder="Password" required="">
+                                        <input type="password" class="form-control" name="password_login" id="password_login" placeholder="Passwort" required="">
                                     </div>
                                     <span id="pass_error" class="errors"> <?php echo $passErr;?></span>
                                 </div>
 
                                 <div class="col-sm-12">
                                     <div class="center-content">
-                                        <a href="index.php?page=register">Don't have an account?</a>
-                                        <a href="index.php?page=login">Forgot your password?</a>
+                                        <a href="index.php?page=register">Haben sie keinen Account?</a>
+                                        <a href="index.php?page=login">Oasswort vergessen?</a>
                                         <input type="submit" value="Login" class="btn larg-btn" name="submit_login">
                                     </div>
                                 </div>
