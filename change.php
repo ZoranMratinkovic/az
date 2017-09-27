@@ -235,8 +235,8 @@
                   <div class="col-md-12 col-sm-12">
                       <div class="message_content">
                           <div class="message_heading_text center-content wow zoomIn" data-wow-duration="1s">
-                              <h2>Get in Touch</h2>
-                              <p id="neuspeh" >Have feedback, suggestion, or any thought about our app? Feel free to contact us anytime, we will get back to you in 24 hours.</p>
+                              <h2>Account Informationen</h2>
+                              <p id="neuspeh" >Hier können Sie Accountinformationen wechseln</p>
                           </div>
 
                           <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">

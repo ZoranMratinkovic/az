@@ -372,7 +372,7 @@
                                     "
                                         <li><a href='logout.php' class=''>Logout</a></li>
                                         <li><a href='index.php?page=change' class=''>change</a></li>
-                                        <li  class='right_li'><a href=''>{$_SESSION['name']} {$_SESSION['last_name']}</a></li>
+                                        <li  class='right_li'><a href=''>{$_SESSION['name']}</a></li>
 
                                     ";
                                 }

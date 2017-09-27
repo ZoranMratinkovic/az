@@ -119,9 +119,10 @@
                                                    ?>
 
                                             <div class="col-xs-12 col-lg-12 col-sm-12">
+                                              <?php if(isset($_SESSION['email'])){ ?>
 
                                                 <input type="submit" name="sub" class="btn btn-default white-btn youtube-media btnmy" value="Jetzt Einkaufen!!">
-
+<?php }else { echo "<a href='index.php?page=login' class='btn btn-default white-btn youtube-media btnmy'>Bitte einloggen</a>";}?>
                                             </div>
 
 
