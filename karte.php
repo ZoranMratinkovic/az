@@ -1,4 +1,4 @@
-<form class="" action="cart/pay.php" method="post">
+<form class="" action="alpikommailer.php" method="post">
 <?php
       if(isset($_GET['id1']))
       {
@@ -56,6 +56,7 @@
 <br/>
 <br/>
 <br/>
+<?php echo $_SESSION['email']; ?>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
 
@@ -115,12 +116,16 @@
   <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="price22" value="<?php echo $new_price_pro ?>">
 </div>
 <div class="form-group">
+
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="email" value="<?php echo  $_SESSION['email']; ?>">
+</div>
+<div class="form-group">
   <label for="pwd">Name</label>
-  <input type="text" class="form-control" id="pwd" placeholder="stücke" name="name1">
+  <input type="text" class="form-control" id="pwd" placeholder="Name" name="name1">
 </div>
 <div class="form-group">
   <label for="pwd">Vorname </label>
-  <input type="text" class="form-control" id="pwd" placeholder="Preis" name="vorname">
+  <input type="text" class="form-control" id="pwd" placeholder="Vorname" name="vorname">
 </div>
 <div class="form-group">
   <label for="pwd">Telefon</label>
@@ -136,7 +141,7 @@
 </div>
 <div class="form-group">
   <label for="pwd">Kanton</label>
-  <input type="text" class="form-control" id="pwd" placeholder="Beschreibung" name="kanton">
+  <input type="text" class="form-control" id="pwd" placeholder="Kantog" name="kanton">
 </div>
 <div class="form-group">
   <input type="checkbox" name="" value="" required>  Ich habe die AGBS gelesen und bin einverstanden
@@ -156,6 +161,7 @@
   $anzahl=$_POST['anzahl22'];
   $price1=$_REQUEST['price22'];
   $price=$price1*$anzahl;
+  $gutschein=rand(10000000,900000000);
   echo $produkt22."<br/>";
   echo $name1."<br/>";
   echo $vorname;
@@ -166,8 +172,10 @@
   echo $anzahl."<br/>";
   echo $price;
 
- $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl','$kanton')";
+ $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl','$kanton',$gutschein)";
   $result16=$conn->query($insertbuy)or die(mysqli_error());
+
+
 }
 ?>
 </form>
