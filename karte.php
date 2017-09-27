@@ -1,4 +1,4 @@
-
+<form class="" action="cart/pay.php" method="post">
 <?php
       if(isset($_GET['id1']))
       {
@@ -58,7 +58,7 @@
 <br/>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
-  <form class="" action="index.php?page=karte" method="post">
+
 	<table id="cart" class="table table-hover table-condensed">
     				<thead>
 						<tr>
@@ -82,27 +82,16 @@
 							</td>
 							<td data-th="Price" id='tab'><?php echo $new_price_pro ?> CHF</td>
 							<td data-th="Quantity">
-								<input type="number" class="form-control text-center" value="<?php echo $_POST['nmbr']; ?>">
+								<input type="number" name="anz" class="form-control text-center" value="<?php echo $_POST['nmbr']; ?>" disabled>
 							</td>
-							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro*$_POST['nmbr']; ?></td>
+							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro*$_POST['nmbr']; ?>CHF</td>
 							<td class="actions" data-th="">
-								<button class="btn btn-info btn-sm" onclick="change();" name="refresh"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+
 							</td>
 						</tr>
 
 					</tbody>
-					<tfoot>
-						<tr class="visible-xs">
-							<td class="text-center"><strong>50</strong></td>
-						</tr>
-						<tr>
-							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
-							<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
-						</tr>
-					</tfoot>
+
 				</table>
 </div>
   <div class="container">
@@ -113,7 +102,18 @@
 <br/>
 
 
+<div class="form-group">
 
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="produkt22" value="<?php echo  $name_pro; ?>">
+</div>
+<div class="form-group">
+
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="anzahl22" value="<?php echo $_POST['nmbr']; ?>">
+</div>
+<div class="form-group">
+
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="price22" value="<?php echo $new_price_pro ?>">
+</div>
 <div class="form-group">
   <label for="pwd">Name</label>
   <input type="text" class="form-control" id="pwd" placeholder="stücke" name="name1">
@@ -146,14 +146,28 @@
 </div>
 <?php
     if(isset($_REQUEST['bestel'])){
+      $produkt22=$_REQUEST['produkt22'];
   $name1=$_REQUEST['name1'];
   $vorname=$_REQUEST['vorname'];
   $tel=$_REQUEST['tel'];
   $adress=$_REQUEST['adresse'];
   $postleitzahl=$_REQUEST['postleitzahl'];
   $kanton=$_REQUEST['kanton'];
-  $insertbuy="INSERT into buy('','$name1','$vorname','$tel','$adress','$postleitzahl','$kanton')";
-  $result16=$conn->query($insertbuy)or die("errrorrr");
+  $anzahl=$_POST['anzahl22'];
+  $price1=$_REQUEST['price22'];
+  $price=$price1*$anzahl;
+  echo $produkt22."<br/>";
+  echo $name1."<br/>";
+  echo $vorname;
+  echo $tel."<br/>";
+  echo $adress."<br/>";
+  echo $postleitzahl."<br/>";
+  echo $kanton."<br/>";
+  echo $anzahl."<br/>";
+  echo $price;
+
+ $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl','$kanton')";
+  $result16=$conn->query($insertbuy)or die(mysqli_error());
 }
 ?>
 </form>

@@ -66,7 +66,7 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                     <a href="admin.php?word=insert">New Product</a>
                 </li>
                 <li>
-                    <a href="#">Bestellte Produkte</a>
+                    <a href="admin.php?word=buyed">Bestellte Produkte</a>
                 </li>
 
             </ul>
@@ -97,6 +97,8 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                                     break;
                                 case "delete": include("delete.php");
                                     break;
+                                    case "buyed": include("buyed.php");
+                                        break;
                                 default:
                                     break;
                             }
