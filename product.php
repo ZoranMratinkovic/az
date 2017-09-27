@@ -96,7 +96,7 @@
                             <div id='details' class="single_home_content wow zoomIn  productss1" data-wow-duration="1s">
 
 
-                                <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price; ?>">
+                                <div data-ng-app="" data-ng-init="quantity=1;price=<?php echo $new_price_pro; ?>">
 
 
 
