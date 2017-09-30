@@ -68,6 +68,9 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                 <li>
                     <a href="admin.php?word=buyed">Bestellte Produkte</a>
                 </li>
+                <li>
+                    <a href="admin.php?word=news">newsletter</a>
+                </li>
 
             </ul>
         </div>
@@ -99,6 +102,8 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                                     break;
                                     case "buyed": include("buyed.php");
                                         break;
+                                        case "news": include("news.php");
+                                            break;
                                 default:
                                     break;
                             }

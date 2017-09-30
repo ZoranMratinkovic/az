@@ -262,6 +262,25 @@
                                       <span class="error"> <?php echo $lNameErr;?></span>
                                   </div>
                               </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" name="strasse" placeholder="Strasse Huausnummer" value="<?php echo $r1['strasse'];?>" required="">
+                                      <span class="error"> <?php echo $lNameErr;?></span>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" name="kanton" placeholder="Kanton,postleitzahl" value="<?php echo $r1['platz'];?>" required="">
+                                      <span class="error"> <?php echo $lNameErr;?></span>
+                                  </div>
+                              </div>
+                              <div class="col-sm-12">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" name="telefon" placeholder="Telefon" value="<?php echo $r1['telefon'];?>" required="">
+                                      <span class="error"> <?php echo $lNameErr;?></span>
+                                  </div>
+                              </div>
+
 
                               <div class="col-sm-12">
                                   <div class="form-group">
@@ -288,8 +307,11 @@
                                         $lastname=$_REQUEST['last_name'];
                                         $email=$_REQUEST['email'];
                                         $password=$_REQUEST['pass'];
+                                        $strasse=$_REQUEST['strasse'];
+                                        $kanton=$_REQUEST['kanton'];
+                                        $telefon=$_REQUEST['telefon'];
                                         $password = password_hash($password,PASSWORD_BCRYPT,$options);
-                                            $updateuser="UPDATE user SET name='$name',last_name='$lastname',email='$email',password='$password' where id_user=".$_SESSION['id_user'];
+                                            $updateuser="UPDATE user SET name='$name',last_name='$lastname',strasse='$strasse',platz='$kanton',telefon='$telefon',email='$email',password='$password' where id_user=".$_SESSION['id_user'];
                                     $result4 = $conn->query($updateuser)or die("bat upit");
                             } ?>
                           </form>

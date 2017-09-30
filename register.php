@@ -253,6 +253,24 @@
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="strasse" placeholder="strasse" required="">
+                                        <span class="error"> <?php echo $lNameErr;?></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="kanton" placeholder="Kanton,Postleitzahl" required="">
+                                        <span class="error"> <?php echo $lNameErr;?></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="telefon" placeholder="telefon" required="">
+                                        <span class="error"> <?php echo $lNameErr;?></span>
+                                    </div>
+                                </div>
 
                                 <div class="col-sm-12">
                                     <div class="form-group">

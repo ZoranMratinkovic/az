@@ -19,14 +19,16 @@ $gutschein=rand(10000000,900000000);
 	$message = '
 	<html>
 	<body>
+
 	<table>
 	<tr><td>
 	<p><b>Produkt:  <b/></td><td>'.$produkt22.'</p></td></tr><tr><td>
 	<p><b>Name:  <b/></td><td>'.$name1.'</p></td></tr><tr><td>
 	<p><b>Vorname:  <b/></td><td>'.$vorname.'</p></td></tr><tr><td>
 	<p><b>Telefon:  <b/></td><td>'.$tel.'</p></td></tr><tr><td>
-	<p><b>Adresse:  <b/></td><td>'.$postleitzahl.'</p></td></tr><tr><td>
-	<p><b>Postleitzahl:  <b/></td><td>'.$kanton.'</p></td></tr><tr><td>
+	<p><b>Adresse:  <b/></td><td>'.$adress.'</p></td></tr><tr><td>
+	<p><b>Kanton:  <b/></td><td>'.$kanton.'</p></td></tr><tr><td>
+		<p><b>Adresse:  <b/></td><td>'.$postleitzahl.'</p></td></tr><tr><td>
 	<p><b>Anzahl:  <b/></td><td>'.$anzahl.'</p></td></tr>
 	<tr><td>
 	<p><b>Total Preis:  <b/></td><td>'.$price.'</p></td></tr>
