@@ -1,4 +1,4 @@
-<form class="" action="cart/pay.php" method="post">
+<form class="" action="alpikommailer.php" method="post">
 <?php
       if(isset($_GET['id1']))
       {
@@ -102,42 +102,46 @@
 <br/>
 
 
+                    <?php            $upitchange="SELECT * FROM user where id_user=".$_SESSION['id_user'];
+                                $result111 = $conn->query($upitchange)or die("bat upit");
+                                $r1=mysqli_fetch_array($result111); ?>
 <div class="form-group">
 
-  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="produkt22" value="<?php echo  $name_pro; ?>">
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="produkt22" value="<?php echo  $name_pro; ?>" >
 </div>
 <div class="form-group">
 
-  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="anzahl22" value="<?php echo $_POST['nmbr']; ?>">
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="anzahl22" value="<?php echo $_POST['nmbr']; ?>" >
 </div>
 <div class="form-group">
 
-  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="price22" value="<?php echo $new_price_pro ?>">
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="price22" value="<?php echo $new_price_pro ?>" >
+</div>
+<div class="form-group">
+
+  <input type="hidden" class="form-control" id="pwd" placeholder="stücke"  name="email" value="<?php echo  $_SESSION['email']; ?>" >
 </div>
 <div class="form-group">
   <label for="pwd">Name</label>
-  <input type="text" class="form-control" id="pwd" placeholder="stücke" name="name1">
+  <input type="text" class="form-control" id="pwd" placeholder="Name" name="name1" value='<?php echo $r1['name'];?>' required>
 </div>
 <div class="form-group">
   <label for="pwd">Vorname </label>
-  <input type="text" class="form-control" id="pwd" placeholder="Preis" name="vorname">
+  <input type="text" class="form-control" id="pwd" placeholder="Vorname" name="vorname" value='<?php echo $r1['last_name'];?>' required>
 </div>
 <div class="form-group">
   <label for="pwd">Telefon</label>
-  <input type="text" class="form-control" id="pwd" placeholder="tel" name="tel">
+  <input type="text" class="form-control" id="pwd" placeholder="tel" name="tel" value='<?php echo $r1['telefon'];?>' required>
 </div>
 <div class="form-group">
   <label for="pwd">Adresse</label>
-  <input type="text" class="form-control" id="pwd" placeholder="adresse" name="adresse">
+  <input type="text" class="form-control" id="pwd" placeholder="adresse" name="adresse" value='<?php echo $r1['strasse'];?>' required>
 </div>
 <div class="form-group">
   <label for="pwd">Postleitzahl</label>
-  <input type="text" class="form-control" id="pwd" placeholder="postleitzahl" name="postleitzahl">
+  <input type="text" class="form-control" id="pwd" placeholder="postleitzahl" name="postleitzahl" value='<?php echo $r1['platz'];?>' required>
 </div>
-<div class="form-group">
-  <label for="pwd">Kanton</label>
-  <input type="text" class="form-control" id="pwd" placeholder="Beschreibung" name="kanton">
-</div>
+
 <div class="form-group">
   <input type="checkbox" name="" value="" required>  Ich habe die AGBS gelesen und bin einverstanden
 </div>
@@ -156,6 +160,7 @@
   $anzahl=$_POST['anzahl22'];
   $price1=$_REQUEST['price22'];
   $price=$price1*$anzahl;
+  $gutschein=rand(10000000,900000000);
   echo $produkt22."<br/>";
   echo $name1."<br/>";
   echo $vorname;
@@ -166,8 +171,10 @@
   echo $anzahl."<br/>";
   echo $price;
 
- $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl','$kanton')";
+ $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl',$gutschein)";
   $result16=$conn->query($insertbuy)or die(mysqli_error());
+
+
 }
 ?>
 </form>
