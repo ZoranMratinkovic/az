@@ -2,6 +2,7 @@
 
         $fNameErr = $lNameErr = $emailErr = $passErr = $passErr1 = "";
         $fName = $lName = $email = $pass_reg = $pass1 = $hash_ver = "";
+
         $errors = array();
         $id_role = 2; $pass_hashed = $id = "      ";
         $options =
@@ -19,6 +20,11 @@
 
         if(isset($_POST['submit_register']))
         {
+            $kanton = $_POST['kanton'];
+            $strasse = $_POST['strasse'];
+            $telefon = $_POST['telefon'];
+
+
             //firstNAme
             if(empty($_POST["first_name"]))
             {
@@ -155,9 +161,9 @@
                       $stmt->close();
                       $hash_ver = md5(rand(0,1000));
                       $status = "";
-                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+                      $stm = $conn->prepare("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-                      $stm->bind_param("sssssssi",$id,$pass_hashed,$email,$fName,$lName,$hash_ver,$status,$id_role);
+                      $stm->bind_param("ssssssssssi",$id,$pass_hashed,$email,$fName,$lName,$telefon,$strasse,$kanton,$hash_ver,$status,$id_role);
 
                       $stm->execute();
                       echo strlen($pass_hashed);
@@ -173,7 +179,7 @@
                           //Enable SMTP debugging.
                           //$mail->SMTPDebug = 3; -> client ---> server dialog
                           //Set PHPMailer to use SMTP.
-                        // $mail->isSMTP();
+                        $mail->isSMTP();
                           //Set SMTP host name
                           $mail->Host = "smtp.gmail.com";
                           //Set this to true if SMTP host requires authentication to send email
@@ -265,7 +271,7 @@
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="telefon" placeholder="telefon" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>

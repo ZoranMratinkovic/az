@@ -45,7 +45,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd='+id_product,true);
+            request.open('GET','update.php?id_productProd='+id_cat,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }
@@ -61,7 +61,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd1='+id_product1,true);
+            request.open('GET','update.php?id_productProd1='+id_cat1,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }
@@ -77,7 +77,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd2='+id_product2,true);
+            request.open('GET','update.php?id_productProd2='+id_cat2,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }
@@ -93,7 +93,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd3='+id_product3,true);
+            request.open('GET','update.php?id_productProd3='+id_cat3,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }
@@ -102,7 +102,7 @@ function ispisi()
     {
         if(request.readyState==4 || request.status == 200)
         {
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            /*document.getElementById("demo").innerHTML = "EXPIRED";*/
         }
         //page not found kada u isto vreme - resi!
     }

@@ -54,13 +54,13 @@ function count2(tm,id)
         if(id==2)//kategorija vino
         {
 
-          document.getElementById("vino").innerHTML = days + "d " + hours + "h "
+          document.getElementById("pivo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
         else if(id==1)//kategorija pivo
         {
 
-          document.getElementById("pivo").innerHTML = days + "d " + hours + "h "
+          document.getElementById("vino").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
         else if(id==3)//kategorija phone
@@ -77,25 +77,24 @@ function count2(tm,id)
         // If the count down is over, write some text
         if (distance < 0 && id == 2) {
             updateVino();
-            clearInterval(x);
              document.getElementById("vino").innerHTML = "Expired";
         }
         else if(distance < 0 && id == 1)
         {
           updatePivo();
-          clearInterval(x);
+          
           document.getElementById("pivo").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 3)
         {
           updatePhone();
-          clearInterval(x);
+          
           document.getElementById("phone").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 4)
         {
           updateLaptop();
-          clearInterval(x);
+          
           document.getElementById("laptop").innerHTML = "Expired";
         }
 }
