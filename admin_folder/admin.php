@@ -72,7 +72,7 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                     <a href="admin.php?word=news">newsletter</a>
                 </li>
                 <li>
-                    <a href="admin.php?word=answer">newsletter</a>
+                    <a href="admin.php?word=answer">Kommentare</a>
                 </li>
 
             </ul>
