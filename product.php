@@ -72,7 +72,7 @@
 
 
                                             <td class="zindex" id='price'>Markt Preis </td>
-                                            <td class="zindex">Neuer Preis </td>
+                                            <td class="zindex">Katoo Preis </td>
                                             <td class="zindex">Rabatt </td>
 
                                         </tr>

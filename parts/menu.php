@@ -165,7 +165,7 @@
                     </div>
                     <div id="navbar" aria-expended='false' class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
-                             <li><a href="index.php" class="" >Brands</a></li>
+                            
                              <!--
                                   $upit1 ="SELECT * from categorie";
                                   $result1 = $conn->query($upit1);
