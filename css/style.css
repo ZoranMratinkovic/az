@@ -1055,9 +1055,7 @@ a.info_right_text{
 	color: #e0356e;
 	padding-bottom: 24px;
 }
-#message .form-group .form-control {
-	padding: 25px;
-}
+
 #message .larg-btn {
 	background: #e0356e;
 	border: none;
@@ -1070,6 +1068,9 @@ a.info_right_text{
 	background-color: #f79b23;
 	color: #fff;
 	text-decoration: none;
+}
+.clear {
+  clear:fix;
 }
 
 /* footer Section */

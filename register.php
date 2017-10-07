@@ -248,48 +248,48 @@
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="first_name" placeholder="Name" required="">
+                                        <input type="text" class="form-control input-lg" name="first_name" placeholder="Name" required="">
                                         <span class="error"> <?php echo $fNameErr;?></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="last_name" placeholder="Vorname" required="">
+                                        <input type="text" class="form-control input-lg" name="last_name" placeholder="Vorname" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="strasse" placeholder="strasse" required="">
+                                        <input type="text" class="form-control input-lg" name="strasse" placeholder="strasse" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="kanton" placeholder="Kanton,Postleitzahl" required="">
+                                        <input type="text" class="form-control input-lg" name="kanton" placeholder="Kanton,Postleitzahl" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="telefon" placeholder="telefon" required="">
+                                        <input type="text" class="form-control input-lg" name="telefon" placeholder="telefon" required="">
                                         <span class="error"> <?php echo $lNameErr;?></span>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email" name="email" required="">
+                                        <input type="email" class="form-control input-lg" placeholder="Email" name="email" required="">
                                         <span class="error"> <?php echo $emailErr;?></span>
                                     </div> <!-- end of form-group -->
 
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Passwort" name="pass" required="">
+                                        <input type="password" class="form-control input-lg" placeholder="Passwort" name="pass" required="">
                                         <span class="error"> <?php echo $passErr;?></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Passwort nochmal" name="pass1" required="">
+                                        <input type="password" class="form-control input-lg" placeholder="Passwort nochmal" name="pass1" required="">
                                         <span class="error"> <?php echo $passErr1;?></span>
                                     </div>
 

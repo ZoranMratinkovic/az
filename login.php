@@ -136,14 +136,14 @@
                             <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST" onSubmit="return login_check();">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email_login" id="email_login" placeholder="Email " required="">
+                                        <input type="email" class="form-control input-lg" name="email_login" id="email_login" placeholder="Email " required="">
                                     </div>
                                     <span id="emailErr" class="errors"> <?php echo $emailErr;?></span>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password_login" id="password_login" placeholder="Passwort" required="">
+                                        <input type="password" class="form-control input-lg" name="password_login" id="password_login" placeholder="Passwort" required="">
                                     </div>
                                     <span id="pass_error" class="errors"> <?php echo $passErr;?></span>
                                 </div>
@@ -151,7 +151,7 @@
                                 <div class="col-sm-12">
                                     <div class="center-content">
                                         <a href="index.php?page=register">Haben sie keinen Account?</a>
-                                        <a href="index.php?page=login">Oasswort vergessen?</a>
+                                      
                                         <input type="submit" value="Login" class="btn larg-btn" name="submit_login">
                                     </div>
                                 </div>

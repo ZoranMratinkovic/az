@@ -46,6 +46,7 @@
 					}
 					else {
 								echo "<div class='kolone col-lg-10 col-sm-12 col-xs-12 komentar_i_ime pull-right '>";
+
 								echo "<div class='description row color1'>";
 								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
 								if(isset($_SESSION['email']) && $_SESSION['id_role'] == 1)
@@ -59,7 +60,7 @@
 								else
 								{
 								  echo "<p class='col-xs-8'>
-											<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>".$row['name']." ".$row['last_name']." </b>
+											<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>Admin </b>
 										</p>";
 								}
 
@@ -68,7 +69,7 @@
 
 }
 							}
-
+									echo "<div class='clear'></div>";
 							if(isset($_SESSION['email']))
 							{//if the user is logged in
 
