@@ -40,7 +40,11 @@
 								echo "<p class='col-xs-12 cntr'><i class='pull-left'> ".$row['comment']."</i></p></div></div>";
 //odvojeno ovde ide odgovor admina
 
-					if($row['odgovor']==''){}else{
+					if($row['odgovor']=='')
+					{
+						//something
+					}
+					else {
 								echo "<div class='kolone col-lg-10 col-sm-12 col-xs-12 komentar_i_ime pull-right '>";
 								echo "<div class='description row color1'>";
 								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
@@ -76,7 +80,7 @@
 							}
 							else
 							{
-								echo "<a href='index.php?page=login'>Login in order to comment</a>";
+								echo "<div class='col-xs-12'> <a href='index.php?page=login'>Login in order to comment</a></div>";
 							}
 
 						}

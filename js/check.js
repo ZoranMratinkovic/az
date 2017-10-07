@@ -45,9 +45,9 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd='+id_cat,true);
+            request.open('GET','update.php?id_productProd='+id_productt,true);
             request.onreadystatechange = updateTable;
-            request.send(null);1
+            request.send(null);
         }
     }
     function updatePivo()
@@ -61,7 +61,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd1='+id_cat1,true);
+            request.open('GET','update.php?id_productProd1='+id_product1,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }
@@ -77,7 +77,7 @@ function ispisi()
 
         else
         {
-            request.open('GET','update.php?id_productProd2='+id_cat2,true);
+            request.open('GET','update.php?id_productProd2='+id_product2,true);
             request.onreadystatechange = updateTable;
             request.send(null);1
         }

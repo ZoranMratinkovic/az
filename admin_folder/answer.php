@@ -8,7 +8,7 @@
     <title></title>
   </head>
   <body>
-    <?php $upitcomment="SELECT * FROM commentar";
+    <?php $upitcomment="SELECT * FROM commentar com INNER JOIN product p on com.id_product=p.id_product INNER JOIN user u on com.id_user=u.id_user";
           $resultcomment=$conn->query($upitcomment)or die("errrorrr");
      ?>
        <form class="" action="#" method="post" enctype = "multipart/form-data">
@@ -19,17 +19,17 @@
          <th>date</th>
          <th>user</th>
          <th>product</th>
-         <th>answer comment</th>
-         <th>answer</th>
+         <th>Answer</th>
+         <th>Reply</th>
        </tr>
        <?php while($r=mysqli_fetch_array($resultcomment)){
          echo "<tr><td>".$r['id_com']."</td>
                 <td>".$r['comment']."</td>
-                <td>".$r['date']."</td>
-                <td>".$r['id_user']."</td>
-                <td>".$r['id_product']."</td>
+                <td>".date('M d Y, H:i',$r['date'])."</td>
+                <td>".$r['name']." {$r['last_name']}</td>
+                <td>".$r['product_name']."</td>
                 <td>".$r['odgovor']."</td>
-                  <td><a href='admin.php?word=answer&idc=".$r['id_com']."'class='brisanje'>answer</a></td>
+                  <td><a href='admin.php?word=answer&idc=".$r['id_com']."'class='brisanje'>Reply</a></td>
 
          </tr>";
        } if(isset($_GET['idc'])){

@@ -29,7 +29,7 @@
                  $pic_pro = $row['pictures_slider'];
                  $pic_pro1 =$row['bild2'];
                  $pic_pro2 =$row['bild3'];
-                 $id_product_pro = $row['id_product'];
+                 $id_cat_pro = $row['id_cat'];
                  $text = explode(';',$row['text']);
                  $heading = explode(';',$row['headings']);
                  $descs = explode(';',$row['descs']);
@@ -446,7 +446,7 @@ Kommentare</h4>
 <script type="text/javascript">
       document.getElementById('bgimage_pro').style.backgroundImage="url(<?php echo $pic_pro; ?>)";
 
-            countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>');
+            countdown1('<?php echo $timestamp_pro; ?>','<?php echo $name_cat_pro; ?>','<?php echo $id_cat_pro; ?>');
 
             var bool1 = true;
              function myFunction1() {

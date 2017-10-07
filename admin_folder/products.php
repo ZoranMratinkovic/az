@@ -9,7 +9,6 @@
                 <th>#</th>
                 <th>Product name</th>
                 <th>Categorie</th>
-                <th>Status</th>
                 <th>Ammount</th>
                 <th>Old Price</th>
                 <th>New Price</th>
@@ -23,18 +22,18 @@
             </thead><tbody>";
     while($row=mysqli_fetch_array($stm1))
     {
+        $expiredField = $row['expired'] == 0 ? 'No!':'Yes!';
         echo "<tr>
                   <th scope='row'>$i</th>
                   <td>{$row['product_name']}</td>
                   <td>{$row['categorie']}</td>
-                  <td>{$row['status']}</td>
                   <th>{$row['amount']}</th>
                   <th>{$row['price_old']}</th>
                   <th>{$row['price_new']}</th>
                   <th>{$row['description']}</th>
                   <th><img src='../{$row['pictures_slider']}' width='50' height='50'/></th>
                   <th>{$row['expire_date']}</th>
-                  <th>{$row['expired']}</th>
+                  <th>$expiredField</th>
                   <td><a href='edit.php?ids=".$row['id_product']."'class='brisanje'>change</a></td>
                   <td><a href='admin.php?word=products&id=".$row['id_product']."'class='brisanje'>X</a></td>
               </tr>

@@ -69,10 +69,10 @@ if(isset($_SESSION['email'])&&$_SESSION['id_role']==1){ ?>
                     <a href="admin.php?word=buyed">Bestellte Produkte</a>
                 </li>
                 <li>
-                    <a href="admin.php?word=news">newsletter</a>
+                    <a href="admin.php?word=news">Newsletter</a>
                 </li>
                 <li>
-                    <a href="admin.php?word=answer">newsletter</a>
+                    <a href="admin.php?word=answer">Comments</a>
                 </li>
 
             </ul>

@@ -75,11 +75,11 @@ function count2(tm,id)
         }
 
         // If the count down is over, write some text
-        if (distance < 0 && id == 2) {
+        if (distance < 0 && id == 1) {
             updateVino();
              document.getElementById("vino").innerHTML = "Expired";
         }
-        else if(distance < 0 && id == 1)
+        else if(distance < 0 && id == 2)
         {
           updatePivo();
           
@@ -100,7 +100,7 @@ function count2(tm,id)
 }
 
 
-function count1(tm,name_cat)
+function count1(tm,name_cat,id)
 {
   //this one displays tiimer on slider
   // Set the date we're counting down to
@@ -120,25 +120,25 @@ function count1(tm,name_cat)
         /*output = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         // Output the result in an element with id="demo"*/
-        if(name_cat=='Restaurants')//kategorija vino
+        if(id==1)//kategorija vino
         {
           document.getElementById('vinoo').style.display='block';
           document.getElementById("vinoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Gourmet')//kategorija pivo
+        else if(id==2)//kategorija pivo
         {
            document.getElementById('pivoo').style.display='block';
           document.getElementById("pivoo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Beauty')//kategorija phone
+        else if(id==3)//kategorija phone
         {
            document.getElementById('phoness').style.display='block';
           document.getElementById("phoness").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
         }
-        else if(name_cat=='Freizeit')//kategorija laptop
+        else if(id==4)//kategorija laptop
         {
            document.getElementById('laptopss').style.display='block';
           document.getElementById("laptopss").innerHTML = days + "d " + hours + "h "
@@ -146,28 +146,24 @@ function count1(tm,name_cat)
         }
 
         // If the count down is over, write some text
-        if (distance < 0 && id == 2) {
+        if (distance < 0 && id == 1) {
             updateVino();
-            clearInterval(y);
-             document.getElementById("vino").innerHTML = "Expired";
+             document.getElementById("vinoo").innerHTML = "Expired";
         }
-        else if(distance < 0 && id == 1)
+        else if(distance < 0 && id == 2)
         {
           updatePivo();
-          clearInterval(y);
-          document.getElementById("pivo").innerHTML = "Expired";
+          document.getElementById("pivoo").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 3)
         {
           updatePhone();
-          clearInterval(y);
-          document.getElementById("phone").innerHTML = "Expired";
+          document.getElementById("phoness").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 4)
         {
           updateLaptop();
-          clearInterval(y);
-          document.getElementById("laptop").innerHTML = "Expired";
+          document.getElementById("laptopss").innerHTML = "Expired";
         }
 }
 
@@ -175,9 +171,9 @@ function countdown(tm,id){
     
     var x = setInterval(count2, 1000,tm,id);
 }
-function countdown1(tm,name_cat){
+function countdown1(tm,name_cat,id){
 
-    var y = setInterval(count1, 1000,tm,name_cat);
+    var y = setInterval(count1, 1000,tm,name_cat,id);
 }
 </script>
 

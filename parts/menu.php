@@ -1,10 +1,10 @@
 <?php
    include("connectionFile/connection.php");
-   $sql = "SELECT p.bild2,p.bild3,p.lieferkosten,p.id_cat,p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.expired = ? AND p.id_cat=?";
+   $sql = "SELECT p.bild2,p.bild3,p.lieferkosten,p.id_cat,p.big_desc,p.heading_descs,p.descs,p.text,p.headings,p.id_product,p.product_name,p.amount,p.price_old,p.price_new,p.description,p.pictures_slider,p.expire_date,c.categorie FROM product p INNER JOIN categorie c on p.id_cat = c.id_cat WHERE p.id_cat=?";
    $expired = 0;
    $id_cat = 1;
    $st = $conn->prepare($sql);
-   $st->bind_param("ii",$expired,$id_cat);
+   $st->bind_param("i",$id_cat);
    $st->execute();
    if($st)
    {
@@ -36,6 +36,7 @@
               "
                <script>
                var id_cat = ".$id_catI.";
+               var id_productt = ".$id_product.";
                var timestamp = ".$timestamp.";
 
                  countdown(timestamp,id_cat);
@@ -48,7 +49,7 @@
    $expired1 = 0;
    $id_cat1 = 2;
    $st1 = $conn->prepare($sql);
-   $st1->bind_param("ii",$expired1,$id_cat1);
+   $st1->bind_param("i",$id_cat1);
    $st1->execute();
    if($st)
    {
@@ -72,8 +73,9 @@
               "
                <script>
                var id_cat1 = ". $id_cat1II . ";
+               var id_product1 = ".$id_product1.";
                var timestamp1 = ".$timestamp1.";
-              countdown(timestamp1,id_cat1);
+               countdown(timestamp1,id_cat1);
                </script>
               ";
             }
@@ -82,7 +84,7 @@
    $expired2 = 0;
    $id_cat2 = 3;
    $st2 = $conn->prepare($sql);
-   $st2->bind_param("ii",$expired2,$id_cat2);
+   $st2->bind_param("i",$id_cat2);
    $st2->execute();
    if($st)
    {
@@ -106,6 +108,7 @@
               "
                <script>
                var id_cat2 = ". $id_cat2II . ";
+               var id_product2 = ".$id_product2.";
                var timestamp2 = ".$timestamp2.";
                countdown(timestamp2,id_cat2);
                </script>
@@ -116,7 +119,7 @@
    $expired3 = 0;
    $id_cat3 = 4;
    $st3 = $conn->prepare($sql);
-   $st3->bind_param("ii",$expired3,$id_cat3);
+   $st3->bind_param("i",$id_cat3);
    $st3->execute();
    if($st)
    {
@@ -140,6 +143,7 @@
               "
                <script>
                var id_cat3 = ". $id_cat3II . ";
+               var id_product4 = ".$id_product3.";
                var timestamp3 = ".$timestamp3.";
                countdown(timestamp3,id_cat3);
                </script>
