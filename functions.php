@@ -38,7 +38,31 @@
 								}
 
 								echo "<p class='col-xs-12 cntr'><i class='pull-left'> ".$row['comment']."</i></p></div></div>";
+//odvojeno ovde ide odgovor admina
 
+					if($row['odgovor']==''){}else{
+								echo "<div class='kolone col-lg-10 col-sm-12 col-xs-12 komentar_i_ime pull-right '>";
+								echo "<div class='description row color1'>";
+								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
+								if(isset($_SESSION['email']) && $_SESSION['id_role'] == 1)
+								{
+									echo "
+									<p class='col-xs-8 col-lg-10'>
+										<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>Admin<a href='deleteComm.php?id={$row['id_product']}&id_kom={$row['id_com']}' title='Obrisi komentar'> X</a>
+										</b>
+									</p>";
+								}
+								else
+								{
+								  echo "<p class='col-xs-8'>
+											<b class='pull-left'><i class='fa fa-user ml' aria-hidden='true'></i>".$row['name']." ".$row['last_name']." </b>
+										</p>";
+								}
+
+								echo "<p class='col-xs-12 cntr'><i class='pull-left'> ".$row['odgovor']."</i></p></div></div>";
+
+
+}
 							}
 
 							if(isset($_SESSION['email']))
@@ -75,15 +99,16 @@ function commentsInsert($id)
 
 				include('connectionFile/connection.php');
 
-				$upisC = "INSERT INTO commentar VALUES(?,?,?,?,?)";
+				$upisC = "INSERT INTO commentar VALUES(?,?,?,?,?,?)";
 				$id_com = "";
 				$comment = $_POST['taComment'];
 			    $datum_objave = time();
 			    $id_prodC = $id;
 			    $id_userC = $_SESSION['id_user'];
+					$prazna='';
 
 			    $stmtC = $conn->prepare($upisC);
-			    $stmtC->bind_param('isiii',$id_com,$comment,$datum_objave,$id_userC,$id_prodC);
+			    $stmtC->bind_param('isiiis',$id_com,$comment,$datum_objave,$id_userC,$id_prodC,$prazna);
 			    $stmtC->execute();
 			    if($stmtC)
 			    {

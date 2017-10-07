@@ -120,6 +120,12 @@ font-size: 25px;
 .color{
     font-size:15px;
 }
+.color1{
+  background-color: #f36;
+  color:#fff
+
+}
+}
 /*preporucujem kraj*/
 .NameOnSlider{
     font-size:30px;
