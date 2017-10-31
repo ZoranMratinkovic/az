@@ -154,11 +154,14 @@ Forma payment begins
  */
 $amm = $new_price_pro*$_POST['nmbr'];
 $data = "ZoranMratinkovic-3001";
-$hashed = hash('sha512', $data);
+$string = "AMOUNT=1500Mysecretsig1875!?CURRENCY=CHFMysecretsig1875!?LANGUAGE=de_DEMysecretsig1875!?
+ORDERID=1234Mysecretsig1875!?PSPID=MyPSPIDMysecretsig1875!?";
+$hashed = hash('sha1',$string);
+echo $hashed;
  ?> 
  <input type="hidden" name="PSPID" value="deinbernTEST">
-<input type="hidden" name="ORDERID" value="<?php echo $id_product_pro; ?>">
-<input type="hidden" name="AMOUNT" value="<?php echo $_POST['nmbr']; ?>">
+<input type="hidden" name="ORDERID" value="1234">
+<input type="hidden" name="AMOUNT" value="1500">
 <input type="hidden" name="CURRENCY" value="CHF">
 <input type="hidden" name="LANGUAGE" value="de_DE">
 
