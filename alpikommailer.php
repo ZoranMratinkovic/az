@@ -10,7 +10,6 @@ $vorname=$_REQUEST['vorname'];
 $tel=$_REQUEST['tel'];
 $adress=$_REQUEST['adresse'];
 $postleitzahl=$_REQUEST['postleitzahl'];
-$kanton=$_REQUEST['kanton'];
 $anzahl=$_POST['anzahl22'];
 $price1=$_REQUEST['price22'];
 $price=$price1*$anzahl;
@@ -27,8 +26,7 @@ $gutschein=rand(10000000,900000000);
 	<p><b>Vorname:  <b/></td><td>'.$vorname.'</p></td></tr><tr><td>
 	<p><b>Telefon:  <b/></td><td>'.$tel.'</p></td></tr><tr><td>
 	<p><b>Adresse:  <b/></td><td>'.$adress.'</p></td></tr><tr><td>
-	<p><b>Kanton:  <b/></td><td>'.$kanton.'</p></td></tr><tr><td>
-		<p><b>Adresse:  <b/></td><td>'.$postleitzahl.'</p></td></tr><tr><td>
+		<p><b>Kanton Postleitzahl:  <b/></td><td>'.$postleitzahl.'</p></td></tr><tr><td>
 	<p><b>Anzahl:  <b/></td><td>'.$anzahl.'</p></td></tr>
 	<tr><td>
 	<p><b>Total Preis:  <b/></td><td>'.$price.'</p></td></tr>

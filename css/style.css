@@ -26,6 +26,9 @@ PRE LOADER
 .productKarte{
     height:50px!important;
 }
+.grays{
+      color: #a59999;
+}
 .picture21{
     margin-top:60px;
     height:400px;
@@ -43,9 +46,17 @@ PRE LOADER
 }
 #comm{
     color:#EB008A;
-    margin-top: 20px;
+    margin-top: 95px;
 text-align: center;
 font-size: 25px;
+}
+.newlogo{
+  width: 248px!important;
+  height: 69px;
+      margin-left: -22px!important;
+}
+.nomg{
+  margin-top:0!important;
 }
 #comm:hover{
     cursor: pointer;
@@ -451,7 +462,7 @@ h6 {
     text-decoration: none;
 }
 section:nth-of-type(odd) {
-    background-color: #F9F9F9;
+
 }
 
 .btn {
@@ -568,6 +579,8 @@ p.description {
 
 
 .main-menu .navbar-nav > li > a {
+  font-weight: bold;
+color: #fe4271!important;
     padding: 30px 13px 25px 13px;
     font-size: 14px;
     line-height: 22px;
@@ -963,6 +976,7 @@ a.info_right_text{
     background: #fff;
 }
 .mala {
+  text-align: left;
   margin-top: 15px!important;
 }
 /* Clients Logo Section */
@@ -970,9 +984,15 @@ a.info_right_text{
 	background:#ddd;
 }
 .client_heading_text{
-	padding:70px 0px;
+
 	text-align:center;
-	margin-left: -20px;
+
+}
+.clientss{
+  height: 235px;
+}
+.videoo{
+  opacity:0.3;
 }
 .client_heading_text a{
     margin-right: 20px;
@@ -1257,7 +1277,7 @@ footer {
 margin-top: 33px;
 }
 footer p{
-  margin-top: 33px;
+
 }
 footer {
   background: #fe4271;
@@ -1296,4 +1316,7 @@ footer {
 	table#cart tfoot td{display:block; }
 	table#cart tfoot td .btn{display:block;}
 
+}
+.footer-center{
+      margin-left: 35px;
 }

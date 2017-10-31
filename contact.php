@@ -10,10 +10,11 @@
     <label for="lname">Email</label>
     <input type="text" id="lname" name="lastname" placeholder="Email..">
 
-    <label for="country">fragen zu</label>
+    <label for="country">Fragen zu</label>
     <select id="country" name="country">
       <option value="australia">Produkte</option>
       <option value="canada">Account</option>
+      <option value="usa">Lokale Deals</option>
       <option value="usa">Sonstiges</option>
     </select>
 

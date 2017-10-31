@@ -158,7 +158,7 @@
                 <div class="container pdNula">
                     <div class="navbar-header">
 
-                        <a  href="#home" class="navbar-brand"><img class='picMenu' src="images/logo2.png" alt="Logo" /></a>
+                        <a  href="index.php" class="navbar-brand nomg"><img class='picMenu newlogo'  src="images/logo6.png"  alt="Logo" /></a>
                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
@@ -169,7 +169,7 @@
                     </div>
                     <div id="navbar" aria-expended='false' class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-left drop">
-                            
+
                              <!--
                                   $upit1 ="SELECT * from categorie";
                                   $result1 = $conn->query($upit1);
@@ -181,7 +181,7 @@
                                   }
 */
                              ?>-->
-                            <li><a href="<?php echo "index.php?page=product&id={$id_product}"; ?>" class=""><?php echo $name_cat ?></a>
+                            <li class="newcolor"><a class="newcolor" href="<?php echo "index.php?page=product&id={$id_product}"; ?>" class=""><?php echo $name_cat ?></a>
                             <ul>
                               <a href="#">
                                 <li>
@@ -375,7 +375,7 @@
                                     echo
                                     "
                                         <li><a href='logout.php' class=''>Logout</a></li>
-                                        <li><a href='index.php?page=change' class=''>change</a></li>
+                                        <li><a href='index.php?page=change' class=''>'Einstellungen'</a></li>
                                         <li  class='right_li'><a href=''>{$_SESSION['name']}</a></li>
 
                                     ";
@@ -395,9 +395,9 @@
                           <?php if(isset($_SESSION['email'])&& $_SESSION['id_role']==1){ ?>
                             <li><a href="admin_folder/admin.php">adminpanel</a></li>
                           <?php }else { ?>
-                          <li ><a href="index.php?page=fragen">Hilfe</a></li>
+
                           <li><a href="index.php?page=contact">Kontakt</a></li>
-                          <li><a href="index.php?page=contact"><img src="images/french.jpg" alt=""></a></li>
+                         
 
 
                           <?php } ?>

@@ -99,7 +99,7 @@ $('#dt').click(function(){
 	$('#details').toggle('slow');
 });
 $("#slideshow > div:gt(0)").hide();
-		setInterval(function(e) { 
+		setInterval(function(e) {
   		$('#slideshow > div:first')
 		    .fadeIn(800)
 		    .next()
@@ -218,8 +218,8 @@ $('#portfolio a').nivoLightbox({
 	jQuery(window).scroll(function () {
 	  var top = jQuery(document).scrollTop();
 		var batas = 800;
-                var logo = 'images/logo2.png';
-                var logoScroll = 'images/logo2.png';
+                var logo = 'images/logo6.png';
+                var logoScroll = 'images/logo6.png';
 	  //alert(batas);
 
 	  if (top > batas) {
@@ -397,5 +397,3 @@ $(document).ready(function() {
 					}, 'json');
 			});
 });
-
-

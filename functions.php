@@ -45,7 +45,8 @@
 						//something
 					}
 					else {
-								echo "<div class='kolone col-lg-10 col-sm-12 col-xs-12 komentar_i_ime pull-right '>";
+								echo "<div class='kolone col-lg-10 col-sm-12 col-xs-12 komentar_i_ime pull-right '><img src='images/hund.jpg' style='float: left;height: 93px;margin-top: 9px;
+'>";
 
 								echo "<div class='description row color1'>";
 								echo "<span class='pull-right color col-xs-4 col-lg-2'><i>".date('M d, H:i',$row['date'])."</i></span>";
@@ -64,7 +65,7 @@
 										</p>";
 								}
 
-								echo "<p class='col-xs-12 cntr'><i class='pull-left'> ".$row['odgovor']."</i></p></div></div>";
+								echo "<p class='col-xs-8 cntr'><i class='pull-left'> ".$row['odgovor']."</i></p></div></div>";
 
 
 }
@@ -73,15 +74,15 @@
 							if(isset($_SESSION['email']))
 							{//if the user is logged in
 
-								echo "<form method='post' action='#' onSubmit='return comment();'><textarea class='col-lg-12' name='taComment' placeholder='Add a public comment...' id='textArea' rows='4'></textarea>";
-								echo "<input type='submit' class='btn btn-lg' name='commentSubmit' id='commentSubmit' value='Comment'/>";
-								echo "<input type='button' class='btn btn-lg' name='commentCancel' id='commentCancel' value='Cancel'/></form>";
+								echo "<form method='post' action='#' onSubmit='return comment();'><textarea class='col-lg-12' name='taComment' placeholder='Kommentieren' id='textArea' rows='4'></textarea>";
+								echo "<input type='submit' class='btn btn-lg' name='commentSubmit' id='commentSubmit' value='Jetzt Kommentieren'/>";
+								echo "<input type='button' class='btn btn-lg' name='commentCancel' id='commentCancel' value='Abrechen'/></form>";
 								echo "<span class='errorC' id='comErr'>Morate uneti nesto!</span>";
 
 							}
 							else
 							{
-								echo "<div class='col-xs-12'> <a href='index.php?page=login'>Login in order to comment</a></div>";
+								echo "<div class='col-xs-12'> <a href='index.php?page=login'>Einloggen um zu kommentieren</a></div>";
 							}
 
 						}

@@ -1,0 +1,1 @@
+[27-Sep-2017 02:59:23 Europe/Belgrade] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/alpikomr/qoqa.alpikom.rs/admin_folder/buyed.php on line 22

@@ -25,3 +25,6 @@
 [26-Sep-2017 21:36:02 Europe/Belgrade] PHP Warning:  include(karte.php): failed to open stream: No such file or directory in /home/alpikomr/qoqa.alpikom.rs/index.php on line 231
 [26-Sep-2017 21:36:02 Europe/Belgrade] PHP Warning:  include(karte.php): failed to open stream: No such file or directory in /home/alpikomr/qoqa.alpikom.rs/index.php on line 231
 [26-Sep-2017 21:36:02 Europe/Belgrade] PHP Warning:  include(): Failed opening 'karte.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/alpikomr/qoqa.alpikom.rs/index.php on line 231
+[07-Oct-2017 17:47:44 Europe/Belgrade] PHP Fatal error:  Call to a member function bind_param() on boolean in /home/alpikomr/qoqa.alpikom.rs/parts/menu.php on line 7
+[07-Oct-2017 17:47:48 Europe/Belgrade] PHP Fatal error:  Call to a member function bind_param() on boolean in /home/alpikomr/qoqa.alpikom.rs/parts/menu.php on line 7
+[07-Oct-2017 17:48:35 Europe/Belgrade] PHP Fatal error:  Call to a member function bind_param() on boolean in /home/alpikomr/qoqa.alpikom.rs/parts/menu.php on line 7

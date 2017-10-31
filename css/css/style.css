@@ -464,6 +464,7 @@ section:nth-of-type(odd) {
 .center-content {
     text-align: center;
 }
+
 p.description {
     width: 70%;
     margin: 0 auto;
@@ -947,6 +948,7 @@ a.info_right_text{
 }
 .mala {
   margin-top: 15px!important;
+  text-align: left!important;
 }
 /* Clients Logo Section */
 #clientsLogo{
@@ -962,6 +964,9 @@ a.info_right_text{
     margin-bottom: 30px;
     overflow: hidden;
     display: inline-block;
+}
+.fa{
+  float:left!important;
 }
 
 /* Download Apps Section */
@@ -1019,7 +1024,13 @@ a.info_right_text{
 	outline: none;
 	font-size:20px;
 }
+.cent{
+  width:60%;
 
+}
+.left1{
+  float:left;
+}
 /*Message Section*/
 
 #message {
@@ -1241,4 +1252,7 @@ footer p{
 }
 footer {
   background: #fe4271;
+}
+.pola{
+  width:50%;
 }

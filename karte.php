@@ -143,7 +143,7 @@
 </div>
 
 <div class="form-group">
-  <input type="checkbox" name="" value="" required>  Ich habe die AGBS gelesen und bin einverstanden
+  <input type="checkbox" name="" value="" required>  Ich habe die <a href="index.php?page=fragen" target="_blank">AGBs</a> gelesen und bin einverstanden
 </div>
 <div class="form-group">
   <a href="cart/pay.php"><input type="submit" class="btn-sm" name="bestel" value="Jetzt Bestellen"></a>

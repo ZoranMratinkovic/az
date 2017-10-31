@@ -1,0 +1,263 @@
+@media (max-width:374px) and (min-width:320px){
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:15px!important;
+		text-align: center;
+	}
+	.prozent{
+		font-size:17px!important;
+	}
+	.transpBg{
+		top:487px!important;
+	}
+	.cntr{
+		margin-top:15px;
+		text-align: center!important;
+	}
+	#comm{
+		text-align: center;
+	}
+	.picture21{
+		height:270px!important;
+	}
+	.single_works_text,.martop{
+		margin-top: 15px!important;
+	}
+	.font{
+		margin-top: 35px!important;
+	}
+	.main_des_third_contant{
+		padding:0!important;
+	}
+	.marg{
+		margin-bottom: 0!important;
+	}
+	.pedingnula{
+		padding:0!important; 
+	}
+	.single_works_text{
+		margin-bottom: 35px!important;
+	}
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
+	.centar .martopIpad{
+		font-size:22px!important;
+	}
+	.marbot h3{
+		margin-top: 35px!important;
+		text-align: center;
+	}
+	.download_heading_text{
+		padding-top:0!important;
+		padding-bottom:0!important;
+	}
+	.main-menu .navbar-nav > li > a{
+		padding: 5px 13px 25px 13px!important;
+		border-bottom: 2px solid #ccc!important;
+		text-align: center;
+	}
+	.DropDownPic{
+		display:none!important;
+	}
+
+
+	.slider1 {
+    	height: 568px!important;
+	}
+	.single_home_content h1{
+		font-size: 22px;
+	}
+	.zindex{
+		font-size:14px!important;
+	}
+	.header-image{
+		padding-top:110px;
+	}
+	.scrolldown{
+		display:none;
+	}
+	.productss{
+		min-height:130px!important;
+	}
+	.btnmy{
+		height:40px!important;
+		width:100px!important;
+	}
+	
+}
+/*Iphone 5,6,6+ 320px-414px width*/
+@media (max-width:414px) and (min-width:375px){
+	
+	.main-menu .navbar-nav > li > a{
+		padding: 5px 13px 25px 13px!important;
+		border-bottom: 2px solid #ccc!important;
+		text-align: center;
+	}
+	.download_heading_text{
+		padding-top:0!important;
+		padding-bottom:0!important;
+	}
+	.marbot h3{
+	
+		text-align: center;
+	}
+
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:15px!important;
+		text-align: center;
+	}
+	.prozent{
+		font-size:20px!important;
+	}
+	.transpBg{
+		top:581px!important;
+	}
+	.cntr{
+		margin-top:15px;
+		text-align: center!important;
+	}
+	#comm{
+		text-align: center;
+	}
+	.picture21{
+		height:270px!important;
+	}
+	.single_works_text,.martop{
+		margin-top: 20px!important;
+	}
+	.font{
+		margin-top: 35px!important;
+	}
+	.main_des_third_contant{
+		padding:0!important;
+	}
+	.marg{
+		margin-bottom: 0!important;
+	}
+	.pedingnula{
+		padding:0!important; 
+	}
+	.single_works_text{
+		margin-bottom: 35px!important;
+	}
+	.pdNula{
+    	padding-top:0!important;
+    	padding-bottom:0!important;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.works_content{
+		padding:0!important;
+	}
+	.paddingUnderSlider{
+		margin-bottom: 25px!important;
+	}
+	.marbot h3{
+		margin-top: 35px!important;
+		text-align: center;
+	}
+	.DropDownPic{
+		display:none!important;
+	}
+
+	.slider1 {
+    	height: 667px!important;
+	}
+	.single_home_content h1{
+		font-size: 22px;
+	}
+	.zindex{
+		font-size:17px!important;
+	}
+	.header-image{
+		padding-top:150px!important;
+	}
+	.scrolldown{
+		display:none;
+	}
+	.productss{
+		min-height:130px!important;
+	}
+	.btnmy{
+		height:40px!important;
+		width:100px!important;
+	}
+}
+/*Iphone 5,6,6+ 320px width end*/
+@media (max-width:768px) and (min-width:415px){
+	.navbar-brand>img{
+		margin: 0 auto!important;
+		width: 25%!important;
+	}
+	.navbar-brand{
+		float:none!important;
+	}
+	
+	.navbar-header{
+		width: 100%!important;
+	}
+	.nav>li>a{
+		padding:10px 15px!important;
+	}
+	.tabela{
+		margin:0 auto;
+	}
+	.sredina{
+		width: 80%;
+		margin:0 auto!important;
+	}
+	.rightt{
+		margin-top: 50px;
+		float:none!important;
+	}
+	.transpBg{
+		top:627px!important;
+	}
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:28px!important;
+		text-align: center;
+	}
+	.martopIpad{
+		margin-top: 35px!important;
+		text-align: center;
+	}
+	.centar1{
+		text-align: center;
+	}
+	.main_des_third_contant{
+		padding:0!important;
+	}
+	.main-menu .navbar-nav > li > a{
+		font-size:13px!important;
+	}
+	.marbot{
+		margin-top: 45px!important;
+		
+	}
+	.marbot h3{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width:1024px) and (min-width:769px){
+	.transpBg{
+		top:685px!important;
+	}
+	#demo,#pivoo,#vinoo,#phoness,#laptopss{
+		font-size:26px!important;
+		text-align: center;
+	}
+}
+@media (max-width:1920px) and (min-width:1025px){
+	.navbar-nav{
+		height: 79px!important;
+	}
+}

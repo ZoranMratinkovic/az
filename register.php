@@ -97,7 +97,7 @@
 
                     if($verify)
                     {
-                        echo "<script>alert('Ihr Password ist genügend sicher!');</script>";
+
                     }
                     else
                     {
@@ -170,7 +170,7 @@
                       //send mail after inserting into database
                       if($stm)
                       {
-                        echo "<script>alert('Upis izvrsen');</script>";
+
 
                           include('phpmailer/PHPMailerAutoload.php');
                           include("connectionFile/define.php");
@@ -179,7 +179,7 @@
                           //Enable SMTP debugging.
                           //$mail->SMTPDebug = 3; -> client ---> server dialog
                           //Set PHPMailer to use SMTP.
-                        $mail->isSMTP();
+                       // $mail->isSMTP();
                           //Set SMTP host name
                           $mail->Host = "smtp.gmail.com";
                           //Set this to true if SMTP host requires authentication to send email
@@ -204,7 +204,7 @@
 
                               <i>Your name is: $fName $lName</i><br/>
                               <i>Your password is: {$_POST['pass']}</i>
-                              <b><a href='www.qoqa.alpikom.rs/verify.php?hash={$hash_ver}&email={$email}'>Klicken sie hier um Ihren Account zu verifizieren:</a></b>
+                              <b><a href='www.deinbern.ch/test/verify.php?hash={$hash_ver}&email={$email}'>Klicken sie hier um Ihren Account zu verifizieren:</a></b>
 
                           ";
                           $mail->AltBody = "Your name is: $fName $lName";

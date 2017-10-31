@@ -236,7 +236,7 @@
                       <div class="message_content">
                           <div class="message_heading_text center-content wow zoomIn" data-wow-duration="1s">
                               <h2>Account Informationen</h2>
-                              <p id="neuspeh" >Hier können Sie Accountinformationen wechseln</p>
+                              <p id="neuspeh" >Hier können Sie Accountinformationen umändern</p>
                           </div>
 
                           <form action="#" id="formid" class="wow fadeIn" data-wow-duration="2s" method="POST">
@@ -289,17 +289,17 @@
                                   </div> <!-- end of form-group -->
 
                                   <div class="form-group">
-                                      <input type="password" class="form-control" placeholder="Password" name="pass"  required="">
+                                      <input type="password" class="form-control" placeholder="Passwort" name="pass"  required="">
                                       <span class="error"> <?php echo $passErr;?></span>
                                   </div>
                                   <div class="form-group">
-                                      <input type="password" class="form-control" placeholder="Repeat password" name="pass1" required="">
+                                      <input type="password" class="form-control" placeholder="Passwort Wiederholen" name="pass1" required="">
                                       <span class="error"> <?php echo $passErr1;?></span>
                                   </div>
 
 
                                   <div class="center-content">
-                                      <input type="submit" value="Submit" class="btn larg-btn" name="submit_register1">
+                                      <input type="submit" value="Informationen Aktualisieren" class="btn larg-btn" name="submit_register1">
                                   </div>
                               </div>
                             <?php   } if(isset($_REQUEST['submit_register1'])){

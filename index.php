@@ -11,7 +11,7 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Zoom UI Kit One Page Portfolios Template</title>
 
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
         <!-- font awesome -->
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
         <!-- Bootstrap -->
@@ -82,19 +82,19 @@ function count2(tm,id)
         else if(distance < 0 && id == 2)
         {
           updatePivo();
-          
+
           document.getElementById("pivo").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 3)
         {
           updatePhone();
-          
+
           document.getElementById("phone").innerHTML = "Expired";
         }
          else if(distance < 0 && id == 4)
         {
           updateLaptop();
-          
+
           document.getElementById("laptop").innerHTML = "Expired";
         }
 }
@@ -168,7 +168,7 @@ function count1(tm,name_cat,id)
 }
 
 function countdown(tm,id){
-    
+
     var x = setInterval(count2, 1000,tm,id);
 }
 function countdown1(tm,name_cat,id){
@@ -221,6 +221,9 @@ function countdown1(tm,name_cat,id){
                     case 'contact':
                       include('contact.php');
                       break;
+                      case 'about':
+                        include('about.php');
+                        break;
                     case 'karte':
                       include('karte.php');
                       break;

@@ -72,7 +72,7 @@
 
 
                                             <td class="zindex" id='price'>Markt Preis </td>
-                                            <td class="zindex">Katoo Preis </td>
+                                            <td class="zindex">Neuer Preis </td>
                                             <td class="zindex">Rabatt </td>
 
                                         </tr>
@@ -342,7 +342,7 @@ Kommentare</h4>
                     <div class="main_des_third_contant">
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="left_desc_img center-content wow fadeInLeft" data-wow-duration="1.5s">
-                                <img src="<?php echo $pic_pro1; ?>" alt="" class='slika2Product'/>
+                                <img src="<?php echo $pic_pro2; ?>" alt="" class='slika2Product'/>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -369,52 +369,27 @@ Kommentare</h4>
         <!-- Our Testimonial  -->
 
         <section id="testimonial">
-            <div class="container">
-                <div class="row">
-                    <div class="main_testimonial_text center-content">
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Super Produkte kaufe gerne hier ein!</p>
-                            <a href="">Jhone Due, Käufer</a>
-                        </div>
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Super alles Top sicher und schnell einfeg</p>
-                            <a href="">Hans Musterman</a>
-                        </div>
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
-                        </div>
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
-                        </div>
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
-                        </div>
-                        <div class="col-md-12 col-sm-12 single_testimonial_text item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="">Jhone Due, Photographer</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+                  <video src="images/bern1.mp4" loop autoplay width="100%" class="videoo" >
+                    <source src="mov_bbb.ogg" type="video/ogg">
+
+                  </video>
+
+
         </section>
 
 
         <!-- Clients logo Section  -->
 
-        <section id="clientsLogo">
+        <section class="clientss">
             <div class="container">
                 <div class="row">
                     <div class="client_heading_text center-content wow zoomIn" data-wow-duration="1.5s">
-                        <h1>As Seen On</h1>
 
-                        <a href=""><img src="images/c1.png" alt="" /></a>
-                        <a href=""><img src="images/c2.png" alt="" /></a>
-                        <a href=""><img src="images/c3.png" alt="" /></a>
-                        <a href=""><img src="images/c4.png" alt="" /></a>
-                        <a href=""><img src="images/c5.png" alt="" /></a>
+
+                        <a href=""><img src="images/lieferkosten.png" alt="" /></a>
+
                     </div>
                 </div>
             </div>
@@ -426,13 +401,14 @@ Kommentare</h4>
             <div class="container">
                 <div class="row">
                     <div class="download_heading_text center-content">
-                        <h1>Download the App</h1>
-                        <p>Phasellus nisl leo congue eu malesuada lobortis fringilla et nulla. Curabitur posuere sem nec bibendum finibus.</p>
+                        <h1 class="grays">DeinBern</h1>
+                        <p class="grays">An oberste Stelle stehen für uns</p>
+
 
                         <div class="down_text_des wow fadeInUp" data-wow-duration="1.5s">
-                            <a href=""><img src="images/d1.png" alt="" /></a>
-                            <a href=""><img src="images/d2.png" alt="" /></a>
-                            <a href=""><img src="images/d3.png" alt="" /></a>
+                            <a href=""><img src="images/d1.jpg" width="300px" alt="" /></a>
+                            <a href=""><img src="images/d2.jpg" width="300px" alt="" /></a>
+                            <a href=""><img src="images/d3.jpg" width="300px" height="169px" alt="" /></a>
                         </div>
                     </div>
                 </div>
