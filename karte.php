@@ -148,7 +148,7 @@
 <div class="form-group">
   <a href="cart/pay.php"><input type="submit" class="btn-sm" name="bestel" value="Jetzt Bestellen"></a>
 </div>
-<?php 
+<?php
 /*
 Forma payment begins
  */
