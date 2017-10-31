@@ -1,4 +1,4 @@
-<form class="" action="alpikommailer.php" method="post">
+<form METHOD="post" action="https://e-payment.postfinance.ch/ncol/test/orderstandard.asp" id="form1" name="paymentform">
 <?php
       if(isset($_GET['id1']))
       {
@@ -82,7 +82,7 @@
 							</td>
 							<td data-th="Price" id='tab'><?php echo $new_price_pro ?> CHF</td>
 							<td data-th="Quantity">
-								<input type="number" name="anz" class="form-control text-center" value="<?php echo $_POST['nmbr']; ?>" disabled>
+								<input type="number" name="anz" class="form-control text-center" value="<?php echo $_POST['nmbr']; ?>">
 							</td>
 							<td data-th="Subtotal" name="anzahl" id="anzahl" class="text-center"><?php echo $new_price_pro*$_POST['nmbr']; ?>CHF</td>
 							<td class="actions" data-th="">
@@ -148,34 +148,80 @@
 <div class="form-group">
   <a href="cart/pay.php"><input type="submit" class="btn-sm" name="bestel" value="Jetzt Bestellen"></a>
 </div>
+<?php 
+/*
+Forma payment begins
+ */
+$amm = $new_price_pro*$_POST['nmbr'];
+$data = "ZoranMratinkovic-3001";
+$hashed = hash('sha512', $data);
+ ?> 
+ <input type="hidden" name="PSPID" value="deinbernTEST">
+<input type="hidden" name="ORDERID" value="<?php echo $id_product_pro; ?>">
+<input type="hidden" name="AMOUNT" value="<?php echo $_POST['nmbr']; ?>">
+<input type="hidden" name="CURRENCY" value="CHF">
+<input type="hidden" name="LANGUAGE" value="de_DE">
+
+<!-- layout information -->
+<input type="hidden" name="TITLE" value="title to be displayed on the postfinance site">
+<input type="hidden" name="BGCOLOR" value="#ffffff">
+<input type="hidden" name="TXTCOLOR" value="#000000">
+<input type="hidden" name="FONTTYPE" value="Arial">
+
+<!-- post-payment redirection -->
+<input type="hidden" name="ACCEPTURL" value="on succesful payment, where to redirect the buyer?">
+<input type="hidden" name="DECLINEURL" value="https://deinbern.ch">
+<input type="hidden" name="EXCEPTIONURL" value="on exception/error, where to redirect the buyer?">
+<input type="hidden" name="CANCELURL" value="if the buyer cancels, where to redirect the buyer?">
+<input type="hidden" name="BACKURL" value="if the buyer hits the back button in the form, where to redirect the buyer?">
+<!-- miscellanous -->
+<input type="hidden" name="HOMEURL" value="">
+<input type="hidden" name="CATALOGURL" value="">
+<input type="hidden" name="CN" value="the buyers full name">
+<input type="hidden" name="EMAIL" value="the buyers email">
+<input type="hidden" name="PM" value="">
+<input type="hidden" name="BRAND" value="">
+<input type="hidden" name="OWNERZIP" value="">
+<input type="hidden" name="OWNERADDRESS" value="">
+<input type="hidden" name="OWNERADDRESS2" value="">
+<input type="hidden" name="SHASIGN" value="<?php echo $hashed; ?>">
+<input type="hidden" name="ALIAS" value="">
+<input type="hidden" name="ALIASUSAGE" value="">
+<input type="hidden" name="ALIASOPERATION" value="">
+<input type="hidden" name="COM" value="">
+<input type="hidden" name="COMPLUS" value="">
+<input type="hidden" name="PARAMPLUS" value="">
+<input type="hidden" name="USERID" value="">
+<input type="hidden" name="CREDITCODE" value="">
 <?php
-    if(isset($_REQUEST['bestel'])){
-      $produkt22=$_REQUEST['produkt22'];
-  $name1=$_REQUEST['name1'];
-  $vorname=$_REQUEST['vorname'];
-  $tel=$_REQUEST['tel'];
-  $adress=$_REQUEST['adresse'];
-  $postleitzahl=$_REQUEST['postleitzahl'];
-  $kanton=$_REQUEST['kanton'];
-  $anzahl=$_POST['anzahl22'];
-  $price1=$_REQUEST['price22'];
-  $price=$price1*$anzahl;
-  $gutschein=rand(10000000,900000000);
-  echo $produkt22."<br/>";
-  echo $name1."<br/>";
-  echo $vorname;
-  echo $tel."<br/>";
-  echo $adress."<br/>";
-  echo $postleitzahl."<br/>";
-  echo $kanton."<br/>";
-  echo $anzahl."<br/>";
-  echo $price;
+    if(isset($_REQUEST['bestel']))
+    {
+        $produkt22=$_REQUEST['produkt22'];
+        $name1=$_REQUEST['name1'];
+        $vorname=$_REQUEST['vorname'];
+        $tel=$_REQUEST['tel'];
+        $adress=$_REQUEST['adresse'];
+        $postleitzahl=$_REQUEST['postleitzahl'];
+        $kanton=$_REQUEST['kanton'];
+        $anzahl=$_POST['anzahl22'];
+        $price1=$_REQUEST['price22'];
+        $price=$price1*$anzahl;
+        $gutschein=rand(10000000,900000000);
+        echo $produkt22."<br/>";
+        echo $name1."<br/>";
+        echo $vorname;
+        echo $tel."<br/>";
+        echo $adress."<br/>";
+        echo $postleitzahl."<br/>";
+        echo $kanton."<br/>";
+        echo $anzahl."<br/>";
+        echo $price;
 
- $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl',$gutschein)";
-  $result16=$conn->query($insertbuy)or die(mysqli_error());
+         $insertbuy="INSERT into buy VALUES('','$produkt22',$anzahl,$price,'$name1','$vorname','$tel','$adress','$postleitzahl',$gutschein)";
+          $result16=$conn->query($insertbuy)or die(mysqli_error());
 
 
-}
+    }
 ?>
 </form>
 </div>
