@@ -14,7 +14,7 @@
              <h1 class="tag-home text-center">AGB: die Allgemeinen Geschäftsbedingungen</strong></h1><br>
             <div class="col-xs-12">
               <div class="">
-                <h3 class="bold1">Deinbern  </h3>
+                <h3 class="bold1">So kaufen Sie einen Gutschein auf https://www.Deinbern.ch  </h3>
                 <p> Auf der Webseite www.deinbern.ch der WebFound  werden Gutscheine über Leistungen oder über Waren anderer Unternehmen (Partner) angeboten. Herausgeber der Gutscheine und Schuldner der in den Gutscheinen angegebenen Leistungen oder Waren sind allein die jeweils angegebenen Partner, die diese Leistungen auf der Grundlage ihrer jeweiligen Allgemeinen Geschäftsbedingungen erbringen.
 Die WebFound selbst schuldet nicht die Erbringung der in den Gutscheinen angegebenen Leistungen oder die Lieferung der angegebenen Waren, sondern lediglich, dass der Gutschein Ihnen einen Anspruch auf die Leistungserbringung durch den Partner gewährt. Für die Nutzung des Services von Deinbern.ch gelten ausschließlich die nachfolgenden Nutzungsbedingungen. Die von Deinbern.ch verkauften Gutscheine sind entweder auf eine konkrete Leistung (Erlebnisgutschein), eine konkrete Ware (Warengutschein) oder einen bestimmten Leistungs- bzw. Warenwert (Wertgutschein) gerichtet.</p>
               </div>
@@ -33,7 +33,7 @@ Die WebFound selbst schuldet nicht die Erbringung der in den Gutscheinen angegeb
               <br/>
               <hr class="bold1">
               <div class="">
-                <h3 class="bold1">Ist die Kostenschätzung und Behandlungsplan des Zahnarztes verbindlich? </h3>
+                <h3 class="bold1">So kaufen Sie einen Gutschein auf https://www.Deinbern.ch </h3>
                 <p>So kaufen Sie einen Gutschein auf www.Deinbern.ch 4.1 Bestätigen Sie den Button "Kaufen" auf der Startseite. 4.2 Wählen Sie die gewünschte Anzahl an Gutscheinen. 4.3 Geben Sie Ihren Namen und Ihre e-mail Adresse und Ihre Kontoverbindung (Name, Kontonummer, Bankleitzahl, Bank) bzw. Kreditkarte an. 4.4 Die Abgabe ihres Kaufgebots findet durch Bestätigen der Nutzungsbedingungen und Drücken des Buttons "Kaufen" statt. Die Annahme des Kaufvertrags durch Deinbern.ch findet mit der Bestätigung in Form der Zusendung des Gutscheincodes statt. 4.5 Wenn nach Ablauf der vorgegebenen Verkaufszeit die Mindestteilnehmerzahl erreicht ist und wir Ihre Zahlung erfolgreich verbucht haben, senden wir Ihnen den Gutschein per E-Mail im .Pdf Format zu. 4.6 Drucken Sie den Gutschein aus und lösen Sie ihn im jeweiligen Partnergeschäft bzw. bei dem entsprechenden Partner ein.</p>
               </div>
               <br/>

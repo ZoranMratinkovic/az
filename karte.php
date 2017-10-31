@@ -148,14 +148,14 @@
 <div class="form-group">
   <a href="cart/pay.php"><input type="submit" class="btn-sm" name="bestel" value="Jetzt Bestellen"></a>
 </div>
-<?php 
+<?php
 /*
 Forma payment begins
  */
 $amm = $new_price_pro*$_POST['nmbr'];
 $data = "ZoranMratinkovic-3001";
 $hashed = hash('sha512', $data);
- ?> 
+ ?>
  <input type="hidden" name="PSPID" value="deinbernTEST">
 <input type="hidden" name="ORDERID" value="<?php echo $id_product_pro; ?>">
 <input type="hidden" name="AMOUNT" value="<?php echo $_POST['nmbr']; ?>">
