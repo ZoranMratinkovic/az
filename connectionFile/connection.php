@@ -5,7 +5,7 @@
 	$db = "webvi";
 	$conn= mysqli_connect($host,$root,$pass,$db);
 	if(!$conn){
-		echo "Connection problem: " . mysqli_connect_errno() . PHP_EOL();;
+		echo "Connection problem: " . mysqli_connect_errno();
 	}
 
  ?>

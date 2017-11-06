@@ -1,4 +1,4 @@
-<form METHOD="post" action="https://e-payment.postfinance.ch/ncol/test/orderstandard.asp" id="form1" name="paymentform">
+<form METHOD="post" action="https://e-payment.postfinance.ch/ncol/test/orderstandard_utf8.asp" id="form1" name="paymentform">
 <?php
       if(isset($_GET['id1']))
       {
@@ -148,54 +148,8 @@
 <div class="form-group">
   <a href="cart/pay.php"><input type="submit" class="btn-sm" name="bestel" value="Jetzt Bestellen"></a>
 </div>
-<?php
-/*
-Forma payment begins
- */
-$amm = $new_price_pro*$_POST['nmbr'];
-$data = "ZoranMratinkovic-3001";
-$string = "AMOUNT=1500Mysecretsig1875!?CURRENCY=CHFMysecretsig1875!?LANGUAGE=de_DEMysecretsig1875!?
-ORDERID=1234Mysecretsig1875!?PSPID=deinbernTESTMysecretsig1875!?";
-$hashed = hash('sha1',$string);
-echo $hashed;
- ?> 
- <input type="hidden" name="PSPID" value="deinbernTEST">
-<input type="hidden" name="ORDERID" value="1234">
-<input type="hidden" name="AMOUNT" value="1500">
-<input type="hidden" name="CURRENCY" value="CHF">
-<input type="hidden" name="LANGUAGE" value="de_DE">
 
-<!-- layout information -->
-<input type="hidden" name="TITLE" value="title to be displayed on the postfinance site">
-<input type="hidden" name="BGCOLOR" value="#ffffff">
-<input type="hidden" name="TXTCOLOR" value="#000000">
-<input type="hidden" name="FONTTYPE" value="Arial">
 
-<!-- post-payment redirection -->
-<input type="hidden" name="ACCEPTURL" value="on succesful payment, where to redirect the buyer?">
-<input type="hidden" name="DECLINEURL" value="https://deinbern.ch">
-<input type="hidden" name="EXCEPTIONURL" value="on exception/error, where to redirect the buyer?">
-<input type="hidden" name="CANCELURL" value="if the buyer cancels, where to redirect the buyer?">
-<input type="hidden" name="BACKURL" value="if the buyer hits the back button in the form, where to redirect the buyer?">
-<!-- miscellanous -->
-<input type="hidden" name="HOMEURL" value="">
-<input type="hidden" name="CATALOGURL" value="">
-<input type="hidden" name="CN" value="the buyers full name">
-<input type="hidden" name="EMAIL" value="the buyers email">
-<input type="hidden" name="PM" value="">
-<input type="hidden" name="BRAND" value="">
-<input type="hidden" name="OWNERZIP" value="">
-<input type="hidden" name="OWNERADDRESS" value="">
-<input type="hidden" name="OWNERADDRESS2" value="">
-<input type="hidden" name="SHASIGN" value="<?php echo $hashed; ?>">
-<input type="hidden" name="ALIAS" value="">
-<input type="hidden" name="ALIASUSAGE" value="">
-<input type="hidden" name="ALIASOPERATION" value="">
-<input type="hidden" name="COM" value="">
-<input type="hidden" name="COMPLUS" value="">
-<input type="hidden" name="PARAMPLUS" value="">
-<input type="hidden" name="USERID" value="">
-<input type="hidden" name="CREDITCODE" value="">
 <?php
     if(isset($_REQUEST['bestel']))
     {
@@ -228,6 +182,48 @@ echo $hashed;
 ?>
 </form>
 </div>
+<?php
 
+        //The AMOUNT PARAMETER
+        $amm = $_POST['nmbr'];
+        
+        //PSPID PARAMETER
+        $pspid = "deinbernTEST";
+       
+        /*
+        Configuration in the Backoffice:
+        1.  Each parameter followed by the passphrase
+        2.  SHA-512
+        3.  UTF-8
+        4.  SHA-IN passphrase: ZoranMratinkovic-3001
+        5.  Question -> Is it able to test it from a localhost? 
+         */
+        $passPhrase = "ZoranMratinkovic-3001";
+        
+        //String to hash
+        $string = "AMOUNT=".$amm.$passPhrase."?CURRENCY=CHF".$passPhrase."?LANGUAGE=en_US".$passPhrase."?ORDERID=".$id_prod.$passPhrase."?PSPID=".$pspid.$passPhrase;
+       
+        //hashed string
+        $hashed = hash("sha512",$string);
 
+ ?> 
+<FORM METHOD="post" ACTION="https://e-payment.postfinance.ch/ncol/test//orderstandard.asp" id=form1 name=form1>
+  
+        <INPUT type="hidden" NAME="PSPID" value="deinbernTEST">
+
+        <INPUT type="hidden" NAME="ORDERID" value="<?php echo $id_prod; ?>">
+
+        <INPUT type="hidden" NAME="AMOUNT" value="<?php echo $amm; ?>">
+
+        <INPUT type="hidden" NAME="CURRENCY" value="CHF">
+
+        <INPUT type="hidden" NAME="LANGUAGE" value="en_US">
+
+        <!-- lay out information -->
+        <INPUT type="hidden" NAME="SHASIGN" value="<?php echo $hashed; ?>">
+
+        <input type="submit" value="Proceed" id=submit2 name=submit2>
+
+</form>
+  
 </div>
